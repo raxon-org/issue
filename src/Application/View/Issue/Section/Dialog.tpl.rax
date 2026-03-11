@@ -1,8 +1,7 @@
 {{$frontend.host = options('frontend.host')}}{{$backend.host = options('backend.host')}}{{literal}}
-{{RAX}}
 <div class="dialog dialog-{{config('controller.name')}}-main">
     <div class="head" data-title="Issue | {{$request.file|>default:''|>file.basename}}">
-        <h1><img src="{{route.get('application-issue-icon')}}" class="icon" /> Issue's</h1>
+        <h1><img src="{{route.get('application-issue-icon')}}" class="icon" /> Issue{{literal}}'{{/literal}}s</h1>
         <span class="close"><i class="fas fa-window-close"></i></span>
         <span class="minimize"><i class="far fa-window-minimize"></i></span>
     </div>
