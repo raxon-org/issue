@@ -33,7 +33,7 @@ issue.menu_application = (id) => {
     if(!section){
         return;
     }
-    dialog.click(section, '.menu-application-audio-player');
+    dialog.click(section, '.menu-application-issue');
 }
 
 issue.menu = (id) => {
