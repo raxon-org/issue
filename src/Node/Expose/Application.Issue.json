@@ -1,0 +1,512 @@
+{
+  "Application": {
+    "Issue": {
+      "count": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "task"
+            ],
+            "object": {
+              "task": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "list": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "page": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "read": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "record": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "create": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "create_many": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "put": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "put_many": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "patch": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "patch_many": {
+        "output": [
+          {
+            "role": "ROLE_SYSTEM",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          },
+          {
+            "role": "ROLE_ADMIN",
+            "property": [
+              "uuid",
+              "name",
+              "user",
+              "description",
+              "attachment",
+              "tasks"
+            ],
+            "object": {
+              "tasks": {
+                "multiple": true,
+                "output": [
+                  "name",
+                  "description",
+                  "status"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

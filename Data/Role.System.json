@@ -2,5 +2,38 @@
   "name": "ROLE_SYSTEM",
   "rank": 1,
   "#class": "Account.Role",
-  "permission": []
+  "permission": [
+    {
+      "name": "Application:Issue:create",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:create.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:put",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:put.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:patch",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:patch.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:delete.many",
+      "#class": "Account.Permission"
+    }
+  ]
 }

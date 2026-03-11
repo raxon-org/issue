@@ -1,0 +1,33 @@
+{
+  "Application": {
+    "Issue": {
+      "create": {
+        "validate": {
+          "uuid": [
+            {
+              "is.uuid": true
+            }
+          ]
+        }
+      },
+      "put": {
+        "validate": {
+          "uuid": [
+            {
+              "is.uuid": true
+            }
+          ]
+        }
+      },
+      "patch": {
+        "validate": {
+          "uuid": [
+            {
+              "is.uuid": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}
