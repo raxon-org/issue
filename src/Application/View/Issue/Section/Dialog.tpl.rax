@@ -1,7 +1,7 @@
 {{$frontend.host = options('frontend.host')}}{{$backend.host = options('backend.host')}}{{literal}}
 {{RAX}}
 <div class="dialog dialog-{{config('controller.name')}}-main">
-    <div class="head" data-title="Issue | {{$request.file|>file.basename}}">
+    <div class="head" data-title="Issue | {{$request.file|>default:''|>file.basename}}">
         <h1><img src="{{route.get('application-issue-icon')}}" class="icon" /> Audio player</h1>
         <span class="close"><i class="fas fa-window-close"></i></span>
         <span class="minimize"><i class="far fa-window-minimize"></i></span>
@@ -27,12 +27,12 @@
     </div>
     <div class="menu-application-audio-player">
         <ul>
-            <li title="{{$request.file|>file.basename}}">{{$request.file|>file.basename}}</li>
+            <li title="{{$request.file|>default:''|>file.basename}}">{{$request.file|>default:''|>file.basename}}</li>
         </ul>
     </div>
     <div class="body">
         {{$source.request = $request.file}}
-        {{$source.request = $source.request|>url.encode}}
+        {{$source.request = $source.request|>default:''|>url.encode}}
         {{$source.src = server.url(\"{{/literal}}{{$backend.host}}{{literal}}\") + 'FileSystem/?url='+ $source.request}}
         {{$source.type = source.type($request.file)}}
         <input type="hidden" name="node.url" value="{{$request.file}}" />
