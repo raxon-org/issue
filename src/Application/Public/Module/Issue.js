@@ -20,6 +20,9 @@ issue.close = (id) => {
         return;
     }
     let close = section.select('.close');
+    if(!close){
+        return;
+    }
     close.on('click', (event) => {
         taskbar.delete(section.attribute('id'));
     });
