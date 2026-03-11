@@ -14,12 +14,12 @@
         </div>
         <div class="menu-file display-none">
             <ul>
-                /*
+                <!--
                 <li>New</li>
                 <li class="menu-file-save">Save</li>
                 <li>Save as</li>
                 <li>Print</li>
-                */
+                -->
                 <li class="menu-file-open">Open</li>
                 <li class="menu-file-exit">Exit</li>
             </ul>
