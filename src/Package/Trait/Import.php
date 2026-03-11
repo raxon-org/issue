@@ -1,10 +1,10 @@
 <?php
 namespace Package\Raxon\Issue\Trait;
 
+use Exception;
 use Raxon\Exception\DirectoryCreateException;
 use Raxon\Exception\FileWriteException;
 use Raxon\Exception\ObjectException;
-
 use Raxon\Node\Module\Node;
 
 trait Import {
@@ -13,6 +13,7 @@ trait Import {
      * @throws DirectoryCreateException
      * @throws FileWriteException
      * @throws ObjectException
+     * @throws Exception
      */
     public function role_system(): void
     {
