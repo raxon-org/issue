@@ -191,22 +191,11 @@
                         </div>
 
                         <div class="form-section">
-                            <label class="section-label">Attachments</label>
-                            <div class="attachment-drop-zone" data-field="attachment">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                <span>
-                                    Drop files here or
-                                    <label class="attachment-browse" for="attachment-input">browse</label>
-                                </span>
-                                <input
-                                    type="file"
-                                    id="attachment-input"
-                                    name="attachment[]"
-                                    multiple
-                                    class="attachment-input"
-                                />
-                            </div>
-                            <ul class="attachment-list"></ul>
+                            <label class="section-label">Files</label>
+                            <ol class="files-ol">
+                                <li><input type="text" name="files[0]" placeholder="File path..." class="sidebar-input" /></li>
+                            </ol>
+                            <button type="button" class="btn-link btn-add-file">+ Add file</button>
                         </div>
 
                     </div><!-- /form-main-column -->
