@@ -13,5 +13,20 @@ require(
         issue.init("{{$id}}");
         dialog.init("{{$id}}");
         taskbar.active("{{$id}}");
+
+        const section = document.getElementById("{{$id}}");
+        const titleInput = section.querySelector('input[name="name"]');
+        const branchInput = section.querySelector('input[data-auto-branch="true"]');
+        if (titleInput && branchInput) {
+            titleInput.addEventListener('input', function () {
+                const slug = this.value
+                    .toLowerCase()
+                    .trim()
+                    .replace(/[^a-z0-9\s-]/g, '')
+                    .replace(/\s+/g, '-')
+                    .replace(/-+/g, '-');
+                branchInput.value = slug ? 'issue/' + slug : '';
+            });
+        }
     }
 );

@@ -145,23 +145,57 @@
                             ></textarea>
                         </div>
 
+                        <div class="form-section form-section-required-steps">
+                            <label class="section-label">Required Steps</label>
+                            <ol class="required-steps-ol">
+                                <li class="required-step">
+                                    <span class="step-number">1</span>
+                                    <div class="step-content">
+                                        <label class="step-label">Git Branch</label>
+                                        <input
+                                            type="text"
+                                            name="required_steps[0][git_branch]"
+                                            class="required-step-git-branch sidebar-input"
+                                            placeholder="issue/issue-title..."
+                                            data-auto-branch="true"
+                                        />
+                                        <span class="field-hint">Auto-generated from issue title</span>
+                                    </div>
+                                </li>
+                                <li class="required-step required-step-test">
+                                    <span class="step-number">2</span>
+                                    <div class="step-content">
+                                        <label class="step-label">Testing</label>
+                                        <code class="step-command">app raxon/test run</code>
+                                        <input
+                                            type="text"
+                                            name="required_steps[1][test]"
+                                            class="sidebar-input"
+                                            placeholder="Test result or notes..."
+                                        />
+                                    </div>
+                                </li>
+                                <li class="required-step required-step-pr">
+                                    <span class="step-number">3</span>
+                                    <div class="step-content">
+                                        <label class="step-label">GitHub Pull Request</label>
+                                        <input
+                                            type="text"
+                                            name="required_steps[2][pull_request]"
+                                            class="sidebar-input"
+                                            placeholder="Pull request URL or title..."
+                                        />
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+
                         <div class="form-section">
-                            <label class="section-label">Attachments</label>
-                            <div class="attachment-drop-zone" data-field="attachment">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                <span>
-                                    Drop files here or
-                                    <label class="attachment-browse" for="attachment-input">browse</label>
-                                </span>
-                                <input
-                                    type="file"
-                                    id="attachment-input"
-                                    name="attachment[]"
-                                    multiple
-                                    class="attachment-input"
-                                />
-                            </div>
-                            <ul class="attachment-list"></ul>
+                            <label class="section-label">Files</label>
+                            <ol class="files-ol">
+                                <li><input type="text" name="files[0]" placeholder="File path..." class="sidebar-input" /></li>
+                            </ol>
+                            <button type="button" class="btn-link btn-add-file">+ Add file</button>
                         </div>
 
                     </div><!-- /form-main-column -->
