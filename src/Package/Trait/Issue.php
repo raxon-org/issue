@@ -28,6 +28,7 @@ trait Issue {
             'created' => $time,
             'modified' => $time
         ];
+        d($create);
         $response = $node->create($class, $role, $create, $options);
         d($response);
     }
