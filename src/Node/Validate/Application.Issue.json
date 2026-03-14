@@ -22,6 +22,11 @@
                 ]
               }
             }
+          ],
+          "description": [
+            {
+              "is.array": true
+            }
           ]
         }
       },
@@ -46,6 +51,11 @@
                 ]
               }
             }
+          ],
+          "description": [
+            {
+              "is.array": true
+            }
           ]
         }
       },
@@ -69,6 +79,11 @@
                   "title"
                 ]
               }
+            }
+          ],
+          "?description": [
+            {
+              "is.array": true
             }
           ]
         }

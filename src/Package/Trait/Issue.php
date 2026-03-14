@@ -21,6 +21,8 @@ trait Issue {
 
         $time = microtime(true);
 
+        ddd($options);
+
         $create = [];
         $create['user'] = $options->user->uuid ?? null;
         $create['title'] = $options->title ?? null;
