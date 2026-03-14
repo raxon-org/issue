@@ -16,6 +16,10 @@
         "type": "array"
       },
       {
+        "name": "is",
+        "type": "object"
+      },
+      {
         "name": "uuid",
         "type": "uuid"
       },

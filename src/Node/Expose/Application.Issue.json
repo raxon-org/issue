@@ -11,8 +11,19 @@
               "user",
               "title",
               "description",
+              "is",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -23,7 +34,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -38,7 +59,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -49,7 +80,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -64,7 +105,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -75,7 +126,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -90,7 +151,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -101,7 +172,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -116,7 +197,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -127,7 +218,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -142,7 +243,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -153,7 +264,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -168,7 +289,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -179,7 +310,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -194,7 +335,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -205,7 +356,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -220,7 +381,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -231,7 +402,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -246,7 +427,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -257,7 +448,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       },
@@ -272,7 +473,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           },
           {
             "role": "ROLE_ADMIN",
@@ -283,7 +494,17 @@
               "title",
               "description",
               "file"
-            ]
+            ],
+            "object": {
+              "is": {
+                "multiple": false,
+                "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              }
+            }
           }
         ]
       }
