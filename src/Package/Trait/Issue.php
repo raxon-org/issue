@@ -24,8 +24,10 @@ trait Issue {
         $create['user'] = $options->user->uuid ?? null;
         $create['title'] = $options->title ?? null;
         $create['description'] = $options->description ?? [];
-        $create['is']['created'] = $time;
-        $create['is']['modified'] = $time;
+        $create['is'] = (object) [
+            'created' => $time,
+            'modified' => $time
+        ];
         $response = $node->create($class, $role, $create, $options);
         d($response);
     }
