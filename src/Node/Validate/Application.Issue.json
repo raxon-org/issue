@@ -7,6 +7,21 @@
             {
               "is.uuid": true
             }
+          ],
+          "user": [
+            {
+              "is.uuid": true
+            }
+          ],
+          "title": [
+            {
+              "is.unique": {
+                "class": "Application.Issue",
+                "attribute": [
+                  "title"
+                ]
+              }
+            }
           ]
         }
       },
@@ -16,6 +31,21 @@
             {
               "is.uuid": true
             }
+          ],
+          "user": [
+            {
+              "is.uuid": true
+            }
+          ],
+          "title": [
+            {
+              "is.unique": {
+                "class": "Application.Issue",
+                "attribute": [
+                  "title"
+                ]
+              }
+            }
           ]
         }
       },
@@ -24,6 +54,21 @@
           "uuid": [
             {
               "is.uuid": true
+            }
+          ],
+          "?user": [
+            {
+              "is.uuid": true
+            }
+          ],
+          "?title": [
+            {
+              "is.unique": {
+                "class": "Application.Issue",
+                "attribute": [
+                  "title"
+                ]
+              }
             }
           ]
         }

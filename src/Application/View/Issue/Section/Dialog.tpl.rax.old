@@ -1,0 +1,434 @@
+{{$frontend.host = options('frontend.host')}}{{$backend.host = options('backend.host')}}{{literal}}
+<div class="dialog dialog-{{config('controller.name')}}-main">
+    <div class="head" data-title="Issue Tracker">
+        <h1><img src="{{route.get('application-issue-icon')}}" class="icon" /> Issue Tracker</h1>
+        <span class="close"><i class="fas fa-window-close"></i></span>
+        <span class="minimize"><i class="far fa-window-minimize"></i></span>
+    </div>
+    <div class="menu">
+        <ul>
+            <li class="file">File</li>
+        </ul>
+        <div class="menu-file-protector display-none"></div>
+        <div class="menu-file display-none">
+            <ul>
+                <li class="menu-file-new">New Issue</li>
+                <li class="menu-separator"></li>
+                <li class="menu-file-open">Open</li>
+                <li class="menu-separator"></li>
+                <li class="menu-file-exit">Exit</li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu-application-issue">
+        <ul>
+            <li class="active" data-view="new-issue">New Issue</li>
+            <li data-view="issue-list">Issues</li>
+            <li data-view="statistics">Statistics</li>
+        </ul>
+    </div>
+    <div class="body">
+
+        <!-- ═══════════════════════════════════════════════════════════ NEW ISSUE FORM -->
+        <div class="view view-new-issue active">
+            <form
+                class="issue-form"
+                data-backend="{{/literal}}{{$backend.host}}{{literal}}"
+                data-class="Application.Issue"
+                autocomplete="off"
+            >
+                <!-- Title row: type badge + title input -->
+                <div class="form-title-row">
+                    <div class="form-field">
+                        <select name="type" class="issue-type-select">
+                            <option value="bug">Bug</option>
+                            <option value="feature">Feature</option>
+                            <option value="improvement">Improvement</option>
+                            <option value="task" selected>Task</option>
+                            <option value="question">Question</option>
+                            <option value="note">Note</option>
+                            <option value="refactor">Refactor</option>
+                            <option value="process">Process</option>
+                        </select>
+                    </div>
+                    <div class="form-field form-field-grow">
+                        <input
+                            type="text"
+                            name="name"
+                            class="issue-title-input"
+                            placeholder="Issue title — short, clear summary..."
+                            required
+                        />
+                    </div>
+                </div>
+
+                <!-- Two-column body -->
+                <div class="form-body">
+
+                    <!-- ─── LEFT: main content ─── -->
+                    <div class="form-main-column">
+
+                        <div class="form-section">
+                            <label class="section-label">Description</label>
+                            <textarea
+                                name="description[0][content]"
+                                class="form-textarea"
+                                rows="5"
+                                placeholder="Describe the issue in detail. What is happening? What is the context? Why does it matter?"
+                            ></textarea>
+                        </div>
+
+                        <div class="form-section form-section-bug">
+                            <label class="section-label">Steps to Reproduce</label>
+                            <ol class="steps-ol">
+                                <li><input type="text" name="description[1][step][0]" placeholder="Step 1..." /></li>
+                                <li><input type="text" name="description[1][step][1]" placeholder="Step 2..." /></li>
+                                <li><input type="text" name="description[1][step][2]" placeholder="Step 3..." /></li>
+                            </ol>
+                            <button type="button" class="btn-link btn-add-step">+ Add step</button>
+                        </div>
+
+                        <div class="form-section form-columns-2 form-section-bug">
+                            <div class="form-half">
+                                <label class="section-label">Expected Behavior</label>
+                                <textarea
+                                    name="description[2][expected]"
+                                    class="form-textarea form-textarea-sm"
+                                    rows="3"
+                                    placeholder="What should happen?"
+                                ></textarea>
+                            </div>
+                            <div class="form-half">
+                                <label class="section-label">Actual Behavior</label>
+                                <textarea
+                                    name="description[3][actual]"
+                                    class="form-textarea form-textarea-sm"
+                                    rows="3"
+                                    placeholder="What actually happens?"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <label class="section-label">Environment</label>
+                            <div class="environment-grid">
+                                <div class="env-field">
+                                    <label>OS</label>
+                                    <input type="text" name="description[4][env][os]" placeholder="e.g. Ubuntu 22.04" />
+                                </div>
+                                <div class="env-field">
+                                    <label>PHP</label>
+                                    <input type="text" name="description[4][env][php]" placeholder="e.g. 8.3.0" />
+                                </div>
+                                <div class="env-field">
+                                    <label>Browser</label>
+                                    <input type="text" name="description[4][env][browser]" placeholder="e.g. Chrome 122" />
+                                </div>
+                                <div class="env-field">
+                                    <label>Raxon</label>
+                                    <input type="text" name="description[4][env][raxon]" placeholder="e.g. 2024.09.04" />
+                                </div>
+                                <div class="env-field env-field-wide">
+                                    <label>Additional Context</label>
+                                    <input type="text" name="description[4][env][context]" placeholder="Any other relevant environment details..." />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <label class="section-label">Notes &amp; Internal Comments</label>
+                            <textarea
+                                name="description[5][notes]"
+                                class="form-textarea form-textarea-sm"
+                                rows="3"
+                                placeholder="Private notes, links, workarounds, references, related commits..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-section form-section-required-steps">
+                            <label class="section-label">Required Steps</label>
+                            <ol class="required-steps-ol">
+                                <li class="required-step">
+                                    <span class="step-number">1</span>
+                                    <div class="step-content">
+                                        <label class="step-label">Git Branch</label>
+                                        <input
+                                            type="text"
+                                            name="required_steps[0][git_branch]"
+                                            class="required-step-git-branch sidebar-input"
+                                            placeholder="issue/issue-title..."
+                                            data-auto-branch="true"
+                                        />
+                                        <span class="field-hint">Auto-generated from issue title</span>
+                                    </div>
+                                </li>
+                                <li class="required-step required-step-test">
+                                    <span class="step-number">2</span>
+                                    <div class="step-content">
+                                        <label class="step-label">Testing</label>
+                                        <code class="step-command">app raxon/test run</code>
+                                        <input
+                                            type="text"
+                                            name="required_steps[1][test]"
+                                            class="sidebar-input"
+                                            placeholder="Test result or notes..."
+                                        />
+                                    </div>
+                                </li>
+                                <li class="required-step required-step-pr">
+                                    <span class="step-number">3</span>
+                                    <div class="step-content">
+                                        <label class="step-label">GitHub Pull Request</label>
+                                        <input
+                                            type="text"
+                                            name="required_steps[2][pull_request]"
+                                            class="sidebar-input"
+                                            placeholder="Pull request URL or title..."
+                                        />
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="form-section">
+                            <label class="section-label">Files</label>
+                            <ol class="files-ol">
+                                <li><input type="text" name="files[0]" placeholder="File path..." class="sidebar-input" /></li>
+                            </ol>
+                            <button type="button" class="btn-link btn-add-file">+ Add file</button>
+                        </div>
+
+                    </div><!-- /form-main-column -->
+
+                    <!-- ─── RIGHT: sidebar metadata ─── -->
+                    <div class="form-sidebar-column">
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Status</label>
+                            <select name="task[status]">
+                                <option value="open" selected>Open</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="blocked">Blocked</option>
+                                <option value="review">In Review</option>
+                                <option value="resolved">Resolved</option>
+                                <option value="closed">Closed</option>
+                                <option value="wont-fix">Won&#39;t Fix</option>
+                            </select>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Priority</label>
+                            <select name="description[6][priority]">
+                                <option value="critical">Critical</option>
+                                <option value="high">High</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="low">Low</option>
+                                <option value="trivial">Trivial</option>
+                            </select>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Severity</label>
+                            <select name="description[7][severity]">
+                                <option value="blocker">Blocker</option>
+                                <option value="critical">Critical</option>
+                                <option value="major">Major</option>
+                                <option value="minor" selected>Minor</option>
+                                <option value="cosmetic">Cosmetic</option>
+                            </select>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Linked Task</label>
+                            <input
+                                type="text"
+                                name="task[name]"
+                                placeholder="Task name..."
+                                class="sidebar-input"
+                            />
+                            <textarea
+                                name="task[description]"
+                                class="form-textarea form-textarea-xs"
+                                rows="2"
+                                placeholder="Task description..."
+                            ></textarea>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Labels</label>
+                            <input
+                                type="text"
+                                name="description[8][labels]"
+                                placeholder="frontend, api, urgent..."
+                                class="sidebar-input"
+                            />
+                            <span class="field-hint">comma-separated</span>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Component / Module</label>
+                            <input
+                                type="text"
+                                name="description[9][component]"
+                                placeholder="e.g. raxon/issue, Node, Parser"
+                                class="sidebar-input"
+                            />
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Affected Version</label>
+                            <input
+                                type="text"
+                                name="description[10][version_affected]"
+                                placeholder="e.g. 2024.09.04"
+                                class="sidebar-input"
+                            />
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Fix Version / Milestone</label>
+                            <input
+                                type="text"
+                                name="description[11][version_fix]"
+                                placeholder="e.g. 2024.10.01"
+                                class="sidebar-input"
+                            />
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Due Date</label>
+                            <input
+                                type="date"
+                                name="description[12][due_date]"
+                                class="sidebar-input"
+                            />
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Time Estimate</label>
+                            <input
+                                type="text"
+                                name="description[13][estimate]"
+                                placeholder="e.g. 2h, 1d, 3d"
+                                class="sidebar-input"
+                            />
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Related Issues</label>
+                            <input
+                                type="text"
+                                name="description[14][related]"
+                                placeholder="UUIDs or names, comma-separated"
+                                class="sidebar-input"
+                            />
+                        </div>
+
+                        <div class="sidebar-section">
+                            <label class="section-label">Source / Reference</label>
+                            <input
+                                type="text"
+                                name="description[15][source]"
+                                placeholder="URL, ticket, commit hash..."
+                                class="sidebar-input"
+                            />
+                        </div>
+
+                    </div><!-- /form-sidebar-column -->
+                </div><!-- /form-body -->
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-submit-issue">
+                        <i class="fas fa-plus"></i> Create Issue
+                    </button>
+                    <button type="reset" class="btn btn-secondary btn-reset-issue">
+                        <i class="fas fa-undo"></i> Clear
+                    </button>
+                    <span class="form-status-message"></span>
+                </div>
+
+            </form>
+        </div><!-- /view-new-issue -->
+
+        <!-- ══════════════════════════════════════════════════════════ ISSUES LIST -->
+        <div class="view view-issue-list">
+            <div class="issue-list-toolbar">
+                <select class="filter-status">
+                    <option value="">All statuses</option>
+                    <option value="open">Open</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="blocked">Blocked</option>
+                    <option value="review">In Review</option>
+                    <option value="resolved">Resolved</option>
+                    <option value="closed">Closed</option>
+                </select>
+                <select class="filter-priority">
+                    <option value="">All priorities</option>
+                    <option value="critical">Critical</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <select class="filter-type">
+                    <option value="">All types</option>
+                    <option value="bug">Bug</option>
+                    <option value="feature">Feature</option>
+                    <option value="improvement">Improvement</option>
+                    <option value="task">Task</option>
+                    <option value="note">Note</option>
+                    <option value="process">Process</option>
+                    <option value="refactor">Refactor</option>
+                </select>
+                <input type="text" class="filter-search" placeholder="Search issues..." />
+                <button type="button" class="btn btn-icon btn-refresh-list">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+            <div class="issue-list-container">
+                <div class="list-loading">
+                    <i class="fas fa-spinner fa-spin"></i> Loading issues...
+                </div>
+            </div>
+        </div><!-- /view-issue-list -->
+
+        <!-- ════════════════════════════════════════════════════════════ STATISTICS -->
+        <div class="view view-statistics">
+            <div class="stats-grid">
+                <div class="stat-card stat-open">
+                    <span class="stat-count">—</span>
+                    <span class="stat-label">Open</span>
+                </div>
+                <div class="stat-card stat-in-progress">
+                    <span class="stat-count">—</span>
+                    <span class="stat-label">In Progress</span>
+                </div>
+                <div class="stat-card stat-blocked">
+                    <span class="stat-count">—</span>
+                    <span class="stat-label">Blocked</span>
+                </div>
+                <div class="stat-card stat-resolved">
+                    <span class="stat-count">—</span>
+                    <span class="stat-label">Resolved</span>
+                </div>
+                <div class="stat-card stat-closed">
+                    <span class="stat-count">—</span>
+                    <span class="stat-label">Closed</span>
+                </div>
+                <div class="stat-card stat-total">
+                    <span class="stat-count">—</span>
+                    <span class="stat-label">Total</span>
+                </div>
+            </div>
+            <div class="stats-loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading statistics...
+            </div>
+        </div><!-- /view-statistics -->
+
+    </div><!-- /body -->
+
+    <div class="footer">
+        <span class="footer-status"></span>
+        <span class="footer-info">Application.Issue</span>
+    </div>
+</div>
+{{/literal}}

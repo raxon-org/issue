@@ -4,7 +4,7 @@
     "type": "object",
     "property": [
       {
-        "name": "name",
+        "name": "title",
         "type": "string"
       },
       {
@@ -14,29 +14,6 @@
       {
         "name": "description",
         "type": "array"
-      },
-      {
-        "name": "attachment",
-        "type": "array"
-      },
-      {
-        "name": "task",
-        "type": "object",
-        "property": [
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "status",
-            "type": "string"
-          }
-        ],
-        "multiple": false
       },
       {
         "name": "uuid",
@@ -49,6 +26,6 @@
     ]
   },
   "is.unique": [
-    "action, options.priority"
+    "title"
   ]
 }
