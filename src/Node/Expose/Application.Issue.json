@@ -11,14 +11,49 @@
               "user",
               "title",
               "description",
-              "is",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -35,12 +70,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -61,12 +132,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -83,12 +190,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -109,12 +252,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -131,12 +310,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -157,12 +372,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -179,12 +430,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -205,12 +492,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -227,12 +550,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -253,12 +612,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -275,12 +670,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -301,12 +732,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -323,12 +790,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -349,12 +852,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -371,12 +910,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -397,12 +972,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -419,12 +1030,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -445,12 +1092,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -467,12 +1150,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -493,12 +1212,48 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
+                  "created",
+                  "modified",
+                  "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -515,7 +1270,17 @@
               "title",
               "description",
               "file",
-              "is"
+              "is",
+              "type",
+              "priority",
+              "status",
+              "assignee",
+              "reporter",
+              "repository",
+              "steps_to_reproduce",
+              "resolution",
+              "result",
+              "comments"
             ],
             "object": {
               "is": {
@@ -524,6 +1289,30 @@
                   "created",
                   "modified",
                   "deleted"
+                ]
+              },
+              "repository": {
+                "multiple": false,
+                "output": [
+                  "name",
+                  "branch",
+                  "url",
+                  "commit"
+                ]
+              },
+              "result": {
+                "multiple": false,
+                "output": [
+                  "expected",
+                  "actual"
+                ]
+              },
+              "comments": {
+                "multiple": true,
+                "output": [
+                  "comment",
+                  "user",
+                  "is"
                 ]
               }
             }
