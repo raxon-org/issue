@@ -10,7 +10,8 @@
               "user",
               "issue",
               "comment",
-              "is"
+              "is",
+              "#class"
             ],
             "object": {
               "is": {
@@ -30,7 +31,8 @@
               "issue",
               "user",
               "comment",
-              "is"
+              "is",
+              "#class"
             ],
             "object": {
               "is": {
@@ -51,53 +53,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -109,53 +74,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -171,53 +99,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -229,53 +120,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -291,53 +145,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -349,53 +166,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -411,53 +191,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -469,53 +212,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -531,53 +237,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -589,53 +258,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -651,53 +283,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -709,53 +304,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -771,53 +329,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -829,53 +350,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -891,53 +375,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -949,53 +396,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -1011,53 +421,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -1069,53 +442,16 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -1131,53 +467,16 @@
             "role": "ROLE_SYSTEM",
             "property": [
               "uuid",
-              "name",
               "user",
-              "title",
-              "description",
-              "file",
+              "issue",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
                 "multiple": false,
                 "output": [
-                  "created",
-                  "modified",
-                  "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
                   "created",
                   "modified",
                   "deleted"
@@ -1189,22 +488,11 @@
             "role": "ROLE_ADMIN",
             "property": [
               "uuid",
-              "name",
+              "issue",
               "user",
-              "title",
-              "description",
-              "file",
+              "comment",
               "is",
-              "type",
-              "priority",
-              "status",
-              "assignee",
-              "reporter",
-              "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
-              "comments"
+              "#class"
             ],
             "object": {
               "is": {
@@ -1213,30 +501,6 @@
                   "created",
                   "modified",
                   "deleted"
-                ]
-              },
-              "repository": {
-                "multiple": false,
-                "output": [
-                  "name",
-                  "branch",
-                  "url",
-                  "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
-                ]
-              },
-              "comments": {
-                "multiple": true,
-                "output": [
-                  "comment",
-                  "user",
-                  "is"
                 ]
               }
             }
