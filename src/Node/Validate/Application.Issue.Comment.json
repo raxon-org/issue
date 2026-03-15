@@ -1,0 +1,80 @@
+{
+  "Application": {
+    "Issue": {
+      "Comment": {
+        "create": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "user": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "issue": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "comment": [
+              {
+                "is.array": true
+              }
+            ]
+          }
+        },
+        "put": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "user": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "issue": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "comment": [
+              {
+                "is.array": true
+              }
+            ]
+          }
+        },
+        "patch": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "?user": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "?issue": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "?comment": [
+              {
+                "is.array": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

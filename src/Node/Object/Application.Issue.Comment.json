@@ -1,0 +1,57 @@
+{
+  "Node": {
+    "#class": "Application.Issue.Comment",
+    "type": "object",
+    "property": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "user",
+        "type": "uuid"
+      },
+      {
+        "name": "issue",
+        "type": "uuid"
+      },
+      {
+        "name": "comment",
+        "type": "array"
+      },
+      {
+        "name": "is",
+        "type": "object"
+      },
+      {
+        "name": "uuid",
+        "type": "uuid"
+      },
+      {
+        "name": "#class",
+        "type": "string"
+      }
+    ]
+  },
+  "is.unique": [
+    "title"
+  ],
+  "relation": [
+    {
+      "type": "one-many",
+      "class": "Application.Issue.Comment",
+      "attribute": "comments",
+      "sort" : {
+        "is.created" : "ASC"
+      },
+      "output": {
+        "filter":[
+          "Package:Raxon:Issue:Output:Filter:Application:Issue:comment"
+        ]
+      },
+      "where": "",
+      "filter": [],
+      "limit": "*"
+    }
+  ]
+}
