@@ -60,7 +60,7 @@
         "type": "array"
       },
       {
-        "name": "comments",
+        "name": "task",
         "type": "array",
         "relation": true,
         "is_multiple": true
@@ -81,14 +81,14 @@
   "relation": [
     {
       "type": "one-many",
-      "class": "Application.Issue.Comment",
-      "attribute": "comments",
+      "class": "Application.Issue.Task",
+      "attribute": "task",
       "sort" : {
         "is.created" : "ASC"
       },
       "output": {
         "filter":[
-          "Package:Raxon:Issue:Output:Filter:Application:Issue:comment"
+          "Package:Raxon:Issue:Output:Filter:Application:Issue:task"
         ]
       },
       "where": "",

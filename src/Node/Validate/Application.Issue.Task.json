@@ -1,7 +1,7 @@
 {
   "Application": {
     "Issue": {
-      "Comment": {
+      "Task": {
         "create": {
           "validate": {
             "uuid": [
@@ -14,12 +14,7 @@
                 "is.uuid": true
               }
             ],
-            "issue": [
-              {
-                "is.uuid": true
-              }
-            ],
-            "comment": [
+            "description": [
               {
                 "is.array": true
               }
@@ -38,12 +33,7 @@
                 "is.uuid": true
               }
             ],
-            "issue": [
-              {
-                "is.uuid": true
-              }
-            ],
-            "comment": [
+            "description": [
               {
                 "is.array": true
               }
@@ -62,12 +52,7 @@
                 "is.uuid": true
               }
             ],
-            "?issue": [
-              {
-                "is.uuid": true
-              }
-            ],
-            "?comment": [
+            "?description": [
               {
                 "is.array": true
               }

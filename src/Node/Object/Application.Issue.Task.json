@@ -1,0 +1,33 @@
+{
+  "Node": {
+    "#class": "Application.Issue.Task",
+    "type": "object",
+    "property": [
+      {
+        "name": "user",
+        "type": "uuid"
+      },
+      {
+        "name": "description",
+        "type": "array"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "is",
+        "type": "object"
+      },
+      {
+        "name": "uuid",
+        "type": "uuid"
+      },
+      {
+        "name": "#class",
+        "type": "string"
+      }
+    ]
+  },
+  "is.unique": []
+}

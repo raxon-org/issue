@@ -27,6 +27,15 @@
             {
               "is.array": true
             }
+          ],
+          "type": [
+            {
+              "in.array": [
+                "bug",
+                "feature",
+                "question"
+              ]
+            }
           ]
         }
       },
@@ -56,6 +65,15 @@
             {
               "is.array": true
             }
+          ],
+          "type": [
+            {
+              "in.array": [
+                "bug",
+                "feature",
+                "question"
+              ]
+            }
           ]
         }
       },
@@ -84,6 +102,15 @@
           "?description": [
             {
               "is.array": true
+            }
+          ],
+          "?type": [
+            {
+              "in.array": [
+                "bug",
+                "feature",
+                "question"
+              ]
             }
           ]
         }
