@@ -19,7 +19,8 @@
                 "in.array": [
                   "open",
                   "processing",
-                  "closed"
+                  "success",
+                  "error"
                 ]
               }
             ]
@@ -42,7 +43,8 @@
                 "in.array": [
                   "open",
                   "processing",
-                  "closed"
+                  "success",
+                  "error"
                 ]
               }
             ]
@@ -65,7 +67,8 @@
                 "in.array": [
                   "open",
                   "processing",
-                  "closed"
+                  "success",
+                  "error"
                 ]
               }
             ]
