@@ -39,6 +39,10 @@ trait Task {
         return $node->create($class, $role, $create, $options);
     }
 
+    /**
+     * @throws ObjectException
+     * @throws Exception
+     */
     public function patch($flags, $options): void
     {
         $object = $this->object();
@@ -47,10 +51,13 @@ trait Task {
         $role = $node->role_system();
 
         $time = microtime(true);
-        if(!property_exists($options, 'description')){
-            throw new Exception('Option description is missing');
+        if(!property_exists($options, 'uuid')){
+            throw new Exception('Option uuid is missing');
         }
-        if(!is_array($options->description)){
+        if(
+            property_exists($options, 'description') &&
+            !is_array($options->description)
+        ){
             throw new Exception('Option description is not an array');
         }
         $response = $node->record($class, $role, [
