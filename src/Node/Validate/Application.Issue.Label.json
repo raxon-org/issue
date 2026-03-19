@@ -11,9 +11,6 @@
             ],
             "text": [
               {
-                "is.string": true
-              },
-              {
                 "string.length": ">=2"
               },
               {
@@ -31,9 +28,6 @@
             ],
             "text": [
               {
-                "is.string": true
-              },
-              {
                 "string.length": ">=2"
               },
               {
@@ -50,9 +44,6 @@
               }
             ],
             "?text": [
-              {
-                "is.string": true
-              },
               {
                 "string.length": ">=2"
               },
