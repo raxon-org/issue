@@ -41,7 +41,7 @@
               {
                 "in.array": [
                   "open",
-                  "progress",
+                  "processing",
                   "closed"
                 ]
               }
@@ -64,7 +64,7 @@
               {
                 "in.array": [
                   "open",
-                  "progress",
+                  "processing",
                   "closed"
                 ]
               }
