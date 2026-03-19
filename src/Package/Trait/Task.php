@@ -44,7 +44,7 @@ trait Task {
      * @throws ObjectException
      * @throws Exception
      */
-    public function patch($flags, $options): void
+    public function patch($flags, $options): false|array
     {
         $object = $this->object();
         $node = new Node($object);
@@ -79,8 +79,9 @@ trait Task {
             $data->set('status', $options->status ?? $data->get('status'));
             $data->set('description', $options->description ?? $data->get('description'));
             $data->set('is.modified', $time);
-            return $node->patch($class, $role, $data->data(), $options);
+            return $node->patch($class, $role, $data, $options);
         }
+        return false;
     }
 
     public function delete($flags, $options): void
