@@ -8,8 +8,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -29,8 +28,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -54,8 +52,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -75,8 +72,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -100,8 +96,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -121,8 +116,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -146,8 +140,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -167,8 +160,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -192,8 +184,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -213,8 +204,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -238,8 +228,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -259,8 +248,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -284,8 +272,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -305,8 +292,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -330,8 +316,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -351,8 +336,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -376,8 +360,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -397,8 +380,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -422,8 +404,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -443,8 +424,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -468,8 +448,7 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
@@ -489,8 +468,7 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
+                "description",
                 "status",
                 "is",
                 "#class"
