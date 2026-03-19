@@ -3,6 +3,7 @@ namespace Package\Raxon\Issue\Trait;
 
 use Exception;
 use Raxon\Exception\ObjectException;
+use Raxon\Module\Data;
 use Raxon\Node\Module\Node;
 
 trait Task {
@@ -69,6 +70,16 @@ trait Task {
                 ]
             ]
         ]);
+        if(
+            array_key_exists('node', $response) &&
+            is_object($response['node']) &&
+            property_exists($response['node'], 'uuid')
+        ){
+            $data = new Data($response['node']);
+            $data->set('status', $options->status ?? $data->get('status'));
+            $data->set('description', $options->description ?? $data->get('description'));
+            ddd($data);
+        }
         ddd($response);
 
         /*
