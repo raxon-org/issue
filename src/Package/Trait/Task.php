@@ -78,20 +78,9 @@ trait Task {
             $data = new Data($response['node']);
             $data->set('status', $options->status ?? $data->get('status'));
             $data->set('description', $options->description ?? $data->get('description'));
-            ddd($data);
+            $data->set('is.modified', $time);
+            return $node->patch($class, $role, $data->data(), $options);
         }
-        ddd($response);
-
-        /*
-        $create = [];
-        $create['description'] = $options->description ?? [];
-        $create['is'] = (object) [
-            'created' => $time,
-            'modified' => $time
-        ];
-        $create['status'] = $options->status ?? self::STATUS_OPEN;
-        return $node->create($class, $role, $create, $options);
-        */
     }
 
     public function delete($flags, $options): void
