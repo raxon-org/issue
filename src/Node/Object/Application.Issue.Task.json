@@ -4,10 +4,6 @@
     "type": "object",
     "property": [
       {
-        "name": "user",
-        "type": "uuid"
-      },
-      {
         "name": "description",
         "type": "array"
       },

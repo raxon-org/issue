@@ -9,14 +9,18 @@
                 "is.uuid": true
               }
             ],
-            "user": [
-              {
-                "is.uuid": true
-              }
-            ],
             "description": [
               {
                 "is.array": true
+              }
+            ],
+            "status": [
+              {
+                "in.array": [
+                  "open",
+                  "progress",
+                  "closed"
+                ]
               }
             ]
           }
@@ -28,14 +32,18 @@
                 "is.uuid": true
               }
             ],
-            "user": [
-              {
-                "is.uuid": true
-              }
-            ],
             "description": [
               {
                 "is.array": true
+              }
+            ],
+            "status": [
+              {
+                "in.array": [
+                  "open",
+                  "progress",
+                  "closed"
+                ]
               }
             ]
           }
@@ -47,14 +55,18 @@
                 "is.uuid": true
               }
             ],
-            "?user": [
-              {
-                "is.uuid": true
-              }
-            ],
             "?description": [
               {
                 "is.array": true
+              }
+            ],
+            "?status": [
+              {
+                "in.array": [
+                  "open",
+                  "progress",
+                  "closed"
+                ]
               }
             ]
           }
