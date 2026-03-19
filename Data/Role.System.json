@@ -40,6 +40,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "Application:Issue:record",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "Application:Issue:Label:create",
       "#class": "Account.Permission"
     },
@@ -76,6 +80,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "Application:Issue:Label:record",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "Application:Issue:Task:create",
       "#class": "Account.Permission"
     },
@@ -109,6 +117,10 @@
     },
     {
       "name": "Application:Issue:Task:list",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:record",
       "#class": "Account.Permission"
     }
   ]
