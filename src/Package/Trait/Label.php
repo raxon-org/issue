@@ -5,7 +5,7 @@ use Exception;
 use Raxon\Exception\ObjectException;
 use Raxon\Node\Module\Node;
 
-trait Issue {
+trait Label {
     const NAME = 'Issue';
 
     /**
