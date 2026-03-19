@@ -59,8 +59,11 @@ trait Label {
 
     public function list($flags, $options): void
     {
-        d($options);
-        d($flags);
-
+        $object = $this->object();
+        $node = new Node($object);
+        $class = 'Application.Issue.Label';
+        $role = $node->role_system();
+        $response = $node->list($class, $role, $options);
+        d($response);
     }
 }
