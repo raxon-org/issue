@@ -59,6 +59,8 @@ trait Label {
 
     public function list($flags, $options): void
     {
+        d($options);
+        d($flags);
 
     }
 }
