@@ -39,9 +39,41 @@ trait Task {
         return $node->create($class, $role, $create, $options);
     }
 
-    public function update($flags, $options): void
+    public function patch($flags, $options): void
     {
+        $object = $this->object();
+        $node = new Node($object);
+        $class = self::NAME;
+        $role = $node->role_system();
 
+        $time = microtime(true);
+        if(!property_exists($options, 'description')){
+            throw new Exception('Option description is missing');
+        }
+        if(!is_array($options->description)){
+            throw new Exception('Option description is not an array');
+        }
+        $response = $node->record($class, $role, [
+            'where' => [
+                [
+                    'value' => $options->uuid,
+                    'attribute' => 'uuid',
+                    'operator' => '==='
+                ]
+            ]
+        ]);
+        ddd($response);
+
+        /*
+        $create = [];
+        $create['description'] = $options->description ?? [];
+        $create['is'] = (object) [
+            'created' => $time,
+            'modified' => $time
+        ];
+        $create['status'] = $options->status ?? self::STATUS_OPEN;
+        return $node->create($class, $role, $create, $options);
+        */
     }
 
     public function delete($flags, $options): void

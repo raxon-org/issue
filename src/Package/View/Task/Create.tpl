@@ -1,2 +1,2 @@
-{{$create = Package.Raxon.Issue:Task:create(flags(), options())}}
-{{$create|>object:'json'}}
+{{$response = Package.Raxon.Issue:Task:create(flags(), options())}}
+{{$response|>object:'json'}}
