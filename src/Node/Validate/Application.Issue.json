@@ -21,6 +21,12 @@
                   "title"
                 ]
               }
+            },
+            {
+              "string.length": ">=3"
+            },
+            {
+              "string.length": "<=80"
             }
           ],
           "description": [
@@ -59,6 +65,12 @@
                   "title"
                 ]
               }
+            },
+            {
+              "string.length": ">=3"
+            },
+            {
+              "string.length": "<=80"
             }
           ],
           "description": [
@@ -96,6 +108,7 @@
                 "attribute": [
                   "title"
                 ]
+              }
             },
             {
               "string.length": ">=3"
