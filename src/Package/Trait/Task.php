@@ -23,20 +23,11 @@ trait Task {
         $role = $node->role_system();
 
         $time = microtime(true);
-        if(!property_exists($options, 'text')){
-            throw new Exception('Option text is missing');
+        if(!property_exists($options, 'description')){
+            throw new Exception('Option description is missing');
         }
-        if(
-            property_exists($options, 'color') &&
-            !property_exists($options->color, 'text')
-        ){
-            throw new Exception('Color text is missing');
-        }
-        if(
-            property_exists($options, 'color') &&
-            !property_exists($options->color, 'background')
-        ){
-            throw new Exception('Color background is missing');
+        if(!is_array($options->description)){
+            throw new Exception('Option description is not an array');
         }
         $create = [];
         $create['description'] = $options->description ?? [];
