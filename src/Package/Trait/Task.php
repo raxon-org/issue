@@ -5,8 +5,8 @@ use Exception;
 use Raxon\Exception\ObjectException;
 use Raxon\Node\Module\Node;
 
-trait Label {
-    const NAME = 'Application.Issue.Label';
+trait Task {
+    const NAME = 'Application.Issue.Task';
 
     /**
      * @throws ObjectException
@@ -43,7 +43,6 @@ trait Label {
             'modified' => $time
         ];
         return $node->create($class, $role, $create, $options);
-
     }
 
     public function update($flags, $options): void
@@ -56,10 +55,6 @@ trait Label {
 
     }
 
-    /**
-     * @throws ObjectException
-     * @throws Exception
-     */
     public function list($flags, $options): array
     {
         $object = $this->object();

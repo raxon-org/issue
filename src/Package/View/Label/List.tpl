@@ -1,1 +1,2 @@
-{{Package.Raxon.Issue:Label:list(flags(), options())}}
+{{$response = Package.Raxon.Issue:Label:list(flags(), options())}}
+{{$response|>object:'json'}}

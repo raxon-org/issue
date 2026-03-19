@@ -6,17 +6,17 @@ use Raxon\Exception\ObjectException;
 use Raxon\Node\Module\Node;
 
 trait Issue {
-    const NAME = 'Issue';
+    const NAME = 'Application.Issue';
 
     /**
      * @throws ObjectException
      * @throws Exception
      */
-    public function create($flags, $options): void
+    public function create($flags, $options): false|array
     {
         $object = $this->object();
         $node = new Node($object);
-        $class = 'Application.Issue';
+        $class = self::NAME;
         $role = $node->role_system();
 
         $time = microtime(true);
@@ -28,9 +28,7 @@ trait Issue {
             'created' => $time,
             'modified' => $time
         ];
-        d($create);
-        $response = $node->create($class, $role, $create, $options);
-        d($response);
+        return $node->create($class, $role, $create, $options);
     }
 
     public function update($flags, $options): void
@@ -43,8 +41,16 @@ trait Issue {
 
     }
 
-    public function list($flags, $options): void
+    /**
+     * @throws ObjectException
+     * @throws Exception
+     */
+    public function list($flags, $options): array
     {
-
+        $object = $this->object();
+        $node = new Node($object);
+        $class = self::NAME;
+        $role = $node->role_system();
+        return $node->list($class, $role, $options);
     }
 }
