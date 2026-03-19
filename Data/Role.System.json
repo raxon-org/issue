@@ -34,6 +34,38 @@
     {
       "name": "Application:Issue:delete.many",
       "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:create",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:create.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:put",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:put.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:patch",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:patch.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:delete.many",
+      "#class": "Account.Permission"
     }
   ]
 }
