@@ -74,6 +74,42 @@
     {
       "name": "Application:Issue:Label:list",
       "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:create",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:create.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:put",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:put.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:patch",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:patch.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:delete.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Task:list",
+      "#class": "Account.Permission"
     }
   ]
 }
