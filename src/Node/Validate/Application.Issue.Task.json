@@ -18,7 +18,7 @@
               {
                 "in.array": [
                   "open",
-                  "progress",
+                  "processing",
                   "closed"
                 ]
               }

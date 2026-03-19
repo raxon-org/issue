@@ -7,6 +7,9 @@ use Raxon\Node\Module\Node;
 
 trait Task {
     const NAME = 'Application.Issue.Task';
+    const STATUS_OPEN = 'open';
+    const STATUS_CLOSED = 'closed';
+    const STATUS_PROCESSING = 'processing';
 
     /**
      * @throws ObjectException
@@ -36,12 +39,12 @@ trait Task {
             throw new Exception('Color background is missing');
         }
         $create = [];
-        $create['text'] = $options->text ?? null;
-        $create['color'] = $options->color ?? (object) ['text' => 'rgba(0,0,0,0.54)', 'background' => 'rgba(255, 255, 255, 0.8)'];
+        $create['description'] = $options->description ?? [];
         $create['is'] = (object) [
             'created' => $time,
             'modified' => $time
         ];
+        $create['status'] = $options->status ?? self::STATUS_OPEN;
         return $node->create($class, $role, $create, $options);
     }
 
