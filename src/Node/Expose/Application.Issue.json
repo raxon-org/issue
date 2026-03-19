@@ -22,7 +22,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -71,7 +72,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -124,7 +126,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -173,7 +176,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -226,7 +230,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -275,7 +280,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -328,7 +334,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -377,7 +384,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -430,7 +438,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -479,7 +488,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -532,7 +542,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -581,7 +592,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -634,7 +646,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -683,7 +696,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -736,7 +750,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -785,7 +800,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -838,7 +854,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -887,7 +904,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -940,7 +958,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -989,7 +1008,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -1042,7 +1062,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {
@@ -1091,7 +1112,8 @@
               "steps_to_reproduce",
               "resolution",
               "result",
-              "comments",
+              "task",
+              "label",
               "#class"
             ],
             "object": {

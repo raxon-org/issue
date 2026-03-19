@@ -1,0 +1,68 @@
+{
+  "Application": {
+    "Issue": {
+      "Label": {
+        "create": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "text": [
+              {
+                "is.string": true
+              },
+              {
+                "string.length": ">=2"
+              },
+              {
+                "string.length": "<=20"
+              }
+            ]
+          }
+        },
+        "put": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "text": [
+              {
+                "is.string": true
+              },
+              {
+                "string.length": ">=2"
+              },
+              {
+                "string.length": "<=20"
+              }
+            ]
+          }
+        },
+        "patch": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "?text": [
+              {
+                "is.string": true
+              },
+              {
+                "string.length": ">=2"
+              },
+              {
+                "string.length": "<=20"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "Node": {
+    "#class": "Application.Issue.Label",
+    "type": "object",
+    "property": [
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "is",
+        "type": "object"
+      },
+      {
+        "name": "color",
+        "type": "object"
+      },
+      {
+        "name": "uuid",
+        "type": "uuid"
+      },
+      {
+        "name": "#class",
+        "type": "string"
+      }
+    ]
+  },
+  "is.unique": [
+    "text"
+  ]
+}

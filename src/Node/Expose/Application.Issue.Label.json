@@ -1,20 +1,26 @@
 {
   "Application": {
     "Issue": {
-      "Task": {
+      "Label": {
         "count": {
           "output": [
             {
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -29,13 +35,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -54,13 +66,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -75,13 +93,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -100,13 +124,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -121,13 +151,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -146,13 +182,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -167,13 +209,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -192,13 +240,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -213,13 +267,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -238,13 +298,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -259,13 +325,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -284,13 +356,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -305,13 +383,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -330,13 +414,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -351,13 +441,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -376,13 +472,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -397,13 +499,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -422,13 +530,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -443,13 +557,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -468,13 +588,19 @@
               "role": "ROLE_SYSTEM",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [
@@ -489,13 +615,19 @@
               "role": "ROLE_ADMIN",
               "property": [
                 "uuid",
-                "user",
-                "comment",
-                "status",
+                "color",
+                "text",
                 "is",
                 "#class"
               ],
               "object": {
+                "color": {
+                  "multiple": false,
+                  "output": [
+                    "text",
+                    "background"
+                  ]
+                },
                 "is": {
                   "multiple": false,
                   "output": [

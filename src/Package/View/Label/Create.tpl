@@ -1,0 +1,1 @@
+{{Package.Raxon.Issue:Label:create(flags(), options())}}
