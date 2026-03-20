@@ -32,6 +32,12 @@
           "description": [
             {
               "is.array": true
+            },
+            {
+              "in.array.word.count": ">= 3"
+            },
+            {
+              "in.array.word.count": "<= 50"
             }
           ],
           "type": [
@@ -76,6 +82,12 @@
           "description": [
             {
               "is.array": true
+            },
+            {
+              "in.array.word.count": ">= 3"
+            },
+            {
+              "in.array.word.count": "<= 50"
             }
           ],
           "type": [
@@ -120,6 +132,12 @@
           "?description": [
             {
               "is.array": true
+            },
+            {
+              "in.array.word.count": ">= 3"
+            },
+            {
+              "in.array.word.count": "<= 50"
             }
           ],
           "?type": [

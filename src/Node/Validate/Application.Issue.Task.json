@@ -12,6 +12,12 @@
             "description": [
               {
                 "is.array": true
+              },
+              {
+                "in.array.word.count": ">= 3"
+              },
+              {
+                "in.array.word.count": "<= 50"
               }
             ],
             "status": [
@@ -36,6 +42,12 @@
             "description": [
               {
                 "is.array": true
+              },
+              {
+                "in.array.word.count": ">= 3"
+              },
+              {
+                "in.array.word.count": "<= 50"
               }
             ],
             "status": [
@@ -60,6 +72,12 @@
             "?description": [
               {
                 "is.array": true
+              },
+              {
+                "in.array.word.count": ">= 3"
+              },
+              {
+                "in.array.word.count": "<= 50"
               }
             ],
             "?status": [
