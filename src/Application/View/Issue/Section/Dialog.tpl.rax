@@ -30,13 +30,14 @@
         </ul>
     </div>
     <div class="body">
-    <div class="issue-list display-none">
+        <div class="issue-list display-none">
 
 
-    </div>
-    <div class="issue-new display-none">
-        <input type="text" name="title" placeholder="Title" />
-        <textarea name="description" placeholder="Description"></textarea>
+        </div>
+        <div class="issue-new display-none">
+            <input type="text" name="title" placeholder="Title" />
+            <textarea name="description" placeholder="Description"></textarea>
+        </div>
     </div>
     <div class="footer">
         <button class="button-save">Save</button>
@@ -44,6 +45,5 @@
         <span class="footer-status"></span>
         <span class="footer-info">Application.Issue</span>
     </div>
-</div>
 </form>
 {{/literal}}

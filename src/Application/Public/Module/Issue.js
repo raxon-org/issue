@@ -106,7 +106,16 @@ issue.list = (id) => {
     }
     console.log(section);
     const url = storage.data.get('backend.issue.list');
-    console.log(url);
+
+    const data = {
+
+    };
+
+    const tab = section.select('.issue-list')
+
+    request(url, data, (url, response) => {
+        console.log(response);
+    })
 }
 
 export { issue }
