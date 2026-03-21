@@ -7,8 +7,6 @@ section[name="application-issue"] {
 section[name="application-issue"] .dialog {
     width: 700px;
     height: 580px;
-    top: calc(50% - 340px);
-    left: calc(50% - 450px);
 }
 
 /* ─── head ─── */
