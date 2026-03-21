@@ -2,6 +2,7 @@ import { taskbar } from "/Application/Desktop/Module/Taskbar.js";
 import { getSectionById } from "/Module/Section.js";
 import { dialog } from "/Dialog/Module/Dialog.js";
 import { file } from "/Application/Filemanager/Module/File.js";
+import { storage } from "/Application/Issue/Module/Storage.js"
 import user from "/Module/User.js";
 
 let issue = {};
@@ -12,6 +13,7 @@ issue.init = (id) => {
     issue.menu(id);
     issue.menu_application(id);
     issue.close(id);
+    issue.list(id);
 }
 
 issue.close = (id) => {
@@ -96,5 +98,14 @@ issue.menu = (id) => {
     }
     dialog.click(section, '.menu');
 }
+
+issue.list = (id) => {
+    const section = getSectionById(id);
+    if(!section){
+        return;
+    }
+    console.log(section);
+    const url = storage.data.get('backend.issue.list');
+    console.log(url);
 
 export { issue }

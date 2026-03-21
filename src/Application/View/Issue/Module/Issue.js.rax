@@ -1,0 +1,24 @@
+//{{RAX}}
+import { version } from "/Module/Priya.js";
+import { root } from "/Module/Web.js";
+import { dialog } from "/Dialog/Module/Dialog.js";
+import { issue } from "/Application/Issue/Module/Issue.js"
+import { storage } from "/Application/Issue/Module/Storage.js"
+import { taskbar } from "/Application/Desktop/Module/Taskbar.js";
+require(
+    [
+        root() + 'Application/Issue/Css/Issue.css?' + version(),
+        root() + 'Dialog/Css/Dialog.css?' + version(),
+    ],
+    function(){
+        storage.data.set('backend.issue.list', "{{/literal}}{{$backend.host}}{{literal}}Node/Application.Issue/");
+        storage.data.set('backend.issue.detail', "{{/literal}}{{$backend.host}}{{literal}}Node/Application.Issue/");
+        storage.data.set('backend.issue.label.list', "{{/literal}}{{$backend.host}}{{literal}}Node/Application.Issue.Label/");
+        storage.data.set('backend.issue.label.detail', "{{/literal}}{{$backend.host}}{{literal}}Node/Application.Issue.Label/");
+        storage.data.set('backend.issue.task.list', "{{/literal}}{{$backend.host}}{{literal}}Node/Application.Issue.Task/");
+        storage.data.set('backend.issue.task.detail', "{{/literal}}{{$backend.host}}{{literal}}Node/Application.Issue.Task/");
+        issue.init("{{$id}}");
+        dialog.init("{{$id}}");
+        taskbar.active("{{$id}}");
+    }
+);

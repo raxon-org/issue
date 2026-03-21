@@ -23,14 +23,18 @@
     </div>
     <div class="menu-application-issue">
         <ul>
-            <li data-view="issue-list">Issues</li>
-            <li class="active" data-view="new-issue">New Issue</li>
-
-            <li data-view="statistics">Labels</li>
-            <li data-view="statistics">Tasks</li>
+            <li class="active" data-tab="issue-list">Issues</li>
+            <li data-tab="issue-new">New Issue</li>
+            <li data-tab="label-list">Labels</li>
+            <li data-tab="task-list">Tasks</li>
         </ul>
     </div>
     <div class="body">
+    <div class="issue-list display-none">
+
+
+    </div>
+    <div class="issue-new display-none">
         <input type="text" name="title" placeholder="Title" />
         <textarea name="description" placeholder="Description"></textarea>
     </div>
