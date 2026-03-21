@@ -113,7 +113,7 @@ issue.list = (id) => {
 
     const tab = section.select('.issue-list')
 
-    const token = user.data.get('token');
+    const token = user.token();
     if(token){
         header('Authorization', 'Bearer ' + token);
         request(url, data, (url, response) => {
