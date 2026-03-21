@@ -1,3 +1,4 @@
+{{$backend.host = options('backend.host')}}{{$frontend.host = options('frontend.host')}}{{literal}}
 //{{RAX}}
 import { version } from "/Module/Priya.js";
 import { root } from "/Module/Web.js";
@@ -22,3 +23,4 @@ require(
         taskbar.active("{{$id}}");
     }
 );
+{{/literal}}
