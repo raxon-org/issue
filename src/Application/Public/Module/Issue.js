@@ -108,7 +108,11 @@ issue.list = (id) => {
     const url = storage.data.get('backend.issue.list');
 
     const data = {
-
+        "output": {
+            "filter": [
+                "Package:Raxon:Issue:Output:Filter:Application:Issue:task"
+            ]
+        }
     };
 
     const tab = section.select('.issue-list')

@@ -62,11 +62,6 @@
   "is.unique": [
     "title"
   ],
-  "output": {
-    "filter":[
-      "Package:Raxon:Issue:Output:Filter:Application:Issue:issue"
-    ]
-  },
   "relation": [
     {
       "type": "one-many",
