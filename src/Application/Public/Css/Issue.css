@@ -4,8 +4,11 @@ section[name="application-issue"] {
 }
 
 section[name="application-issue"] .dialog {
-    width: 700px;
-    height: 580px;
+    width: calc(100% - 250px);
+    min-width: 640px;
+    height: calc(100% - 100px);
+    left: 200px;
+    top: 50px;
 }
 
 /* ─── head ─── */
