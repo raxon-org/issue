@@ -24,10 +24,6 @@
         "type": "object"
       },
       {
-        "name": "type",
-        "type": "string"
-      },
-      {
         "name": "priority",
         "type": "string"
       },
@@ -46,18 +42,6 @@
       {
         "name": "repository",
         "type": "object"
-      },
-      {
-        "name": "result",
-        "type": "object"
-      },
-      {
-        "name": "steps_to_reproduce",
-        "type": "array"
-      },
-      {
-        "name": "resolution",
-        "type": "array"
       },
       {
         "name": "task",
@@ -85,6 +69,22 @@
       "attribute": "task",
       "sort" : {
         "is.created" : "ASC"
+      },
+      "output": {
+        "filter":[
+          "Package:Raxon:Issue:Output:Filter:Application:Issue:task"
+        ]
+      },
+      "where": "",
+      "filter": [],
+      "limit": "*"
+    },
+    {
+      "type": "one-many",
+      "class": "Application.Issue.Label",
+      "attribute": "label",
+      "sort" : {
+        "name" : "ASC"
       },
       "output": {
         "filter":[

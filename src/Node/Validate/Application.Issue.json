@@ -40,12 +40,22 @@
               "in.array.word.count": "<= 50"
             }
           ],
-          "type": [
+          "priority": [
             {
               "in.array": [
-                "bug",
-                "feature",
-                "question"
+                "low",
+                "medium",
+                "high",
+                "critical"
+              ]
+            }
+          ],
+          "status": [
+            {
+              "in.array": [
+                "open",
+                "processing",
+                "closed"
               ]
             }
           ]
@@ -90,12 +100,22 @@
               "in.array.word.count": "<= 50"
             }
           ],
-          "type": [
+          "priority": [
             {
               "in.array": [
-                "bug",
-                "feature",
-                "question"
+                "low",
+                "medium",
+                "high",
+                "critical"
+              ]
+            }
+          ],
+          "status": [
+            {
+              "in.array": [
+                "open",
+                "processing",
+                "closed"
               ]
             }
           ]
@@ -140,12 +160,22 @@
               "in.array.word.count": "<= 50"
             }
           ],
-          "?type": [
+          "?priority": [
             {
               "in.array": [
-                "bug",
-                "feature",
-                "question"
+                "low",
+                "medium",
+                "high",
+                "critical"
+              ]
+            }
+          ],
+          "?status": [
+            {
+              "in.array": [
+                "open",
+                "processing",
+                "closed"
               ]
             }
           ]

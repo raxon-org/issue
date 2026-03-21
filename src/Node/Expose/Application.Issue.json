@@ -13,15 +13,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -42,13 +38,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -92,13 +81,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -117,15 +99,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -146,13 +124,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -196,13 +167,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -221,15 +185,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -250,13 +210,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -300,13 +253,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -325,15 +271,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -354,13 +296,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -404,13 +339,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -429,15 +357,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -458,13 +382,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -508,13 +425,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -533,15 +443,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -562,13 +468,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -612,13 +511,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -637,15 +529,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -666,13 +554,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -716,13 +597,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -741,15 +615,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -770,13 +640,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -820,13 +683,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -845,15 +701,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -874,13 +726,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -924,13 +769,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -949,15 +787,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -978,13 +812,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -1028,13 +855,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -1053,15 +873,11 @@
               "description",
               "file",
               "is",
-              "type",
               "priority",
               "status",
               "assignee",
               "reporter",
               "repository",
-              "steps_to_reproduce",
-              "resolution",
-              "result",
               "task",
               "label",
               "#class"
@@ -1082,13 +898,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
@@ -1132,13 +941,6 @@
                   "branch",
                   "url",
                   "commit"
-                ]
-              },
-              "result": {
-                "multiple": false,
-                "output": [
-                  "expected",
-                  "actual"
                 ]
               }
             }
