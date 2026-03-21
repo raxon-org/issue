@@ -101,11 +101,12 @@ issue.menu = (id) => {
 
 issue.list = (id) => {
     const section = getSectionById(id);
-    if(!section){
+    if (!section) {
         return;
     }
     console.log(section);
     const url = storage.data.get('backend.issue.list');
     console.log(url);
+}
 
 export { issue }
