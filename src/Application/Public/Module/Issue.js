@@ -113,9 +113,13 @@ issue.list = (id) => {
 
     const tab = section.select('.issue-list')
 
-    request(url, data, (url, response) => {
-        console.log(response);
-    })
+    const token = user.data.get('token');
+    if(token){
+        header('Authorization', 'Bearer ' + token);
+        request(url, data, (url, response) => {
+            console.log(response);
+        });
+    }
 }
 
 export { issue }
