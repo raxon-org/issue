@@ -38,13 +38,34 @@ class Issue extends Controller {
         if($connection === null){
             throw new ErrorException('Connection not configured.');
         }
-        $user[] = '20b9de29-4798-464e-b25d-f7dba6897d4a';
-        d($user);
         $connection->manager = Database::entity_manager($object, $config, $connection);
         $repository = $connection->manager->getRepository(Entity::class);
         $user_list = $repository->findBy([
             'uuid' => $user
         ]);
-        ddd($user_list);
+        $user = [];
+        foreach($user_list as $entity){
+            $user[$entity->getUuid()] = $entity;
+        }
+        if(
+            !empty($response) &&
+            (
+                is_object($response) ||
+                is_array($response)
+            )
+        ) {
+            foreach ($response as $nr => $record) {
+                if (
+                    is_object($record) &&
+                    property_exists($record, 'user')
+                ) {
+                    $record->user = (object) [
+                        'uuid' => $record['user'],
+                        'email' => $user[$record->user->uuid]->getEmail(),
+                    ];
+                }
+            }
+        }
+        return $response;
     }
 }
