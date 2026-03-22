@@ -113,7 +113,7 @@ issue.list = (id) => {
                 "Package:Raxon:Issue:Output:Filter:Application:Issue:task"
             ]
         },
-        "method": "GET"
+        "request-method": "GET"
     };
 
     const tab = section.select('.issue-list')
