@@ -1,8 +1,11 @@
 <?php
 namespace Package\Raxon\Issue\Output\Filter\Application;
 
+use Entity\User as Entity;
 use Raxon\App;
 
+use Raxon\Doctrine\Module\Database;
+use Raxon\Exception\ErrorException;
 use Raxon\Module\Controller;
 
 class Issue extends Controller {
@@ -11,8 +14,7 @@ class Issue extends Controller {
     public static function filter(App $object, $response=null): array | object
     {
         $result = [];
-        $count = 0;
-        ddd($response);
+        $user = [];
         if(
             !empty($response) &&
             (
@@ -22,25 +24,25 @@ class Issue extends Controller {
         ) {
             foreach ($response as $nr => $record) {
                 if (
-                    is_array($record) &&
-                    array_key_exists('name', $record)
-                ) {
-                    $result[$record['name']] = $record;
-                    $count++;
-                } elseif (
                     is_object($record) &&
-                    property_exists($record, 'name')
+                    property_exists($record, 'user')
                 ) {
-                    $result[$record->name] = $record;
-                    $count++;
+                    if(!in_array($record->user, $user, true)){
+                        $user[] = $record->user;
+                    }
                 }
             }
         }
-        if($count > 0){
-            return (object) $result;
-        } else {
-            return $response;
+        $config = Database::config($object);
+        $connection = $object->config('doctrine.environment.system.*');
+        if($connection === null){
+            throw new ErrorException('Connection not configured.');
         }
-
+        $connection->manager = Database::entity_manager($object, $config, $connection);
+        $repository = $connection->manager->getRepository(Entity::class);
+        $user_list = $repository->findBy([
+            'uuid' => $user
+        ]);
+        ddd($user_list);
     }
 }
