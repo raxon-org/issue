@@ -8,7 +8,7 @@ use Raxon\Module\Controller;
 class Issue extends Controller {
     const DIR = __DIR__ . '/';
 
-    public static function comment(App $object, $response=null): array | object
+    public static function filter(App $object, $response=null): array | object
     {
         $result = [];
         $count = 0;
