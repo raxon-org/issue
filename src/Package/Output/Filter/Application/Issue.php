@@ -60,7 +60,7 @@ class Issue extends Controller {
                     property_exists($record, 'user')
                 ) {
                     $record->user = (object) [
-                        'uuid' => $record['user'],
+                        'uuid' => $record->user,
                         'email' => $user[$record->user->uuid]->getEmail(),
                     ];
                 }
