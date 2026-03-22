@@ -110,7 +110,8 @@ issue.list = (id) => {
     const data = {
         "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:filter",
         "where[]": "description in.array test1",
-        "request-method": "GET"
+        "request-method": "GET",
+        "debug": "true"
     };
 
     const tab = section.select('.issue-list')
