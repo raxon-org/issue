@@ -109,6 +109,7 @@ issue.list = (id) => {
 
     const data = {
         "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:filter",
+        "where[]": {}
         "request-method": "GET"
     };
 
