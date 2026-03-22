@@ -61,7 +61,7 @@ class Issue extends Controller {
                 ) {
                     $record->user = (object) [
                         'uuid' => $record->user,
-                        'email' => $user[$record->user->uuid]->getEmail(),
+                        'email' => $user[$record->user]->getEmail(),
                     ];
                 }
             }
