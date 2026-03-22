@@ -38,6 +38,7 @@ class Issue extends Controller {
         if($connection === null){
             throw new ErrorException('Connection not configured.');
         }
+        d($user);
         $connection->manager = Database::entity_manager($object, $config, $connection);
         $repository = $connection->manager->getRepository(Entity::class);
         $user_list = $repository->findBy([
