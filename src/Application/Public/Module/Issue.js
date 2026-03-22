@@ -108,11 +108,9 @@ issue.list = (id) => {
     const url = storage.data.get('backend.issue.list');
 
     const data = {
-        "output": {
-            "filter": [
-                "Package:Raxon:Issue:Output:Filter:Application:Issue:task"
-            ]
-        },
+        "output.filter": [
+            "Package:Raxon:Issue:Output:Filter:Application:Issue:task"
+        ],
         "request-method": "GET"
     };
 
