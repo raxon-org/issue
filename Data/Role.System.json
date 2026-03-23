@@ -122,6 +122,46 @@
     {
       "name": "Application:Issue:Task:record",
       "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:create",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:create.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:put",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:put.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:patch",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:patch.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:delete",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:delete.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:list",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:record",
+      "#class": "Account.Permission"
     }
   ]
 }
