@@ -107,7 +107,7 @@ issue.config = (id) => {
     const url = storage.data.get('backend.issue.config');
     const token = user.token();
     const data = {
-        "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:config",
+        "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.config",
         "where": "user === " + user.get('uuid'),
         "request-method": "GET",
     };
