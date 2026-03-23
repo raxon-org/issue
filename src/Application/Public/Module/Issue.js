@@ -151,6 +151,7 @@ issue.config = (id) => {
                         }
                     }
                 }
+                header('Authorization', 'Bearer ' + token);
                 request(url, data, (url, create) => {
                     console.log(create);
                     storage.data.set('issue.config', create);
