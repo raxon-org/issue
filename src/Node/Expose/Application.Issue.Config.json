@@ -1,0 +1,580 @@
+{
+  "Application": {
+    "Issue": {
+      "Config": {
+        "count": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "list": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "page": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "read": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "record": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "create": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "create_many": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "put": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "put_many": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "patch": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        },
+        "patch_many": {
+          "output": [
+            {
+              "role": "ROLE_SYSTEM",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            },
+            {
+              "role": "ROLE_ADMIN",
+              "property": [
+                "uuid",
+                "user",
+                "is",
+                "options",
+                "#class"
+              ],
+              "object": {
+                "is": {
+                  "multiple": false,
+                  "output": [
+                    "created",
+                    "modified",
+                    "deleted"
+                  ]
+                },
+                "options": {
+                  "multiple": false,
+                  "dynamic": true
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

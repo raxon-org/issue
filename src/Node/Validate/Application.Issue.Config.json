@@ -1,0 +1,50 @@
+{
+  "Application": {
+    "Issue": {
+      "Config": {
+        "create": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "?user": [
+              {
+                "is.uuid": true
+              }
+            ]
+          }
+        },
+        "put": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "user": [
+              {
+                "is.uuid": true
+              }
+            ]
+          }
+        },
+        "patch": {
+          "validate": {
+            "uuid": [
+              {
+                "is.uuid": true
+              }
+            ],
+            "?user": [
+              {
+                "is.uuid": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

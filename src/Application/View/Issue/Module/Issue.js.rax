@@ -12,6 +12,7 @@ require(
         root() + 'Dialog/Css/Dialog.css?' + version(),
     ],
     function(){
+        storage.data.set('backend.issue.config', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue.Config/");
         storage.data.set('backend.issue.list', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue/");
         storage.data.set('backend.issue.detail', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue/");
         storage.data.set('backend.issue.label.list', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue.Label/");

@@ -1,0 +1,31 @@
+{
+  "Node": {
+    "#class": "Application.Issue.Config",
+    "type": "object",
+    "property": [
+      {
+        "name": "is",
+        "type": "object"
+      },
+      {
+        "name": "options",
+        "type": "object"
+      },
+      {
+        "name": "uuid",
+        "type": "uuid"
+      },
+      {
+        "name": "user",
+        "type": "uuid"
+      },
+      {
+        "name": "#class",
+        "type": "string"
+      }
+    ]
+  },
+  "is.unique": [
+    "user"
+  ]
+}
