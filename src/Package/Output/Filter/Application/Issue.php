@@ -68,4 +68,9 @@ class Issue extends Controller {
         }
         return $response;
     }
+
+    public static function issue_config(App $object, $response=null): null|array
+    {
+        return $response;
+    }
 }
