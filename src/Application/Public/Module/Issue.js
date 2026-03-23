@@ -118,35 +118,25 @@ issue.config = (id) => {
             if(response?.count === 0){
                 //init config
                 const data = {
-                    user : user.get('uuid'),
-                    options : {
-                        list : {
-                            node: {
-                                output : {
-                                    filter : [
-                                        "Package:Raxon:Issue:Output:Filter:Application:Issue:filter"
-                                    ]
+                    node : {
+                        user : user.get('uuid'),
+                        options : {
+                            list : {
+                                node: {
+                                    output : {
+                                        filter : [
+                                            "Package:Raxon:Issue:Output:Filter:Application:Issue:filter"
+                                        ]
+                                    },
+                                    page : 1,
+                                    limit : 30,
+                                    sort: {
+                                        "title": "ASC"
+                                    },
+                                    where: "",
+                                    "request-method": "GET"
                                 },
-                                page : 1,
-                                limit : 30,
-                                sort: {
-                                    "title": "ASC"
-                                },
-                                where: "",
-                                "request-method": "GET"
-                            },
-                            selector: ".issue-list",
-                            backend: {
-                                "list": storage.data.get('backend.issue.list'),
-                                "detail": storage.data.get('backend.issue.detail'),
-                                "label": {
-                                    "list": storage.data.get('backend.issue.label.list'),
-                                    "detail": storage.data.get('backend.issue.label.detail'),
-                                },
-                                "task": {
-                                    "list": storage.data.get('backend.issue.task.list'),
-                                    "detail": storage.data.get('backend.issue.task.detail'),
-                                }
+                                selector: ".issue-list"
                             }
                         }
                     }
@@ -154,13 +144,22 @@ issue.config = (id) => {
                 header('Authorization', 'Bearer ' + token);
                 request(url, data, (url, create) => {
                     console.log(create);
-                    storage.data.set('issue.config', create);
+                    const data = {
+                        "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.config",
+                        "where": "user === " + user.get('uuid'),
+                        "request-method": "GET",
+                    };
+                    header('Authorization', 'Bearer ' + token);
+                    request(url, data, (url, response) => {
+                        storage.data.set('issue.config', response?.list[0]);
+                        //we can hold active tab in storage and then load it
+                        issue.list(id);
+                    });
                 });
             } else {
                 storage.data.set('issue.config', response?.list[0]);
                 issue.list(id);
             }
-
         });
     }
 }
