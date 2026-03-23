@@ -13,7 +13,7 @@ issue.init = (id) => {
     issue.menu(id);
     issue.menu_application(id);
     issue.close(id);
-    issue.list(id);
+    issue.config(id);
 }
 
 issue.close = (id) => {
@@ -98,6 +98,28 @@ issue.menu = (id) => {
     }
     dialog.click(section, '.menu');
 }
+
+issue.config = (id) => {
+    const section = getSectionById(id);
+    if (!section) {
+        return;
+    }
+    const url = storage.data.get('backend.issue.config');
+    const token = user.token();
+    const data = {
+        "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:config",
+        "where": "user === " + user.get('uuid'),
+        "request-method": "GET",
+    };
+    if (token) {
+        header('Authorization', 'Bearer ' + token);
+        request(url, data, (url, response) => {
+            console.log(response);
+            issue.list(id);
+        });
+    }
+}
+
 
 issue.list = (id) => {
     const section = getSectionById(id);
