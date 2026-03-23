@@ -115,7 +115,51 @@ issue.config = (id) => {
         header('Authorization', 'Bearer ' + token);
         request(url, data, (url, response) => {
             console.log(response);
-            issue.list(id);
+            if(response?.count === 0){
+                //init config
+                const data = {
+                    user : user.get('uuid'),
+                    options : {
+                        list : {
+                            node: {
+                                output : {
+                                    filter : [
+                                        "Package:Raxon:Issue:Output:Filter:Application:Issue:filter"
+                                    ]
+                                },
+                                page : 1,
+                                limit : 30,
+                                sort: {
+                                    "title": "ASC"
+                                },
+                                where: "",
+                                "request-method": "GET"
+                            },
+                            selector: ".issue-list",
+                            backend: {
+                                "list": storage.data.get('backend.issue.list'),
+                                "detail": storage.data.get('backend.issue.detail'),
+                                "label": {
+                                    "list": storage.data.get('backend.issue.label.list'),
+                                    "detail": storage.data.get('backend.issue.label.detail'),
+                                },
+                                "task": {
+                                    "list": storage.data.get('backend.issue.task.list'),
+                                    "detail": storage.data.get('backend.issue.task.detail'),
+                                }
+                            }
+                        }
+                    }
+                }
+                request(url, data, (url, create) => {
+                    console.log(create);
+                    storage.data.set('issue.config', create);
+                });
+            } else {
+                storage.data.set('issue.config', response?.list[0]);
+                issue.list(id);
+            }
+
         });
     }
 }
@@ -128,16 +172,9 @@ issue.list = (id) => {
     }
     console.log(section);
     const url = storage.data.get('backend.issue.list');
-
-    const data = {
-        "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:filter",
-        "where": "description partial tes or description partial 1 or description partial 2",
-        "request-method": "GET",
-        "debug": "true"
-    };
-
-    const tab = section.select('.issue-list')
-
+    let config = storage.data.get('issue.config');
+    const data = config?.options?.list?.node;
+    const tab = section.select(config?.options?.list?.selector)
     const token = user.token();
     if(token){
         header('Authorization', 'Bearer ' + token);
