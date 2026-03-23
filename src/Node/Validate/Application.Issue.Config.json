@@ -9,7 +9,7 @@
                 "is.uuid": true
               }
             ],
-            "?user": [
+            "user": [
               {
                 "is.uuid": true
               }
