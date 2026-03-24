@@ -155,7 +155,8 @@ issue.config = (id) => {
                                     limit : '*',
                                     sort: {
                                         "text": "ASC"
-                                    }
+                                    },
+                                    "request-method": "GET"
                                 }
                             },
                         }
