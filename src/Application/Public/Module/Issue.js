@@ -146,17 +146,8 @@ issue.config = (id) => {
                                 },
                                 selector: ".issue-list",
                                 label : {
-                                    output : {
-                                        filter : [
-                                            "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label"
-                                        ]
-                                    },
-                                    page : 1,
-                                    limit : '*',
-                                    sort: {
-                                        "text": "ASC"
-                                    },
-                                    "request-method": "GET"
+                                    "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label",
+                                    "request-method": "GET",
                                 }
                             }
                         }
@@ -164,7 +155,6 @@ issue.config = (id) => {
                 }
                 header('Authorization', 'Bearer ' + token);
                 request(url, data, (url, create) => {
-                    console.log(create);
                     const data = {
                         "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.config",
                         "where": "user === " + user.get('uuid'),
