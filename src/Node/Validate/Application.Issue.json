@@ -34,10 +34,10 @@
               "is.array": true
             },
             {
-              "in.array.word.count": ">= 3"
+              "array.word.count": ">= 3"
             },
             {
-              "in.array.word.count": "<= 50"
+              "array.word.count": "<= 50"
             }
           ],
           "priority": [
@@ -57,6 +57,19 @@
                 "processing",
                 "closed"
               ]
+            }
+          ],
+          "?label": [
+            {
+              "is.array": true
+            },
+            {
+              "array.count": ">= 1"
+            }
+          ],
+          "?task": [
+            {
+              "is.array": true
             }
           ]
         }
@@ -94,10 +107,10 @@
               "is.array": true
             },
             {
-              "in.array.word.count": ">= 3"
+              "array.word.count": ">= 3"
             },
             {
-              "in.array.word.count": "<= 50"
+              "array.word.count": "<= 50"
             }
           ],
           "priority": [
@@ -117,6 +130,19 @@
                 "processing",
                 "closed"
               ]
+            }
+          ],
+          "?label": [
+            {
+              "is.array": true
+            },
+            {
+              "array.count": ">= 1"
+            }
+          ],
+          "?task": [
+            {
+              "is.array": true
             }
           ]
         }
@@ -154,10 +180,10 @@
               "is.array": true
             },
             {
-              "in.array.word.count": ">= 3"
+              "array.word.count": ">= 3"
             },
             {
-              "in.array.word.count": "<= 50"
+              "array.word.count": "<= 50"
             }
           ],
           "?priority": [
@@ -177,6 +203,19 @@
                 "processing",
                 "closed"
               ]
+            }
+          ],
+          "?label": [
+            {
+              "is.array": true
+            },
+            {
+              "array.count": ">= 1"
+            }
+          ],
+          "?task": [
+            {
+              "is.array": true
             }
           ]
         }

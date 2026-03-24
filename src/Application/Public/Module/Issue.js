@@ -170,18 +170,35 @@ issue.list = (id) => {
     if (!section) {
         return;
     }
+    /**
+     * so we need all labels and all issues
+     * and these need to be combined
+     * and sorted from most till 0
+     * and leave all 0's out of the list
+     */
     console.log(section);
-    const url = storage.data.get('backend.issue.list');
     let config = storage.data.get('issue.config');
-    const data = config?.options?.list?.node;
-    const tab = section.select(config?.options?.list?.selector)
-    const token = user.token();
-    if(token){
-        header('Authorization', 'Bearer ' + token);
-        request(url, data, (url, response) => {
-            console.log(response);
-        });
+    let view = config?.options?.list?.view;
+    if(view){
+        console.log(view);
+    } else {
+        const url = storage.data.get('backend.issue.list');
+        const label_url = storage.data.get('backend.issue.label.list');
+        const token = user.token();
+        if(token){
+            header('Authorization', 'Bearer ' + token);
+            request(url, data, (url, response) => {
+                header('Authorization', 'Bearer ' + token);
+                request(label_url, data, (label_url, label_response) => {
+                    console.log(label_response);
+                })
+                console.log(response);
+            });
+        }
     }
+    // const data = config?.options?.list?.node;
+    // const tab = section.select(config?.options?.list?.selector)
+
 }
 
 export { issue }
