@@ -208,6 +208,7 @@ issue.list = (id) => {
         const token = user.token();
         const data = config?.options?.list?.node;
         const label_data = config?.options?.list?.label;
+        console.log(label_data);
         if(token){
             header('Authorization', 'Bearer ' + token);
             request(url, data, (url, response) => {
