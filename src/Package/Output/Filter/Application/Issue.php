@@ -43,6 +43,7 @@ class Issue extends Controller {
         $user_list = $repository->findBy([
             'uuid' => $user
         ]);
+        ddd($user_list);
         $user = [];
         foreach($user_list as $entity){
             $user[$entity->getUuid()] = $entity;
