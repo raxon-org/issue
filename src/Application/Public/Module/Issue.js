@@ -158,7 +158,7 @@ issue.config = (id) => {
                                     },
                                     "request-method": "GET"
                                 }
-                            },
+                            }
                         }
                     }
                 }
