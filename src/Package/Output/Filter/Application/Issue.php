@@ -73,4 +73,9 @@ class Issue extends Controller {
     {
         return $response;
     }
+
+    public static function issue_label(App $object, $response=null): null|array
+    {
+        return $response;
+    }
 }
