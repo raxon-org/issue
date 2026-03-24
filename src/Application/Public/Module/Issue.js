@@ -107,7 +107,7 @@ issue.config = (id) => {
     const token = user.token();
     const url = storage.data.get('backend.issue.config');
     const data_delete = {
-        "uuid": "2fa30f37-4cdc-411f-8b7a-da91e3e63fc9",
+        "uuid": "24ce65cd-e8ad-4f90-9b73-29a8654bc096",
         "request-method": "DELETE",
     }
     header('Authorization', 'Bearer ' + token);
@@ -131,17 +131,11 @@ issue.config = (id) => {
                         options : {
                             list : {
                                 node: {
-                                    output : {
-                                        filter : [
-                                            "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter"
-                                        ]
-                                    },
                                     page : 1,
                                     limit : 30,
-                                    sort: {
-                                        "title": "ASC"
-                                    },
+                                    sort:  "title=ASC",
                                     where: "",
+                                    "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
                                     "request-method": "GET"
                                 },
                                 selector: ".issue-list",
