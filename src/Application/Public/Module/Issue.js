@@ -105,6 +105,14 @@ issue.config = (id) => {
         return;
     }
     const url = storage.data.get('backend.issue.config');
+    const data_delete = {
+        "uuid": "99db7d04-81bf-4815-be17-e8253a1774d5",
+        "request-method": "DELETE",
+    }
+    header('Authorization', 'Bearer ' + token);
+    request(url, data_delete, (url, response) => {
+        console.log(response);
+    });
     const token = user.token();
     const data = {
         "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.config",
