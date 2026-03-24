@@ -107,7 +107,7 @@ issue.config = (id) => {
     const token = user.token();
     const url = storage.data.get('backend.issue.config');
     const data_delete = {
-        "uuid": "7d40caa3-6115-40b1-97c3-3e5dd569bc4c",
+        "uuid": "2fa30f37-4cdc-411f-8b7a-da91e3e63fc9",
         "request-method": "DELETE",
     }
     header('Authorization', 'Bearer ' + token);
