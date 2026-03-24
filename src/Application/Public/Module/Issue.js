@@ -125,7 +125,7 @@ issue.config = (id) => {
                                 node: {
                                     output : {
                                         filter : [
-                                            "Package:Raxon:Issue:Output:Filter:Application:Issue:filter"
+                                            "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter"
                                         ]
                                     },
                                     page : 1,
@@ -136,8 +136,20 @@ issue.config = (id) => {
                                     where: "",
                                     "request-method": "GET"
                                 },
-                                selector: ".issue-list"
-                            }
+                                selector: ".issue-list",
+                                label : {
+                                    output : {
+                                        filter : [
+                                            "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label"
+                                        ]
+                                    },
+                                    page : 1,
+                                    limit : '*',
+                                    sort: {
+                                        "text": "ASC"
+                                    }
+                                }
+                            },
                         }
                     }
                 }
@@ -185,18 +197,20 @@ issue.list = (id) => {
         const url = storage.data.get('backend.issue.list');
         const label_url = storage.data.get('backend.issue.label.list');
         const token = user.token();
+        const data = config?.options?.list?.node;
+        const label_data = config?.options?.list?.label;
         if(token){
             header('Authorization', 'Bearer ' + token);
             request(url, data, (url, response) => {
                 header('Authorization', 'Bearer ' + token);
-                request(label_url, data, (label_url, label_response) => {
+                request(label_url, label_data, (label_url, label_response) => {
                     console.log(label_response);
                 })
                 console.log(response);
             });
         }
     }
-    // const data = config?.options?.list?.node;
+
     // const tab = section.select(config?.options?.list?.selector)
 
 }
