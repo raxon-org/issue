@@ -308,6 +308,17 @@ issue.list = async (id) => {
             label.style.backgroundColor = label_list[uuid].color.background;
             label.style.color = label_list[uuid].color.text;
             container.append(label);
+            label.addEventListener("mouseenter", () => {
+                label.classList.add("focus");
+                label.style.backgroundColor = label_list[uuid].color.hover.background;
+                label.style.color = label_list[uuid].color.hover.text;
+            });
+
+            label.addEventListener("mouseout", () => {
+                label.classList.remove("focus");
+                label.style.backgroundColor = label_list[uuid].color.background;
+                label.style.color = label_list[uuid].color.text;
+            });
             label.addEventListener("focus", () => {
                 label.classList.add("focus");
                 label.style.backgroundColor = label_list[uuid].color.hover.background;
