@@ -173,6 +173,7 @@ issue.config = (id) => {
                         storage.data.set('issue.config', response?.list[0]);
                         issue.load('issue.list');
                         issue.load('issue.label.list');
+                        console.log('ready');
                         //we can hold active tab in storage and then load it
                         // issue.list(id);
                     });
@@ -186,11 +187,14 @@ issue.config = (id) => {
 }
 
 issue.load = (type) => {
+    let url;
+    let token;
+    let data;
     switch (type) {
         case 'issue.list':
-            const url = storage.data.get('backend.' + type);
-            const token = user.token();
-            const data = storage.data.get('issue.config.options.list.node');
+            url = storage.data.get('backend.' + type);
+            token = user.token();
+            data = storage.data.get('issue.config.options.list.node');
             if(
                 url &&
                 token &&
@@ -198,9 +202,27 @@ issue.load = (type) => {
             ) {
                 header('Authorization', 'Bearer ' + token);
                 request(url, data, (url, response) => {
-                    console.log(response);
+                    storage.data.set(type, response);
+                    console.log('set issue.list');
                 });
             }
+        break;
+        case 'issue.label.list':
+            url = storage.data.get('backend.' + type);
+            token = user.token();
+            data = storage.data.get('issue.config.options.list.label');
+            if(
+                url &&
+                token &&
+                data
+            ) {
+                header('Authorization', 'Bearer ' + token);
+                request(url, data, (url, response) => {
+                    storage.data.set(type, response);
+                    console.log('set issue.label.list');
+                });
+            }
+        break;
     }
 }
 
