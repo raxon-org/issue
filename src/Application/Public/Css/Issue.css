@@ -155,12 +155,18 @@ section[name="application-issue"] .menu-application-issue li.active {
     font-weight: bold;
 }
 
-/* ─── body ─── */
 section[name="application-issue"] .body {
+    /*
     background: rgba(248, 248, 248, 1);
+     */
     height: calc(100% - 122px);
     width: 100%;
     overflow: hidden;
+}
+
+section[name="application-issue"] .body .issue_list .labels {
+    width: 250px;
+    background: transparent;
 }
 
 /* ─── views ─── */
