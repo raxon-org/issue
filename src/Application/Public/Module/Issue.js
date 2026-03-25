@@ -272,7 +272,11 @@ issue.list = async (id) => {
         },
         color: {
             text: "rgba(0,0,0,0.7)",
-            background: "rgba(255,255,255,0.7)"
+            background: "rgba(255,255,255,0.7)",
+            hover: {
+                text: "rgba(0,0,0,0.9)",
+                background: "rgba(255,255,255,0.9)"
+            }
         },
         count: 0
     };
@@ -304,6 +308,17 @@ issue.list = async (id) => {
             label.style.backgroundColor = label_list[uuid].color.background;
             label.style.color = label_list[uuid].color.text;
             container.append(label);
+            label.addEventListener("focus", () => {
+                label.classList.add("focus");
+                label.style.backgroundColor = label_list[uuid].color.hover.background;
+                label.style.color = label_list[uuid].color.hover.text;
+            });
+
+            label.addEventListener("blur", () => {
+                label.classList.remove("focus");
+                label.style.backgroundColor = label_list[uuid].color.background;
+                label.style.color = label_list[uuid].color.text;
+            });
         }
     }
     body_issue_list.append(container);
