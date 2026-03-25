@@ -333,8 +333,26 @@ issue.list = async (id) => {
         }
     }
     body_issue_list.append(container);
+    container = section.select('issues');
+    if(!container){
+        container = document.createElement('div');
+        container.classList.add('issues');
+    }
+    for(let i=0; i < issue_list?.list?.length; i++){
+        //issue_list.list[i];
+        let issue = document.createElement('div');
+        issue.classList.add('issue');
+        issue.setAttribute('data-uuid', issue_list.list[i].uuid);
+        issue.innerHTML = issue_list.list[i].title;
+        for(let j=0; j < issue_list.list[i].label.length; j++){
+            let label_uuid = issue_list.list[i].label[j];
+            issue.innerHTML += '<span style="background: ' + label_list[label_uuid].color.background +' color: ' + label_list[label_uuid].color.text +'">' + label_list[label_uuid].text + '</span>';
+        }
+        container.append(issue);
+
+    }
+    body_issue_list.append(container);
     body_issue_list.removeClass('display-none');
-    console.log(label_list);
     // const tab = section.select(config?.options?.list?.selector)
 
 }

@@ -172,6 +172,15 @@ section[name="application-issue"] .body .issue-list {
     position: relative;
 }
 
+section[name="application-issue"] .body .issue-list .issues {
+    width: calc(100% - 200px);
+    background: transparent;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 section[name="application-issue"] .body .issue-list .labels {
     width: 200px;
     background: transparent;
@@ -181,9 +190,26 @@ section[name="application-issue"] .body .issue-list .labels {
     top: 0;
 }
 
+section[name="application-issue"] .body .issue-list .issues .issue {
+    border: 1px solid rgba(39, 170, 200, 1);
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
+}
+
 section[name="application-issue"] .body .issue-list .labels .label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     cursor: pointer;
     padding-top: 5px;
     padding-bottom: 5px;
