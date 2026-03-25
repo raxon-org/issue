@@ -187,7 +187,7 @@ issue.config = (id) => {
 
 issue.load = (type) => {
     switch (type) {
-        case 'issue.list': {
+        case 'issue.list':
             const url = storage.data.get('backend.' + type);
             const token = user.token();
             const data = storage.data.get('issue.config.options.list.node');
