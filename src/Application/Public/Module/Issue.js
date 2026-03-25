@@ -286,8 +286,27 @@ issue.list = async (id) => {
                 label_list[label_uuid].count++;
             }
         }
-        console.log(issue);
     }
+    let body_issue_list = section.select('.body .issue-list');
+    let container = section.select('labels');
+    if(!container){
+        container = document.createElement('div');
+        container.classList.add('labels');
+    }
+    for(let uuid in label_list){
+        if(label_list[uuid].count === 0){
+            delete label_list[i];
+        } else {
+            let label = document.createElement('div');
+            label.classList.add('label');
+            label.setAttribute('data-uuid', uuid);
+            label.innerHTML = label_list[uuid].text + ' <small>(' + label_list[uuid].count + ')</small>';
+            label.style.backgroundColor = label_list[uuid].color.background;
+            label.style.color = label_list[uuid].color.text;
+            container.append(label);
+        }
+    }
+    body_issue_list.append(container);
     console.log(label_list);
     // const tab = section.select(config?.options?.list?.selector)
 
