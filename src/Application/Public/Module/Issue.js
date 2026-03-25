@@ -271,8 +271,8 @@ issue.list = async (id) => {
             created: _('_').microtime(true)
         },
         color: {
-            text: "rgba(0,0,0,1)",
-            background: "rgba(255,255,255,1)"
+            text: "rgba(0,0,0,0.7)",
+            background: "rgba(255,255,255,0.7)"
         },
         count: 0
     };
