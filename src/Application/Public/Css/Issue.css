@@ -164,7 +164,7 @@ section[name="application-issue"] .body {
     overflow: hidden;
 }
 
-section[name="application-issue"] .body .issue_list .labels {
+section[name="application-issue"] .body .issue-list .labels {
     width: 250px;
     background: transparent;
     height: 100%;
@@ -173,7 +173,7 @@ section[name="application-issue"] .body .issue_list .labels {
     top: 0;
 }
 
-section[name="application-issue"] .body .issue_list .labels .label {
+section[name="application-issue"] .body .issue-list .labels .label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 15px;
     cursor: pointer;
