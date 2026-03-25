@@ -180,7 +180,9 @@ issue.config = (id) => {
                 });
             } else {
                 storage.data.set('issue.config', response?.list[0]);
-                issue.list(id);
+                issue.load('issue.list');
+                issue.load('issue.label.list');
+                console.log('ready');
             }
         });
     }
