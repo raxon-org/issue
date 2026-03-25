@@ -180,15 +180,15 @@ issue.config = (id) => {
                 });
             } else {
                 storage.data.set('issue.config', response?.list[0]);
-                issue.load('issue.list');
-                issue.load('issue.label.list');
+                await issue.load('issue.list', 'issue.config.options.list.node');
+                await issue.load('issue.label.list', 'issue.config.options.list.label');
                 console.log('ready');
             }
         });
     }
 }
 
-issue.load = (type) => {
+issue.load = async (type, attribute) => {
     let url;
     let token;
     let data;
@@ -196,7 +196,7 @@ issue.load = (type) => {
         case 'issue.list':
             url = storage.data.get('backend.' + type);
             token = user.token();
-            data = storage.data.get('issue.config.options.list.node');
+            data = storage.data.get(attribute);
             if(
                 url &&
                 token &&
@@ -212,7 +212,7 @@ issue.load = (type) => {
         case 'issue.label.list':
             url = storage.data.get('backend.' + type);
             token = user.token();
-            data = storage.data.get('issue.config.options.list.label');
+            data = storage.data.get(attribute);
             if(
                 url &&
                 token &&
