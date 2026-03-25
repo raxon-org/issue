@@ -307,6 +307,7 @@ issue.list = async (id) => {
         }
     }
     body_issue_list.append(container);
+    body_issue_list.removeClass('display-none');
     console.log(label_list);
     // const tab = section.select(config?.options?.list?.selector)
 
