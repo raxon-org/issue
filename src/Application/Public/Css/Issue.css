@@ -172,7 +172,7 @@ section[name="application-issue"] .body .issue-list {
 }
 
 section[name="application-issue"] .body .issue-list .labels {
-    width: 250px;
+    width: 200px;
     background: transparent;
     height: 100%;
     position: absolute;
@@ -184,6 +184,11 @@ section[name="application-issue"] .body .issue-list .labels .label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 15px;
     cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
 }
 
 
