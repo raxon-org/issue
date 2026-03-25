@@ -228,7 +228,21 @@ issue.load = (type, attribute) => {
     }
 }
 
-issue.list = (id) => {
+issue.sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function delayedGreeting() {
+    console.log('Hello');
+    await sleep(2000);
+    console.log('World!');
+    await sleep(2000);
+    console.log('Goodbye!');
+}
+
+delayedGreeting();
+
+issue.list = async (id) => {
     const section = getSectionById(id);
     if (!section) {
         return;
@@ -241,13 +255,13 @@ issue.list = (id) => {
     }
     if(!issue_list){
         console.log('issue_list not loaded');
-        _('_').usleep(1000);
-        issue.list(id);
+        await issue.sleep(1000);
+        await issue.list(id);
     }
     if(!issue_label_list){
         console.log('issue_label_list not loaded');
-        _('_').usleep(1000);
-        issue.list(id);
+        await issue.sleep(1000);
+        await issue.list(id);
     }
     console.log('READY');
 
