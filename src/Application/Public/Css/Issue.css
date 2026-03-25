@@ -167,7 +167,18 @@ section[name="application-issue"] .body {
 section[name="application-issue"] .body .issue_list .labels {
     width: 250px;
     background: transparent;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
+
+section[name="application-issue"] .body .issue_list .labels .label {
+    border: 1px solid rgba(39, 170, 200, 1);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 
 /* ─── views ─── */
 section[name="application-issue"] .view {
