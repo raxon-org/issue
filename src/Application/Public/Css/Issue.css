@@ -164,6 +164,13 @@ section[name="application-issue"] .body {
     overflow: hidden;
 }
 
+section[name="application-issue"] .body .issue-list {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
 section[name="application-issue"] .body .issue-list .labels {
     width: 250px;
     background: transparent;
