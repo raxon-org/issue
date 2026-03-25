@@ -247,11 +247,13 @@ issue.list = async (id) => {
         console.log('issue_list not loaded');
         await issue.sleep(1000);
         await issue.list(id);
+        return;
     }
     if(!issue_label_list){
         console.log('issue_label_list not loaded');
         await issue.sleep(1000);
         await issue.list(id);
+        return;
     }
     console.log('READY');
     console.log(issue_list);
