@@ -180,15 +180,21 @@ issue.config = (id) => {
                 });
             } else {
                 storage.data.set('issue.config', response?.list[0]);
-                await issue.load('issue.list', 'issue.config.options.list.node');
-                await issue.load('issue.label.list', 'issue.config.options.list.label');
-                console.log('ready');
+                issue.load('issue.list', 'issue.config.options.list.node');
+                issue.load('issue.label.list', 'issue.config.options.list.label');
+                while(true){
+                    _('_').usleep(1/60 * 1000);
+                    if(storage.data.get('issue.list') && storage.data.get('issue.label.list')){
+                        console.log('ready');
+                        break;
+                    }
+                }
             }
         });
     }
 }
 
-issue.load = async (type, attribute) => {
+issue.load = (type, attribute) => {
     let url;
     let token;
     let data;
