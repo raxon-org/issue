@@ -262,16 +262,33 @@ issue.list = async (id) => {
     for(let i=0; i < issue_label_list?.list?.length; i++ ){
         let label = issue_label_list.list[i];
         label_list[label.uuid] = label;
+        label_list[label.uuid].count = 0;
     }
-    console.log(label_list);
-
+    label_list[''] = {
+        uuid: "",
+        text: "No Label",
+        is: {
+            created: _('_').microtime(true)
+        },
+        color: {
+            text: "rgba(0,0,0,1)",
+            background: "rgba(255,255,255,1)"
+        },
+        count: 0
+    };
     for(let i=0; i < issue_list?.list?.length; i++){
         let issue = issue_list.list[i];
+        if(!issue.label){
+            label_list[''].count++;
+        } else {
+            for(let j=0; j < issue.label.length; j++){
+                let label_uuid = issue.label[j];
+                label_list[label_uuid].count++;
+            }
+        }
         console.log(issue);
     }
-
-
-
+    console.log(label_list);
     // const tab = section.select(config?.options?.list?.selector)
 
 }
