@@ -258,6 +258,20 @@ issue.list = async (id) => {
     console.log('READY');
     console.log(issue_list);
     console.log(issue_label_list);
+    let label_list = {};
+    for(let i=0; i < issue_label_list?.list?.length; i++ ){
+        let label = issue_label_list.list[i];
+        label_list[label.uuid] = label;
+    }
+    console.log(label_list);
+
+    for(let i=0; i < issue_list?.list?.length; i++){
+        let issue = issue_list.list[i];
+        console.log(issue);
+    }
+
+
+
     // const tab = section.select(config?.options?.list?.selector)
 
 }
