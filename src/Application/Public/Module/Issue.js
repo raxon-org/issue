@@ -242,12 +242,12 @@ issue.list = (id) => {
     if(!issue_list){
         console.log('issue_list not loaded');
         _('_').usleep(1000);
-        issue_list.id(id);
+        issue_list(id);
     }
     if(!issue_label_list){
         console.log('issue_label_list not loaded');
         _('_').usleep(1000);
-        issue_list.id(id);
+        issue_list(id);
     }
     console.log('READY');
 
