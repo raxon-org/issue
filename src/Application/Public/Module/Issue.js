@@ -295,7 +295,7 @@ issue.list = async (id) => {
     }
     for(let uuid in label_list){
         if(label_list[uuid].count === 0){
-            delete label_list[i];
+            delete label_list[uuid];
         } else {
             let label = document.createElement('div');
             label.classList.add('label');
