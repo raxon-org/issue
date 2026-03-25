@@ -99,6 +99,35 @@ issue.menu = (id) => {
     dialog.click(section, '.menu');
 }
 
+issue.config_default = () => {
+    return {
+        node : {
+            user : user.get('uuid'),
+                options : {
+                list : {
+                    node: {
+                        page : 1,
+                            limit : "*",
+                            sort:  "title=ASC",
+                            where: "",
+                            "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
+                            "request-method": "GET"
+                    },
+                    selector: ".issue-list",
+                        label : {
+                        page: 1,
+                            limit: "*",
+                            sort: "text=ASC",
+                            where: "",
+                            "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label",
+                            "request-method": "GET"
+                    }
+                }
+            }
+        }
+    }
+}
+
 issue.config = (id) => {
     const section = getSectionById(id);
     if (!section) {
@@ -106,8 +135,9 @@ issue.config = (id) => {
     }
     const token = user.token();
     const url = storage.data.get('backend.issue.config');
+
     const data_delete = {
-        "uuid": "b7c8620a-e1c7-4ecf-9dd7-790cccd0890a",
+        "uuid": "cb734616-2bd2-419b-ae06-5a9c891aa3cb",
         "request-method": "DELETE",
     }
     header('Authorization', 'Bearer ' + token);
@@ -125,32 +155,7 @@ issue.config = (id) => {
             console.log(response);
             if(response?.count === 0){
                 //init config
-                const data = {
-                    node : {
-                        user : user.get('uuid'),
-                        options : {
-                            list : {
-                                node: {
-                                    page : 1,
-                                    limit : 30,
-                                    sort:  "title=ASC",
-                                    where: "",
-                                    "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
-                                    "request-method": "GET"
-                                },
-                                selector: ".issue-list",
-                                label : {
-                                    page: 1,
-                                    limit: "*",
-                                    sort: "text=ASC",
-                                    where: "",
-                                    "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label",
-                                    "request-method": "GET"
-                                }
-                            }
-                        }
-                    }
-                }
+                const data = issue.config_default();
                 header('Authorization', 'Bearer ' + token);
                 request(url, data, (url, create) => {
                     const data = {
