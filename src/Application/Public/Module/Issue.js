@@ -173,22 +173,16 @@ issue.config = (id) => {
                         storage.data.set('issue.config', response?.list[0]);
                         issue.load('issue.list');
                         issue.load('issue.label.list');
-                        console.log('ready');
+
                         //we can hold active tab in storage and then load it
-                        // issue.list(id);
+                        issue.list(id);
                     });
                 });
             } else {
                 storage.data.set('issue.config', response?.list[0]);
                 issue.load('issue.list', 'issue.config.options.list.node');
                 issue.load('issue.label.list', 'issue.config.options.list.label');
-                while(true){
-                    _('_').usleep(1/60 * 1000);
-                    if(storage.data.get('issue.list') && storage.data.get('issue.label.list')){
-                        console.log('ready');
-                        break;
-                    }
-                }
+                issue.list(id);
             }
         });
     }
@@ -239,35 +233,23 @@ issue.list = (id) => {
     if (!section) {
         return;
     }
-    /**
-     * so we need all labels and all issues
-     * and these need to be combined
-     * and sorted from most till 0
-     * and leave all 0's out of the list
-     */
-    console.log(section);
-    let config = storage.data.get('issue.config');
-    let view = config?.options?.list?.view;
-    if(view){
-        console.log(view);
-    } else {
-        const url = storage.data.get('backend.issue.list');
-        const label_url = storage.data.get('backend.issue.label.list');
-        const token = user.token();
-        const data = config?.options?.list?.node;
-        const label_data = config?.options?.list?.label;
-        console.log(label_data);
-        if(token){
-            header('Authorization', 'Bearer ' + token);
-            request(url, data, (url, response) => {
-                header('Authorization', 'Bearer ' + token);
-                request(label_url, label_data, (label_url, label_response) => {
-                    console.log(label_response);
-                })
-                console.log(response);
-            });
-        }
+    const config = storage.data.get('issue.config');
+    const issue_list = storage.data.get('issue.list');
+    const issue_label_list = storage.data.get('issue.label.list');
+    if(!config){
+        return;
     }
+    if(!issue_list){
+        console.log('issue_list not loaded');
+        _('_').usleep(1000);
+        issue_list.id(id);
+    }
+    if(!issue_label_list){
+        console.log('issue_label_list not loaded');
+        _('_').usleep(1000);
+        issue_list.id(id);
+    }
+    console.log('READY');
 
     // const tab = section.select(config?.options?.list?.selector)
 
