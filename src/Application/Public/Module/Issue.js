@@ -171,8 +171,8 @@ issue.config = (id) => {
                     header('Authorization', 'Bearer ' + token);
                     request(url, data, (url, response) => {
                         storage.data.set('issue.config', response?.list[0]);
-                        issue.load('issue.list');
-                        issue.load('issue.label.list');
+                        issue.load('issue.list', 'issue.config.options.list.node');
+                        issue.load('issue.label.list', 'issue.config.options.list.label');
 
                         //we can hold active tab in storage and then load it
                         issue.list(id);
@@ -245,13 +245,13 @@ issue.list = async (id) => {
     }
     if(!issue_list){
         console.log('issue_list not loaded');
-        await issue.sleep(1000);
+        await issue.sleep(1/60);
         await issue.list(id);
         return;
     }
     if(!issue_label_list){
         console.log('issue_label_list not loaded');
-        await issue.sleep(1000);
+        await issue.sleep(1/60);
         await issue.list(id);
         return;
     }
