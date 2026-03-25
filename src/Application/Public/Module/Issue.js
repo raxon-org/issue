@@ -99,32 +99,37 @@ issue.menu = (id) => {
     dialog.click(section, '.menu');
 }
 
-issue.config_default = () => {
-    return {
-        node : {
-            user : user.get('uuid'),
-                options : {
-                list : {
-                    node: {
-                        page : 1,
-                            limit : "*",
-                            sort:  "title=ASC",
-                            where: "",
-                            "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
-                            "request-method": "GET"
-                    },
-                    selector: ".issue-list",
-                        label : {
-                        page: 1,
-                            limit: "*",
-                            sort: "text=ASC",
-                            where: "",
-                            "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label",
-                            "request-method": "GET"
+issue.default = (type) => {
+    switch (type) {
+        case 'config': {
+            return {
+                node : {
+                    user : user.get('uuid'),
+                    options : {
+                        list : {
+                            node: {
+                                page : 1,
+                                limit : "*",
+                                sort:  "title=ASC",
+                                where: "",
+                                "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
+                                "request-method": "GET"
+                            },
+                            selector: ".issue-list",
+                            label : {
+                                page: 1,
+                                limit: "*",
+                                sort: "text=ASC",
+                                where: "",
+                                "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label",
+                                "request-method": "GET"
+                            }
+                        }
                     }
                 }
             }
         }
+
     }
 }
 
@@ -155,7 +160,7 @@ issue.config = (id) => {
             console.log(response);
             if(response?.count === 0){
                 //init config
-                const data = issue.config_default();
+                const data = issue.default('config');
                 header('Authorization', 'Bearer ' + token);
                 request(url, data, (url, create) => {
                     const data = {
@@ -166,8 +171,10 @@ issue.config = (id) => {
                     header('Authorization', 'Bearer ' + token);
                     request(url, data, (url, response) => {
                         storage.data.set('issue.config', response?.list[0]);
+                        issue.load('issue.list');
+                        issue.load('issue.label.list');
                         //we can hold active tab in storage and then load it
-                        issue.list(id);
+                        // issue.list(id);
                     });
                 });
             } else {
@@ -178,6 +185,24 @@ issue.config = (id) => {
     }
 }
 
+issue.load = (type) => {
+    switch (type) {
+        case 'issue.list': {
+            const url = storage.data.get('backend.' + type);
+            const token = user.token();
+            const data = storage.data.get('issue.config.options.list.node');
+            if(
+                url &&
+                token &&
+                data
+            ) {
+                header('Authorization', 'Bearer ' + token);
+                request(url, data, (url, response) => {
+                    console.log(response);
+                });
+            }
+    }
+}
 
 issue.list = (id) => {
     const section = getSectionById(id);
