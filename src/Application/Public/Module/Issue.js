@@ -232,16 +232,6 @@ issue.sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function delayedGreeting() {
-    console.log('Hello');
-    await sleep(2000);
-    console.log('World!');
-    await sleep(2000);
-    console.log('Goodbye!');
-}
-
-delayedGreeting();
-
 issue.list = async (id) => {
     const section = getSectionById(id);
     if (!section) {
@@ -264,7 +254,8 @@ issue.list = async (id) => {
         await issue.list(id);
     }
     console.log('READY');
-
+    console.log(issue_list);
+    console.log(issue_label_list);
     // const tab = section.select(config?.options?.list?.selector)
 
 }
