@@ -348,7 +348,7 @@ issue.list = async (id) => {
         text += '<li class="title">Title</li>';
         text += '<li class="labels">Labels</li>';
         text += '<li class="is-modified">Modified</li>';
-        text += '<li class="title"' + issue_list.list[i].title + '</li><li class="labels">';
+        text += '<li class="title">' + issue_list.list[i].title + '</li><li class="labels">';
         for(let uuid in label_list){
             text += '<span class="label" style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
         }
