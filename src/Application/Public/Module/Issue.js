@@ -344,11 +344,17 @@ issue.list = async (id) => {
         issue.classList.add('issue');
         issue.setAttribute('data-uuid', issue_list.list[i].uuid);
         let text = '';
-        text += '<p class="title">' + issue_list.list[i].title + '<span class="labels">';
+        text += '<ul>';
+        text += '<li class="title">Title</li>';
+        text += '<li class="labels">Labels</li>';
+        text += '<li class="is-modified">Modified</li>';
+        text += '<li class="title"' + issue_list.list[i].title + '</li><li class="labels">';
         for(let uuid in label_list){
             text += '<span class="label" style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
         }
-        text += '</span></p>';
+        let is_modified = _('_').date('Y-m-d H:i:s', issue_list.list[i].is.modified);
+        text += '</li><li class="is-modified">'+ is_modified +'</li>'
+        text += '</li></ul>';
         issue.innerHTML = text;
         container.append(issue);
 
