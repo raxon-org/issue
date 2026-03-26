@@ -172,7 +172,7 @@ section[name="application-issue"] .body .issue-list {
     position: relative;
 }
 
-section[name="application-issue"] .body .issue-list .issues {
+section[name="application-issue"] .body .issue-list div.issues {
     width: calc(100% - 200px);
     background: transparent;
     height: 100%;
@@ -181,7 +181,7 @@ section[name="application-issue"] .body .issue-list .issues {
     top: 0;
 }
 
-section[name="application-issue"] .body .issue-list .labels {
+section[name="application-issue"] .body .issue-list div.labels {
     width: 200px;
     background: transparent;
     height: 100%;
@@ -190,12 +190,12 @@ section[name="application-issue"] .body .issue-list .labels {
     top: 0;
 }
 
-section[name="application-issue"] .body .issue-list .issues .issue {
+section[name="application-issue"] .body .issue-list div.issues div.issue {
     width: calc(100% - 25px);
     margin-left: 5px;
 }
 
-section[name="application-issue"] .body .issue-list .issues .issue p {
+section[name="application-issue"] .body .issue-list div.issues div.issue p {
     background: rgba(0, 0, 0, 0.5);
     color: rgba(255, 255, 255, 1);
     border-radius: 5px;
@@ -208,7 +208,7 @@ section[name="application-issue"] .body .issue-list .issues .issue p {
     border: 1px solid rgba(39, 170, 200, 1);
 }
 
-section[name="application-issue"] .body .issue-list .issues .issue span.labels {
+section[name="application-issue"] .body .issue-list div.issues div.issue span.labels {
     cursor: default;
     padding-left: 10px;
     padding-right: 10px;
@@ -216,7 +216,7 @@ section[name="application-issue"] .body .issue-list .issues .issue span.labels {
     margin-right: 5px;
 }
 
-section[name="application-issue"] .body .issue-list .issues span.labels span.label {
+section[name="application-issue"] .body .issue-list div.issues span.labels span.label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 5px;
     cursor: default;
