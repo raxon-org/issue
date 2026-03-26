@@ -192,11 +192,6 @@ section[name="application-issue"] .body .issue-list .labels {
 
 section[name="application-issue"] .body .issue-list .issues .issue {
     border: 1px solid rgba(39, 170, 200, 1);
-    border-radius: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
     width: calc(100% - 25px);
     margin-left: 5px;
 }
@@ -204,10 +199,23 @@ section[name="application-issue"] .body .issue-list .issues .issue {
 section[name="application-issue"] .body .issue-list .issues .issue p {
     background: rgba(0, 0, 0, 0.5);
     color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     cursor: default;
 }
 
 section[name="application-issue"] .body .issue-list .issues .issue .labels {
+    cursor: default;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+section[name="application-issue"] .body .issue-list .issues .issue .labels .label {
+    border: 1px solid rgba(39, 170, 200, 1);
+    border-radius: 5px;
     cursor: default;
 }
 

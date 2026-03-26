@@ -345,7 +345,7 @@ issue.list = async (id) => {
         issue.setAttribute('data-uuid', issue_list.list[i].uuid);
         issue.innerHTML = '<p>' + issue_list.list[i].title + '<br></p><div class="labels">';
         for(let uuid in label_list){
-            issue.innerHTML += '<span style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
+            issue.innerHTML += '<span class="label" style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
         }
         issue.innerHTML += '</div>';
         container.append(issue);
