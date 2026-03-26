@@ -198,6 +198,7 @@ section[name="application-issue"] .body .issue-list div.issues div.issue {
 section[name="application-issue"] .body .issue-list div.issues div.issue ul {
 
     margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
