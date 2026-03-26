@@ -216,7 +216,7 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li {
 
 section[name="application-issue"] .body .issue-list div.issues div.issue li.title {
     clear: left;
-    width: calc(30% - 26px);
+    width: calc(40% - 26px);
     margin-left: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -227,7 +227,7 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li.labe
     cursor: default;
     padding-left: 10px;
     padding-right: 10px;
-    width: calc(45% - 20px);
+    width: calc(35% - 20px);
     border-left: 0;
     border-right: 0;
 }
