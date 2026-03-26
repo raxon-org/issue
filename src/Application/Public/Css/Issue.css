@@ -208,7 +208,7 @@ section[name="application-issue"] .body .issue-list .issues .issue p {
     border: 1px solid rgba(39, 170, 200, 1);
 }
 
-section[name="application-issue"] .body .issue-list .issues .issue .labels {
+section[name="application-issue"] .body .issue-list .issues .issue span.labels {
     cursor: default;
     padding-left: 10px;
     padding-right: 10px;
@@ -216,14 +216,14 @@ section[name="application-issue"] .body .issue-list .issues .issue .labels {
     margin-right: 5px;
 }
 
-section[name="application-issue"] .body .issue-list .issues .labels .label {
+section[name="application-issue"] .body .issue-list .issues span.labels span.label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 5px;
     cursor: default;
     margin-right: 5px;
 }
 
-section[name="application-issue"] .body .issue-list .labels .label {
+section[name="application-issue"] .body .issue-list div.labels div.label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 5px;
     cursor: default;
