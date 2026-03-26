@@ -241,6 +241,10 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li.is-m
     border-left: 0;
 }
 
+section[name="application-issue"] .body .issue-list div.issues div.issue li.is-modified small {
+    font-size: 74%;
+}
+
 section[name="application-issue"] .body .issue-list div.issues li.labels span.label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 5px;
