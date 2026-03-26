@@ -205,12 +205,15 @@ section[name="application-issue"] .body .issue-list .issues .issue p {
     padding-left: 10px;
     padding-right: 10px;
     cursor: default;
+    margin: 0;
 }
 
 section[name="application-issue"] .body .issue-list .issues .issue .labels {
     cursor: default;
     padding-left: 10px;
     padding-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 section[name="application-issue"] .body .issue-list .issues .issue .labels .label {
