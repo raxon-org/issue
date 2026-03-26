@@ -200,7 +200,7 @@ section[name="application-issue"] .body .issue-list .issues .issue {
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    width: calc(100% - 20px);
+    width: calc(100% - 25px);
     margin-left: 5px;
 }
 
