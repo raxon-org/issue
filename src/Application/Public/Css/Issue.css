@@ -227,7 +227,7 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li.labe
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 5px;
-    width: calc(50% - w5px);
+    width: calc(50% - 25px);
 }
 
 section[name="application-issue"] .body .issue-list div.issues div.issue li.is-modified {
@@ -235,7 +235,7 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li.is-m
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 5px;
-    width: calc(20% - w5px);
+    width: calc(20% - 25px);
 }
 
 section[name="application-issue"] .body .issue-list div.issues li.labels span.label {
