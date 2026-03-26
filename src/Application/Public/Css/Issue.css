@@ -228,7 +228,6 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li.labe
     padding-left: 10px;
     padding-right: 10px;
     width: calc(50% - 20px);
-    font-size: 10px;
     border-left: 0;
     border-right: 0;
 }
@@ -239,7 +238,6 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li.is-m
     padding-right: 10px;
     margin-right: 5px;
     width: calc(20% - 26px);
-    font-size: 10px;
     border-left: 0;
 }
 
@@ -248,6 +246,7 @@ section[name="application-issue"] .body .issue-list div.issues li.labels span.la
     border-radius: 5px;
     cursor: default;
     margin-right: 5px;
+    font-size: 10px;
 }
 
 section[name="application-issue"] .body .issue-list div.labels div.label {

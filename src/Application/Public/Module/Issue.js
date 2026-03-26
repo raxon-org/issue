@@ -353,7 +353,7 @@ issue.list = async (id) => {
             text += '<span class="label" style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
         }
         let is_modified = _('_').date('Y-m-d H:i:s', issue_list.list[i].is.modified);
-        text += '</li><li class="is-modified">'+ is_modified +'</li>'
+        text += '</li><li class="is-modified"><small>'+ is_modified +'</small></li>'
         text += '</li></ul>';
         issue.innerHTML = text;
         container.append(issue);
