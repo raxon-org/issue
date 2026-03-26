@@ -349,7 +349,6 @@ issue.list = async (id) => {
         }
         issue.innerHTML += '</span></p>';
         container.append(issue);
-        console.log(issue);
 
     }
     body_issue_list.append(container);
