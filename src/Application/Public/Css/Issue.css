@@ -191,8 +191,7 @@ section[name="application-issue"] .body .issue-list div.labels {
 }
 
 section[name="application-issue"] .body .issue-list div.issues div.issue {
-    width: calc(100% - 25px);
-    margin-left: 5px;
+    width: 100%;
 }
 
 section[name="application-issue"] .body .issue-list div.issues div.issue ul {
