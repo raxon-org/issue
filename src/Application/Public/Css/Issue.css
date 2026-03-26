@@ -216,10 +216,11 @@ section[name="application-issue"] .body .issue-list .issues .issue .labels {
     margin-right: 5px;
 }
 
-section[name="application-issue"] .body .issue-list .issues .issue .labels .label {
+section[name="application-issue"] .body .issue-list .issues .labels .label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 5px;
     cursor: default;
+    margin-right: 5px;
 }
 
 section[name="application-issue"] .body .issue-list .labels .label {
