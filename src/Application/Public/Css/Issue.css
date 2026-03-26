@@ -227,7 +227,7 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li.labe
     cursor: default;
     padding-left: 10px;
     padding-right: 10px;
-    width: calc(50% - 20px);
+    width: calc(45% - 20px);
     border-left: 0;
     border-right: 0;
 }
@@ -237,7 +237,7 @@ section[name="application-issue"] .body .issue-list div.issues div.issue li.is-m
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 5px;
-    width: calc(20% - 26px);
+    width: calc(25% - 26px);
     border-left: 0;
 }
 
