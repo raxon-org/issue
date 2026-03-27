@@ -371,11 +371,11 @@ issue.list = async (id) => {
         text += '<li class="title">Title</li>';
         text += '<li class="labels">Labels</li>';
         text += '<li class="is-modified">Modified</li>';
-        text += '<li class="title">' + issue_list.list[i].title + '</li><li class="labels">';
+        text += '<li class="title">' + issue_list_all.list[i].title + '</li><li class="labels">';
         for(let uuid in label_list){
             text += '<span class="label" style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
         }
-        let is_modified = _('_').date('Y-m-d H:i:s', issue_list.list[i].is.modified);
+        let is_modified = _('_').date('Y-m-d H:i:s', issue_list_all.list[i].is.modified);
         text += '</li><li class="is-modified"><small>'+ is_modified +'</small></li>'
         text += '</li></ul>';
         issue.innerHTML = text;
