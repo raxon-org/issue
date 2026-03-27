@@ -256,9 +256,15 @@ issue.list = async (id) => {
     if (!section) {
         return;
     }
+    let active_load = storage.data.get('issue.list.load.active');
+    if(!active_load){
+        storage.data.set('issue.list.load.active', true);
+        issue.load('issue.list.active', 'issue.config.options.list.active');
+    }
     const config = storage.data.get('issue.config');
     const issue_list_all = storage.data.get('issue.list.all');
     const issue_label_list_all = storage.data.get('issue.label.list.all');
+    const issue_list_active = storage.data.get('issue.list.active');
     if(!config){
         return;
     }
@@ -274,9 +280,16 @@ issue.list = async (id) => {
         await issue.list(id);
         return;
     }
+    if(!issue_list_active){
+        console.log('issue_list_active not loaded');
+        await issue.sleep(1/60);
+        await issue.list(id);
+        return;
+    }
     console.log('READY');
     console.log(issue_list_all);
     console.log(issue_label_list_all);
+    console.log(issue_label_list_active);
     let label_list = {};
     for(let i=0; i < issue_label_list_all?.list?.length; i++ ){
         let label = issue_label_list_all.list[i];
@@ -402,7 +415,7 @@ issue.list = async (id) => {
         container = document.createElement('div');
         container.classList.add('issues');
     }
-    for(let i=0; i < issue_list_all?.list?.length; i++){
+    for(let i=0; i < issue_list_active?.list?.length; i++){
         //issue_list.list[i];
         let issue = document.createElement('div');
         issue.classList.add('issue');
@@ -412,11 +425,11 @@ issue.list = async (id) => {
         text += '<li class="title">Title</li>';
         text += '<li class="labels">Labels</li>';
         text += '<li class="is-modified">Modified</li>';
-        text += '<li class="title">' + issue_list_all.list[i].title + '</li><li class="labels">';
+        text += '<li class="title">' + issue_list_active.list[i].title + '</li><li class="labels">';
         for(let uuid in label_list){
             text += '<span class="label" style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
         }
-        let is_modified = _('_').date('Y-m-d H:i:s', issue_list_all.list[i].is.modified);
+        let is_modified = _('_').date('Y-m-d H:i:s', issue_list_active.list[i].is.modified);
         text += '</li><li class="is-modified"><small>'+ is_modified +'</small></li>'
         text += '</li></ul>';
         issue.innerHTML = text;
