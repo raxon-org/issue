@@ -290,7 +290,7 @@ issue.list = async (id) => {
     console.log('READY');
     console.log(issue_list_all);
     console.log(issue_label_list_all);
-    console.log(issue_label_list_active);
+    console.log(issue_list_active);
     let label_list = {};
     for(let i=0; i < issue_label_list_all?.list?.length; i++ ){
         let label = issue_label_list_all.list[i];
