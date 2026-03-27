@@ -207,8 +207,10 @@ issue.load = (type, attribute) => {
     switch (type) {
         case 'issue.list.all':
             url = storage.data.get('backend.issue.list');
+            console.log(url);
             token = user.token();
             data = storage.data.get(attribute);
+            console.log(data);
             if(
                 url &&
                 token &&
