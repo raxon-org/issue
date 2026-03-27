@@ -361,11 +361,11 @@ issue.list = async (id) => {
         container = document.createElement('div');
         container.classList.add('issues');
     }
-    for(let i=0; i < issue_list?.list?.length; i++){
+    for(let i=0; i < issue_list_all?.list?.length; i++){
         //issue_list.list[i];
         let issue = document.createElement('div');
         issue.classList.add('issue');
-        issue.setAttribute('data-uuid', issue_list.list[i].uuid);
+        issue.setAttribute('data-uuid', issue_list_all.list[i].uuid);
         let text = '';
         text += '<ul>';
         text += '<li class="title">Title</li>';
