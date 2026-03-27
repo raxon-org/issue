@@ -332,7 +332,6 @@ issue.list = async (id) => {
             label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
             label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 0.7);
             container.append(label);
-            let label_count = container.select('.count');
             label.addEventListener("mouseenter", () => {
                 label.classList.add("focus");
                 label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.hover.background, 1);
@@ -380,6 +379,63 @@ issue.list = async (id) => {
         }
     }
     body_issue_list.append(container);
+
+    let count = body_issue_list.select('.count');
+    if(count){
+        if(_('_').is.nodeList(count)){
+            for(let i=0; i < count.length; i++){
+                count[i].addEventListener("mouseenter", () => {
+                    let label = count[i].closest('.label');
+                    label.classList.add("focus");
+                    label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.background, 1);
+                    label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.text, 1);
+                });
+                count[i].addEventListener("focus", () => {
+                    let label = count[i].closest('.label');
+                    label.classList.add("focus");
+                    label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.background, 1);
+                    label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.text, 1);
+                });
+                count[i].addEventListener("mouseout", () => {
+                    let label = count.closest('.label');
+                    label.classList.remove("focus");
+                    label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.background, 0.7);
+                    label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.text, 0.7);
+                });
+                count[i].addEventListener("blur", () => {
+                    let label = count.closest('.label');
+                    label.classList.remove("focus");
+                    label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.background, 0.7);
+                    label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.text, 0.7);
+                });
+            }
+        } else {
+            count.addEventListener("mouseenter", () => {
+                let label = count.closest('.label');
+                label.classList.add("focus");
+                label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.background, 1);
+                label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.text, 1);
+            });
+            count.addEventListener("focus", () => {
+                let label = count.closest('.label');
+                label.classList.add("focus");
+                label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.background, 1);
+                label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.text, 1);
+            });
+            count.addEventListener("mouseout", () => {
+                let label = count.closest('.label');
+                label.classList.remove("focus");
+                label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.background, 0.7);
+                label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.text, 0.7);
+            });
+            count.addEventListener("blur", () => {
+                let label = count.closest('.label');
+                label.classList.remove("focus");
+                label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.background, 0.7);
+                label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.text, 0.7);
+            });
+        }
+    }
     container = section.select('issues');
     if(!container){
         container = document.createElement('div');
