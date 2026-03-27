@@ -351,6 +351,9 @@ issue.list = async (id) => {
                 label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.hover.background, 1);
                 label.style.color = issue.rgb_to_rgba(label_list[uuid].color.hover.text, 1);
             });
+            label.addEventListener("mouseover", () => {
+                label.trigger('mouseenter');
+            });
             label.addEventListener("mouseout", () => {
                 label.classList.remove("focus");
                 label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
