@@ -322,6 +322,7 @@ issue.list = async (id) => {
     }
     console.log(label_list);
     for(let uuid in label_list){
+        console.log(label_list[uuid]);
         if(label_list[uuid].count === 0){
             delete label_list[uuid];
         } else {
