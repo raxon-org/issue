@@ -315,7 +315,7 @@ issue.list = async (id) => {
     let body_issue_list = section.select('.body .issue-list');
     let container = section.select('labels');
     if(!container){
-        container = document.createElement('div');
+        container = _('_').create('div');
         container.classList.add('labels');
     }
     console.log(label_list);
@@ -332,7 +332,7 @@ issue.list = async (id) => {
             label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
             label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 0.7);
             container.append(label);
-            let label_count = label.select('.count');
+            let label_count = container.select('.count');
             label.addEventListener("mouseenter", () => {
                 label.classList.add("focus");
                 label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.hover.background, 1);
