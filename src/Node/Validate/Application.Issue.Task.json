@@ -24,7 +24,7 @@
               {
                 "in.array": [
                   "open",
-                  "processing",
+                  "active",
                   "success",
                   "error"
                 ]
@@ -54,7 +54,7 @@
               {
                 "in.array": [
                   "open",
-                  "processing",
+                  "active",
                   "success",
                   "error"
                 ]
@@ -84,7 +84,7 @@
               {
                 "in.array": [
                   "open",
-                  "processing",
+                  "active",
                   "success",
                   "error"
                 ]

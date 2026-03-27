@@ -11,15 +11,16 @@ require(
         root() + 'Application/Issue/Css/Issue.css?' + version(),
         root() + 'Dialog/Css/Dialog.css?' + version(),
     ],
-    function(){
+    async () => {
         storage.data.set('backend.issue.config', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue.Config/");
+        storage.data.set('backend.issue.list', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue/");
         storage.data.set('backend.issue.list', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue/");
         storage.data.set('backend.issue.detail', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue/");
         storage.data.set('backend.issue.label.list', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue.Label/");
         storage.data.set('backend.issue.label.detail', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue.Label/");
         storage.data.set('backend.issue.task.list', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue.Task/");
         storage.data.set('backend.issue.task.detail', "{{server.url(\"{{/literal}}{{$backend.host}}{{literal}}\")}}Node/Application.Issue.Task/");
-        issue.init("{{$id}}");
+        await issue.init("{{$id}}");
         dialog.init("{{$id}}");
         taskbar.active("{{$id}}");
     }

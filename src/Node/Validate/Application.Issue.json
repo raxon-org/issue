@@ -54,7 +54,7 @@
             {
               "in.array": [
                 "open",
-                "processing",
+                "active",
                 "closed"
               ]
             }
@@ -127,7 +127,7 @@
             {
               "in.array": [
                 "open",
-                "processing",
+                "active",
                 "closed"
               ]
             }
@@ -200,7 +200,7 @@
             {
               "in.array": [
                 "open",
-                "processing",
+                "active",
                 "closed"
               ]
             }

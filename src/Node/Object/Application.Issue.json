@@ -50,6 +50,12 @@
         "is_multiple": true
       },
       {
+        "name": "label",
+        "type": "array",
+        "relation": true,
+        "is_multiple": true
+      },
+      {
         "name": "uuid",
         "type": "uuid"
       },

@@ -7,13 +7,57 @@ import user from "/Module/User.js";
 
 let issue = {};
 
-issue.init = (id) => {
+issue.init = async (id) => {
     taskbar.add('application-issue', id);
 
     issue.menu(id);
     issue.menu_application(id);
     issue.close(id);
-    issue.config(id);
+    await issue.config(id);
+}
+
+issue.default = (type) => {
+    switch (type) {
+        case 'config': {
+            return {
+                node : {
+                    user : user.get('uuid'),
+                    options : {
+                        list : {
+                            all: {
+                                page : 1,
+                                limit : "*",
+                                sort:  "title=ASC",
+                                where: "",
+                                "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
+                                "request-method": "GET"
+                            },
+                            active: {
+                                page : 1,
+                                limit : 30,
+                                sort:  "title=ASC",
+                                where: "status === 'open'",
+                                "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter.open",
+                                "request-method": "GET"
+                            },
+                            selector: ".issue-list",
+                            label : {
+                                all: {
+                                    page: 1,
+                                    limit: "*",
+                                    sort: "text=ASC",
+                                    where: "",
+                                    "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label",
+                                    "request-method": "GET"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 issue.close = (id) => {
@@ -99,41 +143,9 @@ issue.menu = (id) => {
     dialog.click(section, '.menu');
 }
 
-issue.default = (type) => {
-    switch (type) {
-        case 'config': {
-            return {
-                node : {
-                    user : user.get('uuid'),
-                    options : {
-                        list : {
-                            node: {
-                                page : 1,
-                                limit : "*",
-                                sort:  "title=ASC",
-                                where: "",
-                                "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
-                                "request-method": "GET"
-                            },
-                            selector: ".issue-list",
-                            label : {
-                                page: 1,
-                                limit: "*",
-                                sort: "text=ASC",
-                                where: "",
-                                "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.label",
-                                "request-method": "GET"
-                            }
-                        }
-                    }
-                }
-            }
-        }
 
-    }
-}
 
-issue.config = (id) => {
+issue.config = async (id) => {
     const section = getSectionById(id);
     if (!section) {
         return;
@@ -142,7 +154,7 @@ issue.config = (id) => {
     const url = storage.data.get('backend.issue.config');
 
     const data_delete = {
-        "uuid": "286c2a29-18ee-4b88-956d-5936657e9f8b",
+        "uuid": "593d8910-2a9e-42da-a1de-053dd68d03f3",
         "request-method": "DELETE",
     }
     header('Authorization', 'Bearer ' + token);
@@ -156,9 +168,9 @@ issue.config = (id) => {
     };
     if (token) {
         header('Authorization', 'Bearer ' + token);
-        request(url, data, (url, response) => {
+        request(url, data, async (url, response) => {
             console.log(response);
-            if(response?.count === 0){
+            if (response?.count === 0) {
                 //init config
                 const data = issue.default('config');
                 header('Authorization', 'Bearer ' + token);
@@ -180,9 +192,9 @@ issue.config = (id) => {
                 });
             } else {
                 storage.data.set('issue.config', response?.list[0]);
-                issue.load('issue.list', 'issue.config.options.list.node');
-                issue.load('issue.label.list', 'issue.config.options.list.label');
-                issue.list(id);
+                issue.load('issue.list.all', 'issue.config.options.list.all');
+                issue.load('issue.label.list.all', 'issue.config.options.list.label.all');
+                await issue.list(id);
             }
         });
     }
@@ -193,7 +205,7 @@ issue.load = (type, attribute) => {
     let token;
     let data;
     switch (type) {
-        case 'issue.list':
+        case 'issue.list.all':
             url = storage.data.get('backend.' + type);
             token = user.token();
             data = storage.data.get(attribute);
@@ -209,7 +221,7 @@ issue.load = (type, attribute) => {
                 });
             }
         break;
-        case 'issue.label.list':
+        case 'issue.label.list.all':
             url = storage.data.get('backend.' + type);
             token = user.token();
             data = storage.data.get(attribute);
@@ -232,35 +244,43 @@ issue.sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+issue.rgb_to_rgba = (rgb, alpha) => {
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    function hex(x) {
+        return ("0" + parseInt(x).toString(16)).slice(-2);
+    }
+    return "rgba(" + hex(rgb[1]) + "," + hex(rgb[2]) + "," + hex(rgb[3]) + "," + alpha + ")";
+}
+
 issue.list = async (id) => {
     const section = getSectionById(id);
     if (!section) {
         return;
     }
     const config = storage.data.get('issue.config');
-    const issue_list = storage.data.get('issue.list');
-    const issue_label_list = storage.data.get('issue.label.list');
+    const issue_list_all = storage.data.get('issue.list.all');
+    const issue_label_list_all = storage.data.get('issue.label.list.all');
     if(!config){
         return;
     }
-    if(!issue_list){
+    if(!issue_list_all){
         console.log('issue_list not loaded');
         await issue.sleep(1/60);
         await issue.list(id);
         return;
     }
-    if(!issue_label_list){
+    if(!issue_label_list_all){
         console.log('issue_label_list not loaded');
         await issue.sleep(1/60);
         await issue.list(id);
         return;
     }
     console.log('READY');
-    console.log(issue_list);
-    console.log(issue_label_list);
+    console.log(issue_list_all);
+    console.log(issue_label_list_all);
     let label_list = {};
-    for(let i=0; i < issue_label_list?.list?.length; i++ ){
-        let label = issue_label_list.list[i];
+    for(let i=0; i < issue_label_list_all?.list?.length; i++ ){
+        let label = issue_label_list_all.list[i];
         label_list[label.uuid] = label;
         label_list[label.uuid].count = 0;
     }
@@ -268,20 +288,21 @@ issue.list = async (id) => {
         uuid: "",
         text: "No Label",
         is: {
-            created: _('_').microtime(true)
+            created: _('_').microtime(true),
+            modified: _('_').microtime(true)
         },
         color: {
-            text: "rgba(0,0,0,0.7)",
-            background: "rgba(255,255,255,0.7)",
+            text: "rgb(0,0,0)",
+            background: "rgb(255,255,255)",
             hover: {
-                text: "rgba(0,0,0,0.9)",
-                background: "rgba(255,255,255,0.9)"
+                text: "rgb(0,0,0)",
+                background: "rgb(255,255,255)"
             }
         },
         count: 0
     };
-    for(let i=0; i < issue_list?.list?.length; i++){
-        let issue = issue_list.list[i];
+    for(let i=0; i < issue_list?.list?.all?.length; i++){
+        let issue = issue_list?.list?.all[i];
         if(!issue.label){
             label_list[''].count++;
         } else {
@@ -310,25 +331,25 @@ issue.list = async (id) => {
             container.append(label);
             label.addEventListener("mouseenter", () => {
                 label.classList.add("focus");
-                label.style.backgroundColor = label_list[uuid].color.hover.background;
-                label.style.color = label_list[uuid].color.hover.text;
+                label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.hover.background, 1);
+                label.style.color = issue.rgb_to_rgba(label_list[uuid].color.hover.text, 1);
             });
 
             label.addEventListener("mouseout", () => {
                 label.classList.remove("focus");
-                label.style.backgroundColor = label_list[uuid].color.background;
-                label.style.color = label_list[uuid].color.text;
+                label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
+                label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 0.7);
             });
             label.addEventListener("focus", () => {
                 label.classList.add("focus");
-                label.style.backgroundColor = label_list[uuid].color.hover.background;
-                label.style.color = label_list[uuid].color.hover.text;
+                label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.hover.background, 1);
+                label.style.color = issue.rgb_to_rgba(label_list[uuid].color.hover.text, 1);
             });
 
             label.addEventListener("blur", () => {
                 label.classList.remove("focus");
-                label.style.backgroundColor = label_list[uuid].color.background;
-                label.style.color = label_list[uuid].color.text;
+                label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 1);
+                label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 1);
             });
         }
     }
