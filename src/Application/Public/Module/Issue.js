@@ -359,7 +359,7 @@ issue.list = async (id) => {
 
     let count = body_issue_list.select('.count');
     if(count){
-        if(_('_').is.nodeList(count)){
+        if(is.nodeList(count)){
             for(let i=0; i < count.length; i++){
                 count[i].addEventListener("mouseenter", () => {
                     let label = count[i].closest('.label');
