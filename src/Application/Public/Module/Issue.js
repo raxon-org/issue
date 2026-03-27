@@ -337,7 +337,6 @@ issue.list = async (id) => {
                 label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.hover.background, 1);
                 label.style.color = issue.rgb_to_rgba(label_list[uuid].color.hover.text, 1);
             });
-
             label.addEventListener("mouseout", () => {
                 label.classList.remove("focus");
                 label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
@@ -350,28 +349,6 @@ issue.list = async (id) => {
             });
 
             label.addEventListener("blur", () => {
-                label.classList.remove("focus");
-                label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 1);
-                label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 1);
-            });
-            label_count.addEventListener("mouseenter", () => {
-                label.classList.add("focus");
-                label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.hover.background, 1);
-                label.style.color = issue.rgb_to_rgba(label_list[uuid].color.hover.text, 1);
-            });
-
-            label_count.addEventListener("mouseout", () => {
-                label.classList.remove("focus");
-                label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
-                label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 0.7);
-            });
-            label_count.addEventListener("focus", () => {
-                label.classList.add("focus");
-                label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.hover.background, 1);
-                label.style.color = issue.rgb_to_rgba(label_list[uuid].color.hover.text, 1);
-            });
-
-            label_count.addEventListener("blur", () => {
                 label.classList.remove("focus");
                 label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 1);
                 label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 1);
