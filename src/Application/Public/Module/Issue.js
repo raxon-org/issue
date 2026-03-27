@@ -331,6 +331,7 @@ issue.list = async (id) => {
             label.classList.add('label');
             label.setAttribute('data-uuid', uuid);
             label.innerHTML = label_list[uuid].text + ' <span class="count">(' + label_list[uuid].count + ')</span>';
+            console.log(issue.rgb_to_rgba(label_list[uuid].color.background, 0.7));
             label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
             label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 0.7);
             container.append(label);
