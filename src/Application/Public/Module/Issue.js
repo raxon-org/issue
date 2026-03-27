@@ -37,7 +37,7 @@ issue.default = (type) => {
                                 limit : 30,
                                 sort:  "title=ASC",
                                 where: "status === 'open'",
-                                "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter.open",
+                                "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
                                 "request-method": "GET"
                             },
                             selector: ".issue-list",
@@ -154,7 +154,7 @@ issue.config = async (id) => {
     const url = storage.data.get('backend.issue.config');
 
     const data_delete = {
-        "uuid": "593d8910-2a9e-42da-a1de-053dd68d03f3",
+        "uuid": "42903e71-58d9-4031-95c8-bb1fbbda4282",
         "request-method": "DELETE",
     }
     header('Authorization', 'Bearer ' + token);
