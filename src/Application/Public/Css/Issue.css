@@ -266,6 +266,15 @@ section[name="application-issue"] .body .issue-list div.labels div.label {
     width: calc(100% - 30px);
 }
 
+section[name="application-issue"] .body .issue-list div.labels div.label span.count {
+    float: right;
+    font-size: 10px;
+    background: rgba(39, 170, 200, 1);
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+}
+
 
 /* ─── views ─── */
 section[name="application-issue"] .view {
