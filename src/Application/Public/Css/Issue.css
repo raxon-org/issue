@@ -268,13 +268,13 @@ section[name="application-issue"] .body .issue-list div.labels div.label {
 
 section[name="application-issue"] .body .issue-list div.labels div.label span.count {
     float: right;
-    font-size: 15px;
+    font-size: 16px;
     padding: 5px;
     color: rgba(255, 255, 255, 1);
     background: rgba(39, 170, 200, 1);
-    border-radius: 12px;
-    width: 25px;
-    height: 25px;
+    border-radius: 5px;
+    position: relative;
+    top: -5px;
 }
 
 

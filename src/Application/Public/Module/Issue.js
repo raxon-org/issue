@@ -363,53 +363,37 @@ issue.list = async (id) => {
             for(let i=0; i < count.length; i++){
                 count[i].addEventListener("mouseenter", () => {
                     let label = count[i].closest('.label');
-                    label.classList.add("focus");
-                    label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.background, 1);
-                    label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.text, 1);
+                    label.trigger('mouseenter');
                 });
                 count[i].addEventListener("focus", () => {
                     let label = count[i].closest('.label');
-                    label.classList.add("focus");
-                    label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.background, 1);
-                    label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.text, 1);
+                    label.trigger('focus');
                 });
                 count[i].addEventListener("mouseout", () => {
                     let label = count.closest('.label');
-                    label.classList.remove("focus");
-                    label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.background, 0.7);
-                    label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.text, 0.7);
+                    label.trigger('mouseout');
                 });
                 count[i].addEventListener("blur", () => {
                     let label = count.closest('.label');
-                    label.classList.remove("focus");
-                    label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.background, 0.7);
-                    label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.text, 0.7);
+                    label.trigger('blur');
                 });
             }
         } else {
             count.addEventListener("mouseenter", () => {
                 let label = count.closest('.label');
-                label.classList.add("focus");
-                label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.background, 1);
-                label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.text, 1);
+                label.trigger('mouseenter');
             });
             count.addEventListener("focus", () => {
                 let label = count.closest('.label');
-                label.classList.add("focus");
-                label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.background, 1);
-                label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.hover.text, 1);
+                label.trigger('focus');
             });
             count.addEventListener("mouseout", () => {
                 let label = count.closest('.label');
-                label.classList.remove("focus");
-                label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.background, 0.7);
-                label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.text, 0.7);
+                label.trigger('mouseout');
             });
             count.addEventListener("blur", () => {
                 let label = count.closest('.label');
-                label.classList.remove("focus");
-                label.style.backgroundColor = issue.rgb_to_rgba(label_list[label.data('uuid')].color.background, 0.7);
-                label.style.color = issue.rgb_to_rgba(label_list[label.data('uuid')].color.text, 0.7);
+                label.trigger('blur');
             });
         }
     }
