@@ -331,8 +331,8 @@ issue.list = async (id) => {
             label.classList.add('label');
             label.setAttribute('data-uuid', uuid);
             label.innerHTML = label_list[uuid].text + ' <span class="count">(' + label_list[uuid].count + ')</span>';
-            label.style.backgroundColor = label_list[uuid].color.background;
-            label.style.color = label_list[uuid].color.text;
+            label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
+            label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 0.7);
             container.append(label);
             label.addEventListener("mouseenter", () => {
                 label.classList.add("focus");
