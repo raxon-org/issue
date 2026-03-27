@@ -338,7 +338,7 @@ issue.list = async (id) => {
         if(label_list[uuid].count === 0){
             delete label_list[uuid];
         } else {
-            let label = document.createElement('div');
+            let label = _('_').create('div');
             label.classList.add('label');
             label.setAttribute('data-uuid', uuid);
             label.innerHTML = label_list[uuid].text + ' <span class="count">' + label_list[uuid].count + '</span>';
