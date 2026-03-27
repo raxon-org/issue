@@ -303,6 +303,7 @@ issue.list = async (id) => {
         },
         count: 0
     };
+    console.log(issue_list_all?.length);
     for(let i=0; i < issue_list_all?.length; i++){
         let issue = issue_list_all[i];
         if(!issue.label){
