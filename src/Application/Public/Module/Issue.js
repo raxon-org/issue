@@ -320,6 +320,7 @@ issue.list = async (id) => {
         container = document.createElement('div');
         container.classList.add('labels');
     }
+    console.log(label_list);
     for(let uuid in label_list){
         if(label_list[uuid].count === 0){
             delete label_list[uuid];
