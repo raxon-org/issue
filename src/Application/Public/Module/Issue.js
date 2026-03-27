@@ -206,7 +206,7 @@ issue.load = (type, attribute) => {
     let data;
     switch (type) {
         case 'issue.list.all':
-            url = storage.data.get('backend.' + type);
+            url = storage.data.get('backend.issue.list');
             token = user.token();
             data = storage.data.get(attribute);
             if(
@@ -222,7 +222,7 @@ issue.load = (type, attribute) => {
             }
         break;
         case 'issue.label.list.all':
-            url = storage.data.get('backend.' + type);
+            url = storage.data.get('backend.issue.label.list');
             token = user.token();
             data = storage.data.get(attribute);
             if(
