@@ -305,7 +305,7 @@ issue.list = async (id) => {
     };
     console.log(issue_list_all?.list.length);
     for(let i=0; i < issue_list_all?.list?.length; i++){
-        let issue = issue_list_all[i];
+        let issue = issue_list_all?.list[i];
         if(!issue.label){
             label_list[''].count++;
         } else {
