@@ -163,7 +163,7 @@ issue.config = async (id) => {
     });
     const data = {
         "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.config",
-        "where": "user === " + user.get('uuid'),
+        "where": "user === '" + user.get('uuid') + "'",
         "request-method": "GET",
     };
     if (token) {
@@ -177,7 +177,7 @@ issue.config = async (id) => {
                 request(url, data, (url, create) => {
                     const data = {
                         "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.config",
-                        "where": "user === " + user.get('uuid'),
+                        "where": "user === '" + user.get('uuid') + "'",
                         "request-method": "GET",
                     };
                     header('Authorization', 'Bearer ' + token);
