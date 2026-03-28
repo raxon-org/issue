@@ -496,8 +496,16 @@ issue.list = async (id) => {
                         }
                         if(user.token()){
                             header('Authorization', 'Bearer ' + user.token());
-                            request(storage.data.get('backend.issue.config'), patch, (url, response) => {
-                                console.log(response);
+                            request(storage.data.get('backend.issue.config'), patch, async (url, response) => {
+                                storage.data.set('issue.config', response?.node);
+                                // storage.data.delete('issue.list.all');
+                                // storage.data.delete('issue.label.list.all');
+                                storage.data.delete('issue.list.active');
+                                // issue.load('issue.list.all', 'issue.config.options.list.all');
+                                // issue.load('issue.label.list.all', 'issue.config.options.list.label.all');
+
+                                //we can hold active tab in storage and then load it
+                                await issue.list(id);
                             });
                         }
                         break;
