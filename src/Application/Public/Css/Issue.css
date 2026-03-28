@@ -175,10 +175,11 @@ section[name="application-issue"] .body .issue-list {
 section[name="application-issue"] .body .issue-list div.issues {
     width: calc(100% - 200px);
     background: transparent;
-    height: 100%;
+    height: calc(100% - 5px);
     position: absolute;
     left: 0;
     top: 0;
+    padding-top: 5px;
 }
 
 section[name="application-issue"] .body .issue-list div.labels {
