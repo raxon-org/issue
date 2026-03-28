@@ -315,7 +315,7 @@ issue.list = async (id) => {
     for(let i=0; i < issue_list_all?.list?.length; i++){
         let issue = issue_list_all?.list[i];
         if(!issue.status){
-            issue.status = 'open';
+            continue;
         }
         let status = config?.options?.list?.status;
         if(!status){
@@ -343,7 +343,7 @@ issue.list = async (id) => {
     for(let uuid in label_list){
         console.log(label_list[uuid]);
         if(label_list[uuid].count === 0){
-            delete label_list[uuid];
+            // delete label_list[uuid];
         } else {
             let label = _('_').create('div');
             label.classList.add('label');
