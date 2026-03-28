@@ -489,6 +489,9 @@ issue.list = async (id) => {
                                 options: {
                                     list: {
                                         status: value,
+                                        active: {
+                                            where: "status === '" + value + "'"
+                                        }
                                     }
                                 }
                             },
