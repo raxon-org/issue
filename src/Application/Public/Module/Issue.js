@@ -37,7 +37,7 @@ issue.default = (type) => {
                                 limit : 30,
                                 sort:  "title=ASC",
                                 status: "open",
-                                where: "status === " + this.status,
+                                where: "status === 'open'",
                                 "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
                                 "request-method": "GET"
                             },
