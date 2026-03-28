@@ -484,10 +484,12 @@ issue.list = async (id) => {
                         config.options.list.status = value;
                         storage.data.set('issue.config.options.list.status', value);
                         let patch = {
-                            uuid: config.uuid,
-                            options: {
-                                list: {
-                                    status: value,
+                            node: {
+                                uuid: config.uuid,
+                                options: {
+                                    list: {
+                                        status: value,
+                                    }
                                 }
                             },
                             "request-method": "PATCH"
