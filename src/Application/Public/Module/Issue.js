@@ -250,6 +250,9 @@ issue.sleep = (ms) => {
 
 issue.rgb_to_rgba = (rgb, alpha) => {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    if( !rgb ) {
+        return "rgba(0,0,0,0)";
+    }
     return "rgba(" + rgb[1] + "," + rgb[2] + "," + rgb[3] + "," + alpha + ")";
 }
 
