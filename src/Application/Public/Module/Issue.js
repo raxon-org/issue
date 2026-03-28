@@ -325,7 +325,10 @@ issue.list = async (id) => {
         if(!status){
             status = 'open';
         }
-        if(issue.status !== status){
+        if(
+            issue.status !== status &&
+            status !== 'all'
+        ){
             continue;
         }
         if(!issue.label){
@@ -472,6 +475,26 @@ issue.list = async (id) => {
         if(status){
             status.on('change', (event) => {
                 let value = event.target.value;
+                switch(value){
+                    case 'all':
+                        config.options.list.status = value;
+                        storage.data.set('issue.config.options.list.status', value);
+
+                        let patch = {
+                            uuid: config.uuid,
+                            options: {
+                                list: {
+                                    status: value,
+                                }
+                            }
+                        }
+                        console.log(patch);
+                        break;
+                    case 'open':
+                        config.options.list.status = value;
+                        storage.data.set('issue.config.options.list.status', value);
+                    break;
+                }
                 console.log(value);
                 // issue.list(id);
             });
