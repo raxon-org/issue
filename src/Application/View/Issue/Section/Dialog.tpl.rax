@@ -43,14 +43,14 @@
             <label>Status</label>
             <select name="status">
                 <option value="all">All</option>
-                <option value="open" selected="selected">Open</option>
+                <option value="open">Open</option>
                 <option value="active">Active</option>
                 <option value="closed">Closed</option>
                 <option value="error">Error</option>
             </select>
             <label>Priority</label>
             <select name="priority">
-                <option value="all" selected="selected">All</option>
+                <option value="all">All</option>
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
                 <option value="high">High</option>

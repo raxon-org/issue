@@ -475,6 +475,8 @@ issue.list = async (id) => {
         if(status && !status.data('init')){
             status.on('change', (event) => {
                 let value = event.target.value;
+                let option = status.select('option[value="' + value + '"]');
+                option.attribute('selected', 'selected');
                 let patch;
                 switch(value){
                     case 'all':
