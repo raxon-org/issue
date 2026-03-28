@@ -340,6 +340,7 @@ issue.list = async (id) => {
             }
         }
     }
+    section.select('.body .issue-list').html('');
     let body_issue_list = section.select('.body .issue-list');
     let container = section.select('labels');
     if(!container){
@@ -548,7 +549,6 @@ issue.list = async (id) => {
                                 storage.data.set('issue.config', response?.node);
                                 // storage.data.delete('issue.list.all');
                                 // storage.data.delete('issue.label.list.all');
-                                section.select('.body .issue-list').html('');
                                 storage.data.delete('issue.list.load.active');
                                 storage.data.delete('issue.list.active');
                                 // issue.load('issue.list.all', 'issue.config.options.list.all');
