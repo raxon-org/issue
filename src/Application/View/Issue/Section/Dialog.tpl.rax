@@ -1,5 +1,4 @@
 {{$frontend.host = options('frontend.host')}}{{$backend.host = options('backend.host')}}{{literal}}
-<form>
 <div class="dialog dialog-{{config('controller.name')}}-main">
     <div class="head" data-title="Issue Tracker">
         <h1><img src="{{route.get('application-issue-icon')}}" class="icon" /> Issue Tracker</h1>
@@ -40,10 +39,26 @@
         </div>
     </div>
     <div class="footer">
+        <div class="issue-list display-none">
+            <select name="status">
+                <option value="open" selected="selected">Open</option>
+                <option value="active">Active</option>
+                <option value="closed">Closed</option>
+                <option value="error">Error</option>
+            </select>
+            <select name="priority">
+                <option value="all" selected="selected">All</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                <option value="critical">Critical</option>
+            </select>
+            <button class="button-where">Where</button>
+        </div>
+        <div class="issue-detail display-none">
         <button class="button-save">Save</button>
         <button class="button-cancel">Cancel</button>
         <span class="footer-status"></span>
         <span class="footer-info">Application.Issue</span>
     </div>
-</form>
 {{/literal}}
