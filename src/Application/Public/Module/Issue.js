@@ -182,13 +182,13 @@ issue.config = async (id) => {
                         "request-method": "GET",
                     };
                     header('Authorization', 'Bearer ' + token);
-                    request(url, data, (url, response) => {
+                    request(url, data, async (url, response) => {
                         storage.data.set('issue.config', response?.list[0]);
                         issue.load('issue.list.all', 'issue.config.options.list.all');
                         issue.load('issue.label.list.all', 'issue.config.options.list.label.all');
 
                         //we can hold active tab in storage and then load it
-                        issue.list(id);
+                        await issue.list(id);
                     });
                 });
             } else {
@@ -342,9 +342,11 @@ issue.list = async (id) => {
     console.log(label_list);
     for(let uuid in label_list){
         console.log(label_list[uuid]);
+        /*
         if(label_list[uuid].count === 0){
             // delete label_list[uuid];
         } else {
+         */
             let label = _('_').create('div');
             label.classList.add('label');
             label.setAttribute('data-uuid', uuid);
@@ -377,7 +379,9 @@ issue.list = async (id) => {
                 label.style.backgroundColor = issue.rgb_to_rgba(label_list[uuid].color.background, 0.7);
                 label.style.color = issue.rgb_to_rgba(label_list[uuid].color.text, 0.7);
             });
+            /*
         }
+             */
     }
     body_issue_list.append(container);
 
