@@ -317,8 +317,12 @@ issue.list = async (id) => {
         if(!issue.status){
             issue.status = 'open';
         }
+        let status = config?.options?.list?.active?.status;
+        if(issue.status !== status){
+            continue;
+        }
         if(!issue.label){
-            label_list[''][issue.status].count++;
+            label_list[''].count++;
         } else {
             for(let j=0; j < issue.label.length; j++){
                 let label_uuid = issue.label[j];
