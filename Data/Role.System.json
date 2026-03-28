@@ -12,9 +12,9 @@
       "#class": "Account.Permission"
     },
     {
-      "name": "Application:Issue:Update",
+      "name": "Application:Issue:update",
       "#class": "Account.Permission"
-    },,
+    },
     {
       "name": "Application:Issue:put",
       "#class": "Account.Permission"
