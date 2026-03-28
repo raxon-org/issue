@@ -12,6 +12,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "Application:Issue:Update",
+      "#class": "Account.Permission"
+    },,
+    {
       "name": "Application:Issue:put",
       "#class": "Account.Permission"
     },
@@ -49,6 +53,10 @@
     },
     {
       "name": "Application:Issue:Label:create.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Label:update",
       "#class": "Account.Permission"
     },
     {
@@ -92,6 +100,10 @@
       "#class": "Account.Permission"
     },
     {
+      "name": "Application:Issue:Task:update",
+      "#class": "Account.Permission"
+    },
+    {
       "name": "Application:Issue:Task:put",
       "#class": "Account.Permission"
     },
@@ -129,6 +141,10 @@
     },
     {
       "name": "Application:Issue:Config:create.many",
+      "#class": "Account.Permission"
+    },
+    {
+      "name": "Application:Issue:Config:update",
       "#class": "Account.Permission"
     },
     {
