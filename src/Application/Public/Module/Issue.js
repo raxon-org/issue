@@ -500,6 +500,7 @@ issue.list = async (id) => {
                                 storage.data.set('issue.config', response?.node);
                                 // storage.data.delete('issue.list.all');
                                 // storage.data.delete('issue.label.list.all');
+                                storage.data.delete('issue.list.load.active');
                                 storage.data.delete('issue.list.active');
                                 // issue.load('issue.list.all', 'issue.config.options.list.all');
                                 // issue.load('issue.label.list.all', 'issue.config.options.list.label.all');
