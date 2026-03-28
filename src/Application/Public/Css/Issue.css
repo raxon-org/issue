@@ -253,6 +253,10 @@ section[name="application-issue"] .body .issue-list div.issues li.labels span.la
     font-size: 10px;
 }
 
+section[name="application-issue"] .body .issue-list div.labels {
+    padding-top: 5px;
+}
+
 section[name="application-issue"] .body .issue-list div.labels div.label {
     border: 1px solid rgba(39, 170, 200, 1);
     border-radius: 5px;
@@ -264,6 +268,7 @@ section[name="application-issue"] .body .issue-list div.labels div.label {
     margin-right: 5px;
     margin-left: 5px;
     width: calc(100% - 30px);
+    margin-bottom: 5px;
 }
 
 section[name="application-issue"] .body .issue-list div.labels div.label span.count {
