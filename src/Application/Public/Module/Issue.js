@@ -446,10 +446,10 @@ issue.list = async (id) => {
         text += '<li class="is-modified">Modified</li>';
         text += '<li class="title">' + issue_list_active.list[i].title + '</li><li class="labels">';
         for(let uuid in label_list){
-            if(issue_list_active.list[0].label.length === 0 && label_list[uuid]?.is?.special === 'no-label'){
+            if(issue_list_active.list[0]?.label?.length === 0 && label_list[uuid]?.is?.special === 'no-label'){
                 text += '<span class="label" style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
             } else {
-                if(in_array(uuid, issue_list_active.list[i].label)){
+                if(in_array(uuid, issue_list_active.list[i]?.label)){
                     text += '<span class="label" style="background: ' + label_list[uuid].color.background +'; color: ' + label_list[uuid].color.text + ';">' + label_list[uuid].text + '</span>';
                 }
             }
