@@ -475,15 +475,49 @@ issue.list = async (id) => {
         if(status && !status.data('init')){
             status.on('change', (event) => {
                 let value = event.target.value;
+                let patch;
                 switch(value){
                     case 'all':
+                        config.options.list.status = value;
+                        storage.data.set('issue.config.options.list.status', value);
+                        patch = {
+                            node: {
+                                uuid: config.uuid,
+                                options: {
+                                    list: {
+                                        status: value,
+                                        active: {
+                                            where: ""
+                                        }
+                                    }
+                                }
+                            },
+                            "request-method": "PATCH"
+                        }
+                        if(user.token()){
+                            header('Authorization', 'Bearer ' + user.token());
+                            request(storage.data.get('backend.issue.config'), patch, async (url, response) => {
+                                storage.data.set('issue.config', response?.node);
+                                // storage.data.delete('issue.list.all');
+                                // storage.data.delete('issue.label.list.all');
+                                section.select('.body .issue-list').html('');
+                                storage.data.delete('issue.list.load.active');
+                                storage.data.delete('issue.list.active');
+                                // issue.load('issue.list.all', 'issue.config.options.list.all');
+                                // issue.load('issue.label.list.all', 'issue.config.options.list.label.all');
+
+                                //we can hold active tab in storage and then load it
+                                await issue.list(id);
+                            });
+                        }
+                        break;
                     case 'open':
                     case 'active':
                     case 'closed':
                     case 'error':
                         config.options.list.status = value;
                         storage.data.set('issue.config.options.list.status', value);
-                        let patch = {
+                        patch = {
                             node: {
                                 uuid: config.uuid,
                                 options: {
@@ -515,8 +549,6 @@ issue.list = async (id) => {
                         }
                         break;
                 }
-                console.log(value);
-                // issue.list(id);
             });
             status.data('init', true);
         }
