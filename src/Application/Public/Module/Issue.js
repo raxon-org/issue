@@ -465,6 +465,10 @@ issue.list = async (id) => {
     }
     body_issue_list.append(container);
     body_issue_list.removeClass('display-none');
+    const footer_issue_list = section.select('.footer .issue-list');
+    if(footer_issue_list){
+        footer_issue_list.removeClass('display-none');
+    }
     // const tab = section.select(config?.options?.list?.selector)
 
 }
