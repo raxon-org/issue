@@ -312,6 +312,11 @@ section[name="application-issue"] .footer {
     color: rgba(100, 100, 100, 1);
 }
 
+section[name="application-issue"] .footer .issue-list label {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 /* ═══════════════════════════════════════════════════════════ NEW ISSUE FORM */
 section[name="application-issue"] .issue-form {
     display: flex;
