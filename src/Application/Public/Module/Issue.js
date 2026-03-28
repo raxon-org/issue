@@ -477,23 +477,28 @@ issue.list = async (id) => {
                 let value = event.target.value;
                 switch(value){
                     case 'all':
+                    case 'open':
+                    case 'active':
+                    case 'closed':
+                    case 'error':
                         config.options.list.status = value;
                         storage.data.set('issue.config.options.list.status', value);
-
                         let patch = {
                             uuid: config.uuid,
                             options: {
                                 list: {
                                     status: value,
                                 }
-                            }
+                            },
+                            "request-method": "PATCH"
                         }
-                        console.log(patch);
+                        if(user.token()){
+                            header('Authorization', 'Bearer ' + user.token());
+                            request(storage.data.get('backend.issue.config'), patch, (url, response) => {
+                                console.log(response);
+                            });
+                        }
                         break;
-                    case 'open':
-                        config.options.list.status = value;
-                        storage.data.set('issue.config.options.list.status', value);
-                    break;
                 }
                 console.log(value);
                 // issue.list(id);
