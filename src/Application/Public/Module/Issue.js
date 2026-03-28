@@ -472,7 +472,7 @@ issue.list = async (id) => {
     if(footer_issue_list){
         footer_issue_list.removeClass('display-none');
         let status = footer_issue_list.select('[name="status"]');
-        if(status && !status.data('mtime')){
+        if(status && !status.data('init')){
             status.on('change', (event) => {
                 let value = event.target.value;
                 switch(value){
@@ -518,6 +518,7 @@ issue.list = async (id) => {
                 console.log(value);
                 // issue.list(id);
             });
+            status.data('init', true);
         }
     }
     // const tab = section.select(config?.options?.list?.selector)
