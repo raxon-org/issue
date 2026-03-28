@@ -475,6 +475,15 @@ issue.list = async (id) => {
         if(status && !status.data('init')){
             status.on('change', (event) => {
                 let value = event.target.value;
+                let options = status.select('option');
+                if(is.nodeList(options)){
+                    for(let i=0; i < options.length; i++){
+                        options[i].removeAttribute('selected');
+                    }
+                }
+                else if(options){
+                    options.removeAttribute('selected');
+                }
                 let option = status.select('option[value="' + value + '"]');
                 option.attribute('selected', 'selected');
                 let patch;
