@@ -184,10 +184,11 @@ section[name="application-issue"] .body .issue-list div.issues {
 section[name="application-issue"] .body .issue-list div.labels {
     width: 200px;
     background: transparent;
-    height: 100%;
+    height: calc(100% - 5px);
     position: absolute;
     right: 0;
     top: 0;
+    padding-top: 5px;
 }
 
 section[name="application-issue"] .body .issue-list div.issues div.issue {
@@ -253,9 +254,7 @@ section[name="application-issue"] .body .issue-list div.issues li.labels span.la
     font-size: 10px;
 }
 
-section[name="application-issue"] .body .issue-list div.labels {
-    padding-top: 5px;
-}
+
 
 section[name="application-issue"] .body .issue-list div.labels div.label {
     border: 1px solid rgba(39, 170, 200, 1);
