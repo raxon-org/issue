@@ -36,7 +36,8 @@ issue.default = (type) => {
                                 page : 1,
                                 limit : 30,
                                 sort:  "title=ASC",
-                                where: "status === 'open'",
+                                status: "open",
+                                where: "status === " + this.status,
                                 "output.filter[]": "Package:Raxon:Issue:Output:Filter:Application:Issue:issue.filter",
                                 "request-method": "GET"
                             },
@@ -154,7 +155,7 @@ issue.config = async (id) => {
     const url = storage.data.get('backend.issue.config');
 
     const data_delete = {
-        "uuid": "42903e71-58d9-4031-95c8-bb1fbbda4282",
+        "uuid": "b492a1a5-1c73-4c2f-bd1b-3221b760f3b1",
         "request-method": "DELETE",
     }
     header('Authorization', 'Bearer ' + token);
@@ -306,23 +307,22 @@ issue.list = async (id) => {
         },
         color: {
             text: "rgb(0,0,0)",
-            background: "rgb(255,255,255)",
-            hover: {
-                text: "rgb(0,0,0)",
-                background: "rgb(255,255,255)"
-            }
+            background: "rgb(255,255,255)"
         },
         count: 0
     };
     console.log(issue_list_all?.list.length);
     for(let i=0; i < issue_list_all?.list?.length; i++){
         let issue = issue_list_all?.list[i];
+        if(!issue.status){
+            issue.status = 'open';
+        }
         if(!issue.label){
-            label_list[''].count++;
+            label_list[''][issue.status].count++;
         } else {
             for(let j=0; j < issue.label.length; j++){
                 let label_uuid = issue.label[j];
-                label_list[label_uuid].count++;
+                label_list[label_uuid][issue.status].count++;
             }
         }
     }
