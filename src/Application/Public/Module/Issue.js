@@ -561,6 +561,18 @@ issue.list = async (id) => {
                         break;
                 }
             });
+            let value = config?.options?.list?.status ?? 'all';
+            let options = status.select('option');
+            if(is.nodeList(options)){
+                for(let i=0; i < options.length; i++){
+                    options[i].removeAttribute('selected');
+                }
+            }
+            else if(options){
+                options.removeAttribute('selected');
+            }
+            let option = status.select('option[value="' + value + '"]');
+            option.attribute('selected', 'selected');
             status.data('init', true);
         }
     }
