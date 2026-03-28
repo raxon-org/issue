@@ -184,8 +184,8 @@ issue.config = async (id) => {
                     header('Authorization', 'Bearer ' + token);
                     request(url, data, (url, response) => {
                         storage.data.set('issue.config', response?.list[0]);
-                        issue.load('issue.list', 'issue.config.options.list.node');
-                        issue.load('issue.label.list', 'issue.config.options.list.label');
+                        issue.load('issue.list.all', 'issue.config.options.list.all');
+                        issue.load('issue.label.list.all', 'issue.config.options.list.label.all');
 
                         //we can hold active tab in storage and then load it
                         issue.list(id);
