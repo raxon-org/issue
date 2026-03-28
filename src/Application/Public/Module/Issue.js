@@ -468,6 +468,14 @@ issue.list = async (id) => {
     const footer_issue_list = section.select('.footer .issue-list');
     if(footer_issue_list){
         footer_issue_list.removeClass('display-none');
+        let status = footer_issue_list.select('[name="status"]');
+        if(status){
+            status.on('change', (event) => {
+                let value = event.target.value;
+                console.log(value);
+                // issue.list(id);
+            });
+        }
     }
     // const tab = section.select(config?.options?.list?.selector)
 

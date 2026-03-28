@@ -42,6 +42,7 @@
         <div class="issue-list display-none">
             <label>Status</label>
             <select name="status">
+                <option value="all">All</option>
                 <option value="open" selected="selected">Open</option>
                 <option value="active">Active</option>
                 <option value="closed">Closed</option>
