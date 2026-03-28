@@ -472,7 +472,7 @@ issue.list = async (id) => {
     if(footer_issue_list){
         footer_issue_list.removeClass('display-none');
         let status = footer_issue_list.select('[name="status"]');
-        if(status){
+        if(status && !status.data('mtime')){
             status.on('change', (event) => {
                 let value = event.target.value;
                 switch(value){
