@@ -322,7 +322,13 @@ issue.list = async (id) => {
             continue;
         }
         let status = config?.options?.list?.status;
-        if(!status){
+        if(
+            is.nodeList(status) &&
+            !in_array(issue.status, status, true)
+        ) {
+            continue;
+        }
+        else if(!status){
             status = 'open';
         }
         if(
@@ -481,7 +487,7 @@ issue.list = async (id) => {
         button_status.classList.add('status');
         button_status.innerHTML = 'Status';
         button_status.on('click', (event) => {
-            let div_status = select('.checkbox-status');
+            let div_status = section.select('.checkbox-status');
             if(!div_status){
                 div_status = _('_').create('div');
                 div_status.classList.add('checkbox-status');
