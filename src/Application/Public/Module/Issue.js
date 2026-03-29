@@ -360,7 +360,6 @@ issue.list = async (id) => {
         container = _('_').create('div');
         container.classList.add('labels');
     }
-    console.log(label_list);
     for(let uuid in label_list){
         console.log(label_list[uuid]);
         /*
@@ -502,13 +501,10 @@ issue.list = async (id) => {
                     div_status.toggleClass('display-none');
                 }
                 let status_active = config?.options?.list?.status;
-                console.log(status_active);
                 if(is.array(status_active)){
                     for(let i=0; i < status_active.length; i++){
                         let selector = 'input[name="' + status_active[i] + '"]';
-                        console.log(selector);
                         let checkbox = div_status.select(selector);
-                        console.log(checkbox);
                         if(checkbox){
                             checkbox.attribute('checked', 'checked');
                         }
@@ -523,51 +519,14 @@ issue.list = async (id) => {
                 if(checkboxes){
                     if(is.nodeList(checkboxes)){
                         for(let i=0; i < checkboxes.length; i++){
-                            checkboxes[i].on('change', (event) => {
-                                let value = event.target.name;
-                                let data = [];
-                                let checkboxes = div_status.select('input[type="checkbox"]');
-                                if(is.nodeList(checkboxes)){
-                                    for(let i=0; i < checkboxes.length; i++){
-                                        if(checkboxes[i].checked){
-                                            data.push(checkboxes[i].name);
-                                        }
-                                    }
-                                } else {
-                                    if(checkboxes.checked){
-                                        data.push(checkboxes.name);
-                                    }
-                                }
-                                if(data.length === 0){
-                                    data.push('open');
-                                }
-                                if(user.token()){
-                                    let where = 'status in ["' + data.join('","') + '"]';
-                                    header('Authorization', 'Bearer ' + user.token());
-                                    request(storage.data.get('backend.issue.config'), {
-                                        node: {
-                                            uuid: config.uuid,
-                                            options: {
-                                                list: {
-                                                    status: data,
-                                                    active: {
-                                                        where: where
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        "request-method": "PATCH"
-                                    }, async(url, response) => {
-                                        storage.data.set('issue.config', response?.node);
-                                        storage.data.delete('issue.list.load.active');
-                                        storage.data.delete('issue.list.active');
-                                        await issue.list(id);
-                                    });
-                                }
-                            })
+                            checkboxes[i].on('change', async(event) => {
+                                await issue.status_update(event.target.name, div_status);
+                            });
                         }
                     } else {
-
+                        checkboxes.on('change', async(event) => {
+                            await issue.status_update(event.target.name, div_status);
+                        });
                     }
 
                 }
@@ -585,6 +544,50 @@ issue.list = async (id) => {
     }
     // const tab = section.select(config?.options?.list?.selector)
 
+}
+
+issue.status_update = async (status, div_status) => {
+    let config = storage.data.get('issue.config');
+    let value = event.target.name;
+    let data = [];
+    let checkboxes = div_status.select('input[type="checkbox"]');
+    if(is.nodeList(checkboxes)){
+        for(let i=0; i < checkboxes.length; i++){
+            if(checkboxes[i].checked){
+                data.push(checkboxes[i].name);
+            }
+        }
+    } else {
+        if(checkboxes.checked){
+            data.push(checkboxes.name);
+        }
+    }
+    if(data.length === 0){
+        data.push('open');
+    }
+    if(user.token()){
+        let where = 'status in ["' + data.join('","') + '"]';
+        header('Authorization', 'Bearer ' + user.token());
+        request(storage.data.get('backend.issue.config'), {
+            node: {
+                uuid: config.uuid,
+                options: {
+                    list: {
+                        status: data,
+                        active: {
+                            where: where
+                        }
+                    }
+                }
+            },
+            "request-method": "PATCH"
+        }, async(url, response) => {
+            storage.data.set('issue.config', response?.node);
+            storage.data.delete('issue.list.load.active');
+            storage.data.delete('issue.list.active');
+            await issue.list(id);
+        });
+    }
 }
 
 export { issue }
