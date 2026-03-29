@@ -495,6 +495,7 @@ issue.list = async (id) => {
                     div_status.toggleClass('display-none');
                 }
                 let status_active = config?.options?.list?.status;
+                console.log(status_active);
                 if(is.nodeList(status_active)){
                     for(let i=0; i < status_active.length; i++){
                         let selector = 'input[name="' + status_active[i] + '"]';
