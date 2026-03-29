@@ -630,7 +630,7 @@ issue.new = (id) => {
     if(issue){
         let ul = section.select('.body .issue-new ul');
         if(!ul){
-            ul = _('_').create('label');
+            ul = _('_').create('ul');
             issue.append(ul);
         }
 
@@ -639,7 +639,6 @@ issue.new = (id) => {
             let li = _('_').create('li');
             li.addClass('title');
             let label_title = _('_').create('label');
-            label_title.setAttribute('for', 'title');
             label_title.innerHTML = 'Title';
             title = _('_').create('input');
             title.setAttribute('type', 'text');
@@ -654,7 +653,6 @@ issue.new = (id) => {
             let li = _('_').create('li');
             li.addClass('description');
             let label_description = _('_').create('label');
-            label_description.setAttribute('for', 'description');
             label_description.innerHTML = 'Description<br>';
             let description = _('_').create('textarea');
             description.setAttribute('name', 'description');
