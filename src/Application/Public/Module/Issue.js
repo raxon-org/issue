@@ -615,8 +615,14 @@ issue.new = (id) => {
     if(!config){
         return;
     }
+    let menu_application_issue = section.select('.menu-application-issue');
+    menu_application_issue.select('li.active').removeClass('active');
+    let button_new = section.select('.menu-application-issue li[data-tab="issue-new"]');
+    button_new.addClass('active');
     section.select('.body .issue-list').addClass('display-none');
     section.select('.body .issue-new').removeClass('display-none');
+    let issue = section.select('.body .issue-new');
+
 }
 
 export { issue }

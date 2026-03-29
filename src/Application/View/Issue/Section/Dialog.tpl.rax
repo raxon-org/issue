@@ -30,12 +30,8 @@
     </div>
     <div class="body">
         <div class="issue-list display-none">
-
-
         </div>
         <div class="issue-new display-none">
-            <input type="text" name="title" placeholder="Title" />
-            <textarea name="description" placeholder="Description"></textarea>
         </div>
     </div>
     <div class="footer">
@@ -60,12 +56,19 @@
                 <option value="critical">Critical</option>
             </select>
             */
-
+        </div>
+        <div class="issue-new display-none">
+            <button class="button-save">Create</button>
+            <button class="button-cancel">Cancel</button>
+            <span class="footer-status"></span>
+            <span class="footer-info">Application.Issue</span>
         </div>
         <div class="issue-detail display-none">
-        <button class="button-save">Save</button>
-        <button class="button-cancel">Cancel</button>
-        <span class="footer-status"></span>
-        <span class="footer-info">Application.Issue</span>
+            <button class="button-save">Save</button>
+            <button class="button-cancel">Cancel</button>
+            <span class="footer-status"></span>
+            <span class="footer-info">Application.Issue</span>
+        </div>
     </div>
+</div>
 {{/literal}}
