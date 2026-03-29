@@ -336,7 +336,7 @@ issue.list = async (id) => {
         } else {
             for(let j=0; j < issue.label.length; j++){
                 let label_uuid = issue.label[j];
-                label_list[label_uuid][issue.status].count++;
+                label_list[label_uuid].count++;
             }
         }
     }
@@ -491,6 +491,20 @@ issue.list = async (id) => {
                 footer_issue_list.append(div_status);
             } else {
                 div_status.toggleClass('display-none');
+            }
+            let status_active = config?.options?.list?.status;
+            if(is_array(status_active)){
+                for(let i=0; i < status_active.length; i++){
+                    let checkbox = div_status.select('input[name="' + status_active[i] + '"]');
+                    if(checkbox){
+                        checkbox.attribute('checked', 'checked');
+                    }
+                }
+            } else {
+                let checkbox = div_status.select('input[name="' + status_active + '"]');
+                if(checkbox){
+                    checkbox.attribute('checked', 'checked');
+                }
             }
         });
         footer_issue_list.appendChild(button_status);
