@@ -349,7 +349,7 @@ section[name="application-issue"] .footer .issue-list .checkbox-status li {
     border-radius: 5px;
     border: 1px solid rgba(255,255,255,0.5);
     margin-bottom: 5px;
-    width: cacl(100% - 10px);
+    width: calc(100% - 10px);
 }
 
 section[name="application-issue"] .footer .issue-list .checkbox-status .input[type="checkbox"] {
