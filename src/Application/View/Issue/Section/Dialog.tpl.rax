@@ -40,7 +40,10 @@
     </div>
     <div class="footer">
         <div class="issue-list display-none">
+            /*
             <label>Status</label>
+
+
             <select name="status">
                 <option value="all">All</option>
                 <option value="open">Open</option>
@@ -56,7 +59,8 @@
                 <option value="high">High</option>
                 <option value="critical">Critical</option>
             </select>
-            <button class="button-where">Where</button>
+            */
+            <button class="button-filter">Filters</button>
         </div>
         <div class="issue-detail display-none">
         <button class="button-save">Save</button>

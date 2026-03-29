@@ -471,6 +471,15 @@ issue.list = async (id) => {
     body_issue_list.removeClass('display-none');
     const footer_issue_list = section.select('.footer .issue-list');
     if(footer_issue_list){
+        const button_status = _('_').create('button');
+        button_status.classList.add('status');
+        button_status.innerHTML = 'Status';
+        footer_issue_list.prepend(button_status);
+
+
+
+
+
         footer_issue_list.removeClass('display-none');
         let status = footer_issue_list.select('[name="status"]');
         if(status && !status.data('init')){
