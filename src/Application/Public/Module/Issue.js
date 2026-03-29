@@ -544,11 +544,13 @@ issue.list = async (id) => {
                                         }
                                     },
                                     "request-method": "PATCH"
-                                }, (url, response) => {
-                                    console.log(response);
+                                }, async(url, response) => {
+                                    storage.data.set('issue.config', response?.node);
+                                    storage.data.delete('issue.list.load.active');
+                                    storage.data.delete('issue.list.active');
+                                    await issue.list(id);
                                 });
                             }
-                            console.log(data);
                         })
                     }
                 } else {
@@ -563,6 +565,7 @@ issue.list = async (id) => {
         button_filter.innerHTML = 'Filter';
         footer_issue_list.appendChild(button_filter);
         footer_issue_list.removeClass('display-none');
+        /*
         let status = footer_issue_list.select('[name="status"]');
         if(status && !status.data('init')){
             status.on('change', (event) => {
@@ -666,6 +669,7 @@ issue.list = async (id) => {
             option.attribute('selected', 'selected');
             status.data('init', true);
         }
+         */
     }
     // const tab = section.select(config?.options?.list?.selector)
 
