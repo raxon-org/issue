@@ -493,7 +493,7 @@ issue.list = async (id) => {
                 div_status.toggleClass('display-none');
             }
             let status_active = config?.options?.list?.status;
-            if(is_array(status_active)){
+            if(is.nodelist(status_active)){
                 for(let i=0; i < status_active.length; i++){
                     let checkbox = div_status.select('input[name="' + status_active[i] + '"]');
                     if(checkbox){
