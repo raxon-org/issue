@@ -525,6 +525,28 @@ issue.list = async (id) => {
                                     data.push(checkboxes.name);
                                 }
                             }
+                            if(data.length === 0){
+                                data.push('open');
+                            }
+                            if(user.token()){
+                                let where = 'status in ["' + data.join('","') + '"]';
+                                header('Authorization', 'Bearer ' + user.token());
+                                request(storage.data.get('backend.issue.config'), {
+                                    node: {
+                                        uuid: config.uuid,
+                                        options: {
+                                            list: {
+                                                status: data,
+                                                active: {
+                                                    where: where
+                                                }
+                                            }
+                                        }
+                                    }
+                                }, (url, response) => {
+                                    console.log(response);
+                                });
+                            }
                             console.log(data);
                         })
                     }
