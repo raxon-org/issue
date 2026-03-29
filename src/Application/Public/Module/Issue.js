@@ -477,205 +477,100 @@ issue.list = async (id) => {
     body_issue_list.removeClass('display-none');
     const footer_issue_list = section.select('.footer .issue-list');
     if(footer_issue_list){
-        /*
-        const label_status = _('_').create('label');
-        label_status.classList.add('status');
-        label_status.innerHTML = 'Status';
-        footer_issue_list.appendChild(label_status);
-         */
-        const button_status = _('_').create('button');
-        button_status.classList.add('status');
-        button_status.innerHTML = 'Status';
-        button_status.on('click', (event) => {
-            let div_status = section.select('.checkbox-status');
-            if(!div_status){
-                div_status = _('_').create('div');
-                div_status.classList.add('checkbox-status');
-                div_status.style.top = (event.target.offsetTop - event.target.offsetHeight - 225) + 'px';
-                div_status.style.left = (event.target.offsetLeft) + 'px';
-                div_status.html('<h1 class="title">Status</h1><ul><li><input type="checkbox" name="open"><label class="title">Open</label><br></li><li><input type="checkbox" name="closed"><label class="title">Closed</label><br></li><li><input type="checkbox" name="active"><label class="title">Active</label><br></li><li><input type="checkbox" name="error"><label class="title">Error</label><br></li><li><input type="checkbox" name="template"><label class="title">Template</label><br></li></ul>')
-                footer_issue_list.append(div_status);
-            } else {
-                div_status.toggleClass('display-none');
-            }
-            let status_active = config?.options?.list?.status;
-            if(is.nodeList(status_active)){
-                for(let i=0; i < status_active.length; i++){
-                    let checkbox = div_status.select('input[name="' + status_active[i] + '"]');
+        let button_status = footer_issue_list.select('button.status');
+        if(!button_status){
+            button_status = _('_').create('button');
+            button_status.classList.add('status');
+            button_status.innerHTML = 'Status';
+            button_status.on('click', (event) => {
+                let div_status = section.select('.checkbox-status');
+                if(!div_status){
+                    div_status = _('_').create('div');
+                    div_status.classList.add('checkbox-status');
+                    div_status.style.top = (event.target.offsetTop - event.target.offsetHeight - 225) + 'px';
+                    div_status.style.left = (event.target.offsetLeft) + 'px';
+                    div_status.html('<h1 class="title">Status</h1><ul><li><input type="checkbox" name="open"><label class="title">Open</label><br></li><li><input type="checkbox" name="closed"><label class="title">Closed</label><br></li><li><input type="checkbox" name="active"><label class="title">Active</label><br></li><li><input type="checkbox" name="error"><label class="title">Error</label><br></li><li><input type="checkbox" name="template"><label class="title">Template</label><br></li></ul>')
+                    footer_issue_list.append(div_status);
+                } else {
+                    div_status.toggleClass('display-none');
+                }
+                let status_active = config?.options?.list?.status;
+                if(is.nodeList(status_active)){
+                    for(let i=0; i < status_active.length; i++){
+                        let checkbox = div_status.select('input[name="' + status_active[i] + '"]');
+                        if(checkbox){
+                            checkbox.attribute('checked', 'checked');
+                        }
+                    }
+                } else {
+                    let checkbox = div_status.select('input[name="' + status_active + '"]');
                     if(checkbox){
                         checkbox.attribute('checked', 'checked');
                     }
                 }
-            } else {
-                let checkbox = div_status.select('input[name="' + status_active + '"]');
-                if(checkbox){
-                    checkbox.attribute('checked', 'checked');
-                }
-            }
-            let checkboxes = div_status.select('input[type="checkbox"]');
-            if(checkboxes){
-                if(is.nodeList(checkboxes)){
-                    for(let i=0; i < checkboxes.length; i++){
-                        checkboxes[i].on('change', (event) => {
-                            let value = event.target.name;
-                            let data = [];
-                            let checkboxes = div_status.select('input[type="checkbox"]');
-                            if(is.nodeList(checkboxes)){
-                                for(let i=0; i < checkboxes.length; i++){
-                                    if(checkboxes[i].checked){
-                                        data.push(checkboxes[i].name);
+                let checkboxes = div_status.select('input[type="checkbox"]');
+                if(checkboxes){
+                    if(is.nodeList(checkboxes)){
+                        for(let i=0; i < checkboxes.length; i++){
+                            checkboxes[i].on('change', (event) => {
+                                let value = event.target.name;
+                                let data = [];
+                                let checkboxes = div_status.select('input[type="checkbox"]');
+                                if(is.nodeList(checkboxes)){
+                                    for(let i=0; i < checkboxes.length; i++){
+                                        if(checkboxes[i].checked){
+                                            data.push(checkboxes[i].name);
+                                        }
+                                    }
+                                } else {
+                                    if(checkboxes.checked){
+                                        data.push(checkboxes.name);
                                     }
                                 }
-                            } else {
-                                if(checkboxes.checked){
-                                    data.push(checkboxes.name);
+                                if(data.length === 0){
+                                    data.push('open');
                                 }
-                            }
-                            if(data.length === 0){
-                                data.push('open');
-                            }
-                            if(user.token()){
-                                let where = 'status in ["' + data.join('","') + '"]';
-                                header('Authorization', 'Bearer ' + user.token());
-                                request(storage.data.get('backend.issue.config'), {
-                                    node: {
-                                        uuid: config.uuid,
-                                        options: {
-                                            list: {
-                                                status: data,
-                                                active: {
-                                                    where: where
+                                if(user.token()){
+                                    let where = 'status in ["' + data.join('","') + '"]';
+                                    header('Authorization', 'Bearer ' + user.token());
+                                    request(storage.data.get('backend.issue.config'), {
+                                        node: {
+                                            uuid: config.uuid,
+                                            options: {
+                                                list: {
+                                                    status: data,
+                                                    active: {
+                                                        where: where
+                                                    }
                                                 }
                                             }
-                                        }
-                                    },
-                                    "request-method": "PATCH"
-                                }, async(url, response) => {
-                                    storage.data.set('issue.config', response?.node);
-                                    storage.data.delete('issue.list.load.active');
-                                    storage.data.delete('issue.list.active');
-                                    await issue.list(id);
-                                });
-                            }
-                        })
-                    }
-                } else {
-
-                }
-
-            }
-        });
-        footer_issue_list.appendChild(button_status);
-        const button_filter = _('_').create('button');
-        button_filter.classList.add('filter');
-        button_filter.innerHTML = 'Filter';
-        footer_issue_list.appendChild(button_filter);
-        footer_issue_list.removeClass('display-none');
-        /*
-        let status = footer_issue_list.select('[name="status"]');
-        if(status && !status.data('init')){
-            status.on('change', (event) => {
-                let value = event.target.value;
-                let options = status.select('option');
-                if(is.nodeList(options)){
-                    for(let i=0; i < options.length; i++){
-                        options[i].removeAttribute('selected');
-                    }
-                }
-                else if(options){
-                    options.removeAttribute('selected');
-                }
-                let option = status.select('option[value="' + value + '"]');
-                option.attribute('selected', 'selected');
-                let patch;
-                switch(value){
-                    case 'all':
-                        config.options.list.status = value;
-                        storage.data.set('issue.config.options.list.status', value);
-                        patch = {
-                            node: {
-                                uuid: config.uuid,
-                                options: {
-                                    list: {
-                                        status: value,
-                                        active: {
-                                            where: ""
-                                        }
-                                    }
+                                        },
+                                        "request-method": "PATCH"
+                                    }, async(url, response) => {
+                                        storage.data.set('issue.config', response?.node);
+                                        storage.data.delete('issue.list.load.active');
+                                        storage.data.delete('issue.list.active');
+                                        await issue.list(id);
+                                    });
                                 }
-                            },
-                            "request-method": "PATCH"
+                            })
                         }
-                        if(user.token()){
-                            header('Authorization', 'Bearer ' + user.token());
-                            request(storage.data.get('backend.issue.config'), patch, async (url, response) => {
-                                storage.data.set('issue.config', response?.node);
-                                // storage.data.delete('issue.list.all');
-                                // storage.data.delete('issue.label.list.all');
-                                section.select('.body .issue-list').html('');
-                                storage.data.delete('issue.list.load.active');
-                                storage.data.delete('issue.list.active');
-                                // issue.load('issue.list.all', 'issue.config.options.list.all');
-                                // issue.load('issue.label.list.all', 'issue.config.options.list.label.all');
+                    } else {
 
-                                //we can hold active tab in storage and then load it
-                                await issue.list(id);
-                            });
-                        }
-                        break;
-                    case 'open':
-                    case 'active':
-                    case 'closed':
-                    case 'error':
-                        config.options.list.status = value;
-                        storage.data.set('issue.config.options.list.status', value);
-                        patch = {
-                            node: {
-                                uuid: config.uuid,
-                                options: {
-                                    list: {
-                                        status: value,
-                                        active: {
-                                            where: "status === '" + value + "'"
-                                        }
-                                    }
-                                }
-                            },
-                            "request-method": "PATCH"
-                        }
-                        if(user.token()){
-                            header('Authorization', 'Bearer ' + user.token());
-                            request(storage.data.get('backend.issue.config'), patch, async (url, response) => {
-                                storage.data.set('issue.config', response?.node);
-                                // storage.data.delete('issue.list.all');
-                                // storage.data.delete('issue.label.list.all');
-                                storage.data.delete('issue.list.load.active');
-                                storage.data.delete('issue.list.active');
-                                // issue.load('issue.list.all', 'issue.config.options.list.all');
-                                // issue.load('issue.label.list.all', 'issue.config.options.list.label.all');
+                    }
 
-                                //we can hold active tab in storage and then load it
-                                await issue.list(id);
-                            });
-                        }
-                        break;
                 }
             });
-            let value = config?.options?.list?.status ?? 'all';
-            let options = status.select('option');
-            if(is.nodeList(options)){
-                for(let i=0; i < options.length; i++){
-                    options[i].removeAttribute('selected');
-                }
-            }
-            else if(options){
-                options.removeAttribute('selected');
-            }
-            let option = status.select('option[value="' + value + '"]');
-            option.attribute('selected', 'selected');
-            status.data('init', true);
+            footer_issue_list.appendChild(button_status);
         }
-         */
+        let button_filter = footer_issue_list.select('button.filter');
+        if(!button_filter){
+            button_filter = _('_').create('button');
+            button_filter.classList.add('filter');
+            button_filter.innerHTML = 'Filter';
+            footer_issue_list.appendChild(button_filter);
+        }
+        footer_issue_list.removeClass('display-none');
     }
     // const tab = section.select(config?.options?.list?.selector)
 
