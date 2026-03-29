@@ -542,7 +542,8 @@ issue.list = async (id) => {
                                                 }
                                             }
                                         }
-                                    }
+                                    },
+                                    "request-method": "PATCH"
                                 }, (url, response) => {
                                     console.log(response);
                                 });
