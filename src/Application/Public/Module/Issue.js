@@ -331,12 +331,17 @@ issue.list = async (id) => {
             is.array(status) &&
             !in_array(issue.status, status, true)
         ) {
+            console.log(issue.status);
+            console.log(status);
             continue;
         }
         else if(
+            !is.array(status) &&
             issue.status !== status &&
             status !== 'all'
         ){
+            console.log(issue.status);
+            console.log(status);
             continue;
         }
         if(!issue.label){
