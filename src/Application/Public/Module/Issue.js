@@ -628,12 +628,12 @@ issue.new = (id) => {
     section.select('.footer .issue-new')?.removeClass('display-none');
     let issue = section.select('.body .issue-new');
     if(issue){
-        let ul = section.select('.body .issue-new ul');
+        let ul = section.select('.body .issue-new ul.form');
         if(!ul){
             ul = _('_').create('ul');
+            ul.classList.add('form');
             issue.append(ul);
         }
-
         let title = section.select('.body .issue-new input[name="title"]');
         if(!title){
             let li = _('_').create('li');
@@ -646,6 +646,37 @@ issue.new = (id) => {
             title.setAttribute('placeholder', 'Title');
             li.append(label_title);
             li.append(title);
+            ul.append(li);
+        }
+        let type = section.select('.body .issue-new select[name="type"]');
+        if(!type){
+            let li = _('_').create('li');
+            li.addClass('type');
+            let label_type = _('_').create('label');
+            label_type.innerHTML = 'Type';
+            type = _('_').create('select');
+            let type_options = [
+                {
+                    title: "Bug",
+                    value: "bug"
+                },
+                {
+                    title: "Feature",
+                    value: "feature"
+                },
+                {
+                    title: "Question",
+                    value: "question"
+                }
+            ];
+            for(let i=0; i < type_options.length; i++){
+                let option = _('_').create('option');
+                option.setAttribute('value', type_options[i].value);
+                option.innerHTML = type_options[i].title;
+                type.append(option);
+            }
+            li.append(label_type);
+            li.append(type);
             ul.append(li);
         }
         let description = section.select('.body .issue-new textarea[name="description"]');
