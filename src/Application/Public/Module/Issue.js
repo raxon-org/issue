@@ -497,7 +497,10 @@ issue.list = async (id) => {
                 let status_active = config?.options?.list?.status;
                 if(is.nodeList(status_active)){
                     for(let i=0; i < status_active.length; i++){
-                        let checkbox = div_status.select('input[name="' + status_active[i] + '"]');
+                        let selector = 'input[name="' + status_active[i] + '"]';
+                        console.log(selector);
+                        let checkbox = div_status.select(selector);
+                        console.log(checkbox);
                         if(checkbox){
                             checkbox.attribute('checked', 'checked');
                         }
