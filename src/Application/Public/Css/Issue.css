@@ -319,7 +319,7 @@ section[name="application-issue"] .footer .issue-list label {
 }
 
 section[name="application-issue"] .footer .issue-list .checkbox-status {
-    position: relative;
+    position: absolute;
     top : -150px;
     left: 0;
     width: 300px;
