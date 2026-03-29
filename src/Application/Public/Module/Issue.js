@@ -485,9 +485,7 @@ issue.list = async (id) => {
             div_status.style.left = (event.target.offsetLeft) + 'px';
             div_status.html('<input type="checkbox" name="open"><label class="title">Open</label><br><input type="checkbox" name="closed"><label class="title">Closed</label><br><input type="checkbox" name="active"><label class="title">Active</label><br><input type="checkbox" name="error"><label class="title">Error</label><br>')
             footer_issue_list.append(div_status);
-        })
-
-
+        });
         footer_issue_list.appendChild(button_status);
         const button_filter = _('_').create('button');
         button_filter.classList.add('filter');
