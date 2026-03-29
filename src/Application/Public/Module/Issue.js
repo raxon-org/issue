@@ -471,13 +471,15 @@ issue.list = async (id) => {
     body_issue_list.removeClass('display-none');
     const footer_issue_list = section.select('.footer .issue-list');
     if(footer_issue_list){
+        /*
         const label_status = _('_').create('label');
         label_status.classList.add('status');
         label_status.innerHTML = 'Status';
         footer_issue_list.appendChild(label_status);
+         */
         const button_status = _('_').create('button');
         button_status.classList.add('status');
-        button_status.innerHTML = config?.options?.list?.status + ' <span class="caret"></span>';
+        button_status.innerHTML = 'Status';
         button_status.on('click', (event) => {
             const div_status = _('_').create('div');
             div_status.classList.add('checkbox-status');
