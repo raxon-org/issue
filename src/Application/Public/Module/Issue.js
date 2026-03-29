@@ -475,15 +475,14 @@ issue.list = async (id) => {
         const button_status = _('_').create('button');
         button_status.classList.add('status');
         button_status.innerHTML = 'Open';
-        footer_issue_list.prepend(button_status);
+        footer_issue_list.appendChild(button_status);
         label_status.classList.add('status');
         label_status.innerHTML = 'Status';
-        footer_issue_list.prepend(label_status);
-
-
-
-
-
+        footer_issue_list.appendChild(label_status);
+        const button_filter = _('_').create('button');
+        button_filter.classList.add('filter');
+        button_filter.innerHTML = 'Filter';
+        footer_issue_list.appendChild(button_filter);
         footer_issue_list.removeClass('display-none');
         let status = footer_issue_list.select('[name="status"]');
         if(status && !status.data('init')){

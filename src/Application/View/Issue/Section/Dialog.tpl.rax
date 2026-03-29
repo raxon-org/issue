@@ -60,7 +60,7 @@
                 <option value="critical">Critical</option>
             </select>
             */
-            <button class="button-filter">Filters</button>
+
         </div>
         <div class="issue-detail display-none">
         <button class="button-save">Save</button>
