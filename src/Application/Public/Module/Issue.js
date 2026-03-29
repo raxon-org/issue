@@ -471,10 +471,14 @@ issue.list = async (id) => {
     body_issue_list.removeClass('display-none');
     const footer_issue_list = section.select('.footer .issue-list');
     if(footer_issue_list){
+        const label_status = _('_').create('label');
         const button_status = _('_').create('button');
         button_status.classList.add('status');
-        button_status.innerHTML = 'Status';
+        button_status.innerHTML = 'Open';
         footer_issue_list.prepend(button_status);
+        label_status.classList.add('status');
+        label_status.innerHTML = 'Status';
+        footer_issue_list.prepend(label_status);
 
 
 
