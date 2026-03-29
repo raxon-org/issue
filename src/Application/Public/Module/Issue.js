@@ -481,12 +481,17 @@ issue.list = async (id) => {
         button_status.classList.add('status');
         button_status.innerHTML = 'Status';
         button_status.on('click', (event) => {
-            const div_status = _('_').create('div');
-            div_status.classList.add('checkbox-status');
-            div_status.style.top = (event.target.offsetTop - event.target.offsetHeight - 225) + 'px';
-            div_status.style.left = (event.target.offsetLeft) + 'px';
-            div_status.html('<h1 class="title">Status</h1><ul><li><input type="checkbox" name="open"><label class="title">Open</label><br></li><li><input type="checkbox" name="closed"><label class="title">Closed</label><br></li><li><input type="checkbox" name="active"><label class="title">Active</label><br></li><li><input type="checkbox" name="error"><label class="title">Error</label><br></li><li><input type="checkbox" name="template"><label class="title">Template</label><br></li></ul>')
-            footer_issue_list.append(div_status);
+            let div_status = select('.checkbox-status');
+            if(!div_status){
+                div_status = _('_').create('div');
+                div_status.classList.add('checkbox-status');
+                div_status.style.top = (event.target.offsetTop - event.target.offsetHeight - 225) + 'px';
+                div_status.style.left = (event.target.offsetLeft) + 'px';
+                div_status.html('<h1 class="title">Status</h1><ul><li><input type="checkbox" name="open"><label class="title">Open</label><br></li><li><input type="checkbox" name="closed"><label class="title">Closed</label><br></li><li><input type="checkbox" name="active"><label class="title">Active</label><br></li><li><input type="checkbox" name="error"><label class="title">Error</label><br></li><li><input type="checkbox" name="template"><label class="title">Template</label><br></li></ul>')
+                footer_issue_list.append(div_status);
+            } else {
+                div_status.toggleClass('display-none');
+            }
         });
         footer_issue_list.appendChild(button_status);
         const button_filter = _('_').create('button');
