@@ -506,6 +506,33 @@ issue.list = async (id) => {
                     checkbox.attribute('checked', 'checked');
                 }
             }
+            let checkboxes = div_status.select('input[type="checkbox"]');
+            if(checkboxes){
+                if(is.nodeList(checkboxes)){
+                    for(let i=0; i < checkboxes.length; i++){
+                        checkboxes[i].on('change', (event) => {
+                            let value = event.target.name;
+                            let data = [];
+                            let checkboxes = div_status.select('input[type="checkbox"]');
+                            if(is.nodeList(checkboxes)){
+                                for(let i=0; i < checkboxes.length; i++){
+                                    if(checkboxes[i].checked){
+                                        data.push(checkboxes[i].name);
+                                    }
+                                }
+                            } else {
+                                if(checkboxes.checked){
+                                    data.push(checkboxes.name);
+                                }
+                            }
+                            console.log(data);
+                        })
+                    }
+                } else {
+
+                }
+
+            }
         });
         footer_issue_list.appendChild(button_status);
         const button_filter = _('_').create('button');
