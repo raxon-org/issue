@@ -481,11 +481,11 @@ issue.list = async (id) => {
         button_status.on('click', (event) => {
             const div_status = _('_').create('div');
             div_status.classList.add('status-list');
-            div_status.style.top = event.target.offsetTop + 'px';
-            div_status.style.left = event.target.offsetLeft + 'px';
-            div_status.style.width = event.target.offsetWidth + 'px';
-            div_status.style.height = event.target.offsetHeight + 'px';
-            div_status.style.position = 'absolute';
+            div_status.style.top = '-150px';
+            div_status.style.left = '0px';
+            div_status.style.width = ' 300px';
+            div_status.style.height = '150px';
+            div_status.style.position = 'relative';
             div_status.style.zIndex = 1000;
             div_status.style.backgroundColor = 'rgba(0,0,0,0.5)';
             div_status.style.borderRadius = '5px';
