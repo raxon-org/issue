@@ -619,7 +619,10 @@ issue.new = (id) => {
     let button_new = section.select('.menu-application-issue li[data-tab="issue-new"]');
     button_new.addClass('active');
     section.select('.body .issue-list')?.addClass('display-none');
-    section.select('.footer .checkbox-status')?.addClass('display-none');
+    let checkbox_status = section.select('.footer .checkbox-status');
+    if(checkbox_status){
+        checkbox_status.addClass('display-none');
+    }
     section.select('.body .issue-new')?.removeClass('display-none');
     section.select('.footer .issue-list')?.addClass('display-none');
     section.select('.footer .issue-new')?.removeClass('display-none');
