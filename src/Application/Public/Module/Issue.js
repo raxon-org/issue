@@ -198,6 +198,19 @@ issue.config = async (id) => {
                 await issue.list(id);
             }
         });
+        let button_tab_new = section.select('.menu-application-issue li[data-tab="issue-new"');
+        if(button_tab_new){
+            button_tab_new.on('click', (event) => {
+                issue.new(id);
+            });
+        }
+        let button_tab_list = section.select('.menu-application-issue li[data-tab="issue-list"');
+        if(button_tab_list){
+            button_tab_list.on('click', (event) => {
+                issue.list(id);
+            });
+        }
+
     }
 }
 
@@ -588,6 +601,21 @@ issue.status_update = async (id, status, div_status) => {
             await issue.list(id);
         });
     }
+}
+
+issue.new = (id) => {
+    const section = getSectionById(id);
+    if (!section) {
+        return;
+    }
+    const config = storage.data.get('issue.config');
+    const issue_list_all = storage.data.get('issue.list.all');
+    const issue_label_list_all = storage.data.get('issue.label.list.all');
+    if(!config){
+        return;
+    }
+    section.select('.body .issue-list').addClass('display-none');
+    section.select('.body .issue-new').removeClass('display-none');
 }
 
 export { issue }
