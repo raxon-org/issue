@@ -37,7 +37,16 @@
               "array.word.count": ">= 3"
             },
             {
-              "array.word.count": "<= 50"
+              "array.word.count": "<= 500"
+            }
+          ],
+          "type": [
+            {
+              "in.array": [
+                "bug",
+                "feature",
+                "question"
+              ]
             }
           ],
           "priority": [
@@ -56,7 +65,8 @@
                 "open",
                 "active",
                 "closed",
-                "error"
+                "error",
+                "template"
               ]
             }
           ],
@@ -111,7 +121,16 @@
               "array.word.count": ">= 3"
             },
             {
-              "array.word.count": "<= 50"
+              "array.word.count": "<= 500"
+            }
+          ],
+          "type": [
+            {
+              "in.array": [
+                "bug",
+                "feature",
+                "question"
+              ]
             }
           ],
           "priority": [
@@ -130,7 +149,8 @@
                 "open",
                 "active",
                 "closed",
-                "error"
+                "error",
+                "template"
               ]
             }
           ],
@@ -185,7 +205,16 @@
               "array.word.count": ">= 3"
             },
             {
-              "array.word.count": "<= 50"
+              "array.word.count": "<= 500"
+            }
+          ],
+          "?type": [
+            {
+              "in.array": [
+                "bug",
+                "feature",
+                "question"
+              ]
             }
           ],
           "?priority": [
