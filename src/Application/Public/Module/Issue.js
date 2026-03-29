@@ -480,18 +480,7 @@ issue.list = async (id) => {
         button_status.innerHTML = config?.options?.list?.status + ' <span class="caret"></span>';
         button_status.on('click', (event) => {
             const div_status = _('_').create('div');
-            div_status.classList.add('status-list');
-            div_status.style.top = '-150px';
-            div_status.style.left = '0px';
-            div_status.style.width = ' 300px';
-            div_status.style.height = '150px';
-            div_status.style.position = 'relative';
-            div_status.style.zIndex = 1000;
-            div_status.style.backgroundColor = 'rgba(0,0,0,0.5)';
-            div_status.style.borderRadius = '5px';
-            div_status.style.padding = '10px';
-            div_status.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)';
-            div_status.style.border = '1px solid rgba(255,255,255,0.5)';
+            div_status.classList.add('checkbox-status');
             div_status.html('<input type="checkbox" name="open"><label class="title">Open</label><br><input type="checkbox" name="closed"><label class="title">Closed</label><br><input type="checkbox" name="active"><label class="title">Active</label><br><input type="checkbox" name="error"><label class="title">Error</label><br>')
             footer_issue_list.append(div_status);
         })
