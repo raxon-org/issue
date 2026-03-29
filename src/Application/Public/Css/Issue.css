@@ -159,7 +159,7 @@ section[name="application-issue"] .body {
     /*
     background: rgba(248, 248, 248, 1);
      */
-    height: calc(100% - 122px);
+    height: calc(100% - 110px);
     width: 100%;
     overflow: hidden;
 }
