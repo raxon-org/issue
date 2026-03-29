@@ -322,6 +322,7 @@ issue.list = async (id) => {
             continue;
         }
         let status = config?.options?.list?.status;
+        console.log(issue.status);
         console.log(status);
         if(
             is.array(status) &&
