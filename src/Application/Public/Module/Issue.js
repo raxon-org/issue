@@ -482,7 +482,7 @@ issue.list = async (id) => {
             const div_status = _('_').create('div');
             div_status.classList.add('checkbox-status');
             div_status.style.top = (event.target.offsetTop - 150) + 'px';
-            div_Status.style.left = (event.target.offsetLeft) + 'px';
+            div_status.style.left = (event.target.offsetLeft) + 'px';
             div_status.html('<input type="checkbox" name="open"><label class="title">Open</label><br><input type="checkbox" name="closed"><label class="title">Closed</label><br><input type="checkbox" name="active"><label class="title">Active</label><br><input type="checkbox" name="error"><label class="title">Error</label><br>')
             footer_issue_list.append(div_status);
         })
