@@ -344,12 +344,12 @@ section[name="application-issue"] .footer .issue-list .checkbox-status ul {
 }
 
 section[name="application-issue"] .footer .issue-list .checkbox-status li {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid rgba(255,255,255,0.5);
     margin-bottom: 5px;
+    width: cacl(100% - 10px);
 }
 
 section[name="application-issue"] .footer .issue-list .checkbox-status .input[type="checkbox"] {
