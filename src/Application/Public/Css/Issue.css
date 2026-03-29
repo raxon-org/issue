@@ -330,6 +330,11 @@ section[name="application-issue"] .footer .issue-list .checkbox-status {
     border: 1px solid rgba(255,255,255,0.5);
 }
 
+section[name="application-issue"] .footer .issue-list .checkbox-status label {
+    color: rgba(255,255,255,1);
+    font-size: 16px;
+}
+
 /* ═══════════════════════════════════════════════════════════ NEW ISSUE FORM */
 section[name="application-issue"] .issue-form {
     display: flex;
