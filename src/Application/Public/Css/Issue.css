@@ -323,33 +323,39 @@ section[name="application-issue"] .footer .issue-list .checkbox-status {
     width: 300px;
     height: 150px;
     z-index: 1000;
-    background: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.5);
 }
 
 section[name="application-issue"] .footer .issue-list .checkbox-status h1{
     color: rgba(255,255,255,1);
     font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 10px;
     background: rgba(0,0,0,0.5);
     background: rgba(32, 60, 150, 0.6);
+    width :100%;
 }
 
-section[name="application-issue"] .footer .issue-list .checkbox-status .input[type="checkbox"] {
+section[name="application-issue"] .footer .issue-list .checkbox-status ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+section[name="application-issue"] .footer .issue-list .checkbox-status li {
     margin-left: 10px;
     margin-right: 10px;
     padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+section[name="application-issue"] .footer .issue-list .checkbox-status .input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
 }
 
 section[name="application-issue"] .footer .issue-list .checkbox-status label {
     color: rgba(255,255,255,1);
     font-size: 16px;
-    border-radius: 5px;
-    padding: 5px;
-    border: 1px solid rgba(255,255,255,0.5);
 }
 
 /* ═══════════════════════════════════════════════════════════ NEW ISSUE FORM */
