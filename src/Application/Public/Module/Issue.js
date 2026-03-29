@@ -366,6 +366,7 @@ issue.list = async (id) => {
             }
         }
     }
+    section.select('.body .issue-new').addClass('display-none');
     section.select('.body .issue-list').html('');
     let body_issue_list = section.select('.body .issue-list');
     let container = section.select('labels');
