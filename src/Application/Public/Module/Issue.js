@@ -520,12 +520,12 @@ issue.list = async (id) => {
                     if(is.nodeList(checkboxes)){
                         for(let i=0; i < checkboxes.length; i++){
                             checkboxes[i].on('change', async(event) => {
-                                await issue.status_update(event.target.name, div_status);
+                                await issue.status_update(id, event.target.name, div_status);
                             });
                         }
                     } else {
                         checkboxes.on('change', async(event) => {
-                            await issue.status_update(event.target.name, div_status);
+                            await issue.status_update(id, event.target.name, div_status);
                         });
                     }
 
@@ -546,7 +546,7 @@ issue.list = async (id) => {
 
 }
 
-issue.status_update = async (status, div_status) => {
+issue.status_update = async (id, status, div_status) => {
     let config = storage.data.get('issue.config');
     let value = event.target.name;
     let data = [];
