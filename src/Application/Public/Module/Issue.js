@@ -628,27 +628,39 @@ issue.new = (id) => {
     section.select('.footer .issue-new')?.removeClass('display-none');
     let issue = section.select('.body .issue-new');
     if(issue){
+        let ul = section.select('.body .issue-new ul');
+        if(!ul){
+            ul = _('_').create('label');
+            issue.append(ul);
+        }
+
         let title = section.select('.body .issue-new input[name="title"]');
         if(!title){
+            let li = _('_').create('li');
+            li.addClass('title');
             let label_title = _('_').create('label');
             label_title.setAttribute('for', 'title');
             label_title.innerHTML = 'Title';
-            let title = _('_').create('input');
+            title = _('_').create('input');
             title.setAttribute('type', 'text');
             title.setAttribute('name', 'title');
             title.setAttribute('placeholder', 'Title');
-            issue.append(label_title);
-            issue.append(title);
+            li.append(label_title);
+            li.append(title);
+            ul.append(li);
         }
         let description = section.select('.body .issue-new textarea[name="description"]');
         if(!description){
+            let li = _('_').create('li');
+            li.addClass('description');
             let label_description = _('_').create('label');
             label_description.setAttribute('for', 'description');
             label_description.innerHTML = 'Description<br>';
             let description = _('_').create('textarea');
             description.setAttribute('name', 'description');
-            issue.append(label_description);
-            issue.append(description);
+            li.append(label_description);
+            li.append(description);
+            ul.append(li);
         }
     }
 }
