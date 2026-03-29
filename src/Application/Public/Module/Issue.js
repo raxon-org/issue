@@ -492,7 +492,7 @@ issue.list = async (id) => {
             div_status.style.padding = '10px';
             div_status.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)';
             div_status.style.border = '1px solid rgba(255,255,255,0.5)';
-            div_status.html('<input type="checkbox" name="open"><span class="title">Open</span><br><input type="checkbox" name="closed"><span class="title">Closed</span><br><input type="checkbox" name="active"><span class="title">Active</span><br><input type="checkbox" name="error"><span class="title">Error</span><br>')
+            div_status.html('<input type="checkbox" name="open"><label class="title">Open</label><br><input type="checkbox" name="closed"><label class="title">Closed</label><br><input type="checkbox" name="active"><label class="title">Active</label><br><input type="checkbox" name="error"><label class="title">Error</label><br>')
             body_issue_list.append(div_status);
         })
 
