@@ -472,13 +472,13 @@ issue.list = async (id) => {
     const footer_issue_list = section.select('.footer .issue-list');
     if(footer_issue_list){
         const label_status = _('_').create('label');
+        label_status.classList.add('status');
+        label_status.innerHTML = 'Status';
+        footer_issue_list.appendChild(label_status);
         const button_status = _('_').create('button');
         button_status.classList.add('status');
         button_status.innerHTML = 'Open';
         footer_issue_list.appendChild(button_status);
-        label_status.classList.add('status');
-        label_status.innerHTML = 'Status';
-        footer_issue_list.appendChild(label_status);
         const button_filter = _('_').create('button');
         button_filter.classList.add('filter');
         button_filter.innerHTML = 'Filter';
