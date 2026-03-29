@@ -477,7 +477,26 @@ issue.list = async (id) => {
         footer_issue_list.appendChild(label_status);
         const button_status = _('_').create('button');
         button_status.classList.add('status');
-        button_status.innerHTML = 'Open';
+        button_status.innerHTML = config?.options?.list?.status + ' <span class="caret"></span>';
+        button_status.on('click', (event) => {
+            const div_status = _('_').create('div');
+            div_status.classList.add('status-list');
+            div_status.style.top = event.target.offsetTop + 'px';
+            div_status.style.left = event.target.offsetLeft + 'px';
+            div_status.style.width = event.target.offsetWidth + 'px';
+            div_status.style.height = event.target.offsetHeight + 'px';
+            div_status.style.position = 'absolute';
+            div_status.style.zIndex = 1000;
+            div_status.style.backgroundColor = 'rgba(0,0,0,0.5)';
+            div_status.style.borderRadius = '5px';
+            div_status.style.padding = '10px';
+            div_status.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)';
+            div_status.style.border = '1px solid rgba(255,255,255,0.5)';
+            div_status.html('<input type="checkbox" name="open"><span class="title">Open</span><br><input type="checkbox" name="closed"><span class="title">Closed</span><br><input type="checkbox" name="active"><span class="title">Active</span><br><input type="checkbox" name="error"><span class="title">Error</span><br>')
+            body_issue_list.append(div_status);
+        })
+
+
         footer_issue_list.appendChild(button_status);
         const button_filter = _('_').create('button');
         button_filter.classList.add('filter');
