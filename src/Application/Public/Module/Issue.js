@@ -644,7 +644,7 @@ issue.new = (id) => {
         if(!description){
             let label_description = _('_').create('label');
             label_description.setAttribute('for', 'description');
-            label_description.innerHTML = 'Title';
+            label_description.innerHTML = 'Description<br>';
             let description = _('_').create('textarea');
             description.setAttribute('name', 'description');
             issue.append(label_description);
