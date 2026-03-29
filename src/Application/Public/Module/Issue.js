@@ -324,16 +324,16 @@ issue.list = async (id) => {
         let status = config?.options?.list?.status;
         console.log(issue.status);
         console.log(status);
-        if(
+        if(!status){
+            status = 'open';
+        }
+        else if(
             is.array(status) &&
             !in_array(issue.status, status, true)
         ) {
             continue;
         }
-        else if(!status){
-            status = 'open';
-        }
-        if(
+        else if(
             issue.status !== status &&
             status !== 'all'
         ){
