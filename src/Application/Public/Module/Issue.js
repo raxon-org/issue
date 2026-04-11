@@ -207,6 +207,7 @@ issue.config = async (id) => {
         let button_tab_list = section.select('.menu-application-issue li[data-tab="issue-list"');
         if(button_tab_list){
             button_tab_list.on('click', (event) => {
+                button_tab_list.html(button_tab_list.html() + '<span class="loading">' + 'O' + '</span>');
                 issue.list(id);
             });
         }
@@ -303,6 +304,11 @@ issue.list = async (id) => {
         await issue.sleep(1/60);
         await issue.list(id);
         return;
+    }
+    const button_tab_list = section.select('.menu-application-issue li[data-tab="issue-list"');
+    const loading = button_tab_list.select('.loading');
+    if(loading){
+        loading.remove();
     }
     console.log('READY');
     console.log(issue_list_all);
