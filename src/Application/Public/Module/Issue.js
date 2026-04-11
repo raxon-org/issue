@@ -209,6 +209,10 @@ issue.config = async (id) => {
             button_tab_list.on('click', (event) => {
                 issue.list(id);
             });
+            button_tab_list.on('dblclick', (event) => {
+                button_tab_list.html(button_tab_list.html() + '<span class="loading">o</span>');
+                issue.list(id);
+            });
         }
 
     }
