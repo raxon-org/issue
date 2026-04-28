@@ -62,10 +62,19 @@ class Issue extends Controller {
                     is_object($record) &&
                     property_exists($record, 'user')
                 ) {
-                    $record->user = (object) [
-                        'uuid' => $record->user,
-                        'email' => $user[$record->user]->getEmail(),
-                    ];
+                    if(!array_key_exists($record->user, $user)){
+                        $record->user = (object) [
+                            'uuid' => $record->user,
+                            'email' => 'Unknown',
+                        ];
+                    } else {
+                        $record->user = (object) [
+                            'uuid' => $record->user,
+                            'email' => $user[$record->user]->getEmail(),
+                        ];
+                    }
+
+
                 }
             }
         }
