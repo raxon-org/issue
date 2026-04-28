@@ -47,6 +47,7 @@ class Issue extends Controller {
         foreach($user_list as $entity){
             $user[$entity->getUuid()] = $entity;
         }
+        ddd($user);
         if(
             !empty($response) &&
             (
