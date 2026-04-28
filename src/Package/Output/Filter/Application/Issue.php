@@ -43,6 +43,7 @@ class Issue extends Controller {
         }
         $connection->manager = Database::entity_manager($object, $config, $connection);
         $repository = $connection->manager->getRepository(Entity::class);
+        ddd($user);
         $user_list = $repository->findBy([
             'uuid' => $user
         ]);
