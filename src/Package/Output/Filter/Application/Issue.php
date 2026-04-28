@@ -13,6 +13,7 @@ class Issue extends Controller {
 
     /**
      * @throws ErrorException
+     * @throws \Exception
      */
     public static function issue_filter(App $object, $response=null): array | object
     {
