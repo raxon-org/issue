@@ -44,15 +44,12 @@ class Issue extends Controller {
         }
         $connection->manager = Database::entity_manager($object, $config, $connection);
         $repository = $connection->manager->getRepository(Entity::class);
-        ddd($user);
-        $user_list = $repository->findBy([
-            'uuid' => $user
+        $user_list = $repository->findAll([
         ]);
         $user = [];
         foreach($user_list as $entity){
             $user[$entity->getUuid()] = $entity;
         }
-        ddd($user);
         if(
             !empty($response) &&
             (
