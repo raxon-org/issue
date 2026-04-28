@@ -11,6 +11,9 @@ use Raxon\Module\Controller;
 class Issue extends Controller {
     const DIR = __DIR__ . '/';
 
+    /**
+     * @throws ErrorException
+     */
     public static function issue_filter(App $object, $response=null): array | object
     {
         $result = [];
