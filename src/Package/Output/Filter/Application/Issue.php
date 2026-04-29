@@ -65,7 +65,7 @@ class Issue extends Controller {
                     if(!array_key_exists($record->user, $user)){
                         $record->user = (object) [
                             'uuid' => $record->user,
-                            'email' => 'Unknown',
+                            'email' => null,
                         ];
                     } else {
                         $record->user = (object) [
