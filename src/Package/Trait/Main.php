@@ -23,6 +23,7 @@ use Exception;
 
 trait Main {
     const NAME = 'Issue';
+    const ROUTE_NAME = 'application.issue';
     /**
      * @throws DirectoryCreateException
      * @throws Exception
@@ -243,7 +244,7 @@ trait Main {
                             "name" => self::NAME,
                             "user" => $user['uuid'],
                             "route" => (object) [
-                                'name' => 'application.issue',
+                                'name' => self::ROUTE_NAME,
                                 'get' => '{{route.name($this.name)}}'
                             ],
                             "url" => '{{route.get($this.route.get)}}',
